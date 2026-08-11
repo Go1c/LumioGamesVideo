@@ -1,0 +1,4 @@
+interface:
+  display_name: "Game Menu Motion"
+  short_description: "Turn static game menus into animated backgrounds"
+  default_prompt: "Use $animate-game-menu to turn this static menu or character-select design into a safe animated background."

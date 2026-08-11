@@ -1,0 +1,4 @@
+interface:
+  display_name: "Prompt to 2D Animation"
+  short_description: "Generate game-ready 2D animation flipbooks"
+  default_prompt: "Use $prompt-to-2d-animation to turn this character action prompt into a validated frame sequence and Spine flipbook."

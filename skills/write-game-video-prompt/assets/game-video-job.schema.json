@@ -1,0 +1,195 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://lumio.games/schemas/game-video-job-0.1.0.json",
+  "title": "Lumio Game Video Job",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "job_id",
+    "workflow",
+    "goal",
+    "inputs",
+    "generation",
+    "delivery",
+    "rights",
+    "qa_checks"
+  ],
+  "properties": {
+    "schema_version": {"const": "0.1.0"},
+    "job_id": {
+      "type": "string",
+      "pattern": "^[a-z0-9](?:[a-z0-9-]{0,62}[a-z0-9])?$"
+    },
+    "workflow": {
+      "enum": [
+        "cinematic",
+        "character-performance",
+        "menu-motion",
+        "in-game-loop",
+        "gameplay-previs",
+        "marketing",
+        "2d-animation"
+      ]
+    },
+    "goal": {"type": "string", "minLength": 1, "maxLength": 2000},
+    "inputs": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["assets"],
+      "properties": {
+        "assets": {
+          "type": "array",
+          "maxItems": 24,
+          "items": {"$ref": "#/$defs/asset"}
+        }
+      }
+    },
+    "generation": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "provider",
+        "model",
+        "mode",
+        "duration_seconds",
+        "aspect_ratio",
+        "resolution",
+        "audio",
+        "variants",
+        "execution",
+        "provider_terms_approved",
+        "paid_generation",
+        "paid_generation_approved"
+      ],
+      "properties": {
+        "provider": {"type": ["string", "null"]},
+        "model": {"type": ["string", "null"]},
+        "mode": {
+          "enum": [
+            "text-to-video",
+            "image-to-video",
+            "first-frame-to-video",
+            "first-last-frame-to-video",
+            "reference-to-video",
+            "video-to-video"
+          ]
+        },
+        "duration_seconds": {
+          "type": "number",
+          "exclusiveMinimum": 0,
+          "maximum": 60
+        },
+        "aspect_ratio": {
+          "type": "string",
+          "pattern": "^[1-9][0-9]*:[1-9][0-9]*$"
+        },
+        "resolution": {
+          "type": "string",
+          "pattern": "^[1-9][0-9]{2,4}x[1-9][0-9]{2,4}$"
+        },
+        "audio": {"type": "boolean"},
+        "variants": {"type": "integer", "minimum": 1, "maximum": 12},
+        "execution": {"enum": ["plan-only", "local", "remote"]},
+        "provider_terms_approved": {"type": "boolean"},
+        "paid_generation": {"type": "boolean"},
+        "paid_generation_approved": {"type": "boolean"}
+      }
+    },
+    "delivery": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["kind", "loop", "fps", "containers"],
+      "properties": {
+        "kind": {
+          "enum": [
+            "cinematic-master",
+            "localized-clips",
+            "menu-background",
+            "video-texture",
+            "previs-comparison",
+            "marketing-cuts",
+            "frame-package"
+          ]
+        },
+        "loop": {"type": "boolean"},
+        "fps": {"type": "number", "exclusiveMinimum": 0, "maximum": 120},
+        "containers": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": {
+            "enum": [
+              "mp4",
+              "mov",
+              "webm",
+              "png-sequence",
+              "sprite-atlas",
+              "spine-json"
+            ]
+          }
+        }
+      }
+    },
+    "rights": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["public_release", "ai_disclosure_decision", "notes"],
+      "properties": {
+        "public_release": {"type": "boolean"},
+        "ai_disclosure_decision": {
+          "enum": ["pending", "required", "not-required"]
+        },
+        "notes": {"type": "string", "maxLength": 4000}
+      }
+    },
+    "qa_checks": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": {
+        "enum": [
+          "identity",
+          "continuity",
+          "action",
+          "camera",
+          "text",
+          "audio",
+          "seam",
+          "truthful-claims",
+          "alpha",
+          "runtime"
+        ]
+      }
+    }
+  },
+  "$defs": {
+    "asset": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "type",
+        "source",
+        "role",
+        "rights_status",
+        "remote_upload_approved"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^[a-z0-9](?:[a-z0-9-]{0,62}[a-z0-9])?$"
+        },
+        "type": {
+          "enum": ["image", "video", "audio", "text", "ui", "gameplay"]
+        },
+        "source": {"type": "string", "minLength": 1},
+        "role": {"type": "string", "minLength": 1, "maxLength": 500},
+        "rights_status": {
+          "enum": ["owned", "licensed", "consented", "unknown"]
+        },
+        "remote_upload_approved": {"type": "boolean"}
+      }
+    }
+  }
+}

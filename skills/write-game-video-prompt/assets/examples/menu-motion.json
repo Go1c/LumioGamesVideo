@@ -1,0 +1,44 @@
+{
+  "schema_version": "0.1.0",
+  "job_id": "character-select-background-001",
+  "workflow": "menu-motion",
+  "goal": "Animate the decorative character-select background while reserving exact regions for engine-rendered cards, names, and buttons.",
+  "inputs": {
+    "assets": [
+      {
+        "id": "menu-confirmation",
+        "type": "ui",
+        "source": "references/approved-menu-frame.png",
+        "role": "Lock layout, character positions, hierarchy, safe areas, and overlay zones.",
+        "rights_status": "owned",
+        "remote_upload_approved": false
+      }
+    ]
+  },
+  "generation": {
+    "provider": null,
+    "model": null,
+    "mode": "reference-to-video",
+    "duration_seconds": 10,
+    "aspect_ratio": "16:9",
+    "resolution": "1920x1080",
+    "audio": false,
+    "variants": 4,
+    "execution": "plan-only",
+    "provider_terms_approved": false,
+    "paid_generation": false,
+    "paid_generation_approved": false
+  },
+  "delivery": {
+    "kind": "menu-background",
+    "loop": true,
+    "fps": 30,
+    "containers": ["mp4"]
+  },
+  "rights": {
+    "public_release": false,
+    "ai_disclosure_decision": "pending",
+    "notes": "Interactive and localized UI remains in engine."
+  },
+  "qa_checks": ["identity", "continuity", "camera", "text", "seam"]
+}

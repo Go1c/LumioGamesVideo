@@ -1,0 +1,21 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "lumio-games-video",
+  "version": "0.1.0",
+  "description": "Plan and produce game cinematics, character performances, menu motion, world-loop media, previs, marketing videos, and 2D flipbooks.",
+  "author": {
+    "name": "Lumio Games"
+  },
+  "keywords": [
+    "game-video",
+    "cinematic",
+    "localization",
+    "menu-motion",
+    "video-texture",
+    "previsualization",
+    "marketing",
+    "2d-animation",
+    "video-generation",
+    "spine"
+  ]
+}

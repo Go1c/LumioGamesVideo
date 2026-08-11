@@ -1,0 +1,44 @@
+{
+  "schema_version": "0.1.0",
+  "job_id": "chibi-swordsman-slash-001",
+  "workflow": "2d-animation",
+  "goal": "Generate one readable chibi swordsman slash and package the selected action as transparent frames, an atlas, and a Spine flipbook.",
+  "inputs": {
+    "assets": [
+      {
+        "id": "planned-character-anchor",
+        "type": "image",
+        "source": "anchor/approved-character.png",
+        "role": "Planned generated anchor; lock face, costume, palette, silhouette, weapon, scale, and direction before video generation.",
+        "rights_status": "owned",
+        "remote_upload_approved": false
+      }
+    ]
+  },
+  "generation": {
+    "provider": null,
+    "model": null,
+    "mode": "image-to-video",
+    "duration_seconds": 4,
+    "aspect_ratio": "1:1",
+    "resolution": "512x512",
+    "audio": false,
+    "variants": 4,
+    "execution": "plan-only",
+    "provider_terms_approved": false,
+    "paid_generation": false,
+    "paid_generation_approved": false
+  },
+  "delivery": {
+    "kind": "frame-package",
+    "loop": false,
+    "fps": 12,
+    "containers": ["png-sequence", "sprite-atlas", "spine-json"]
+  },
+  "rights": {
+    "public_release": false,
+    "ai_disclosure_decision": "pending",
+    "notes": "Spine output is a sequence-attachment flipbook, not a skeletal rig."
+  },
+  "qa_checks": ["identity", "continuity", "action", "camera", "alpha", "runtime"]
+}

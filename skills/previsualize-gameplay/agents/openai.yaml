@@ -1,0 +1,4 @@
+interface:
+  display_name: "Gameplay Previsualization"
+  short_description: "Test camera, VFX, and encounter ideas with video"
+  default_prompt: "Use $previsualize-gameplay to compare controlled visual hypotheses for this gameplay or encounter concept."

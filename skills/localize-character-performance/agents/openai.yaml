@@ -1,0 +1,4 @@
+interface:
+  display_name: "Character Performance"
+  short_description: "Adapt character performances across actions and languages"
+  default_prompt: "Use $localize-character-performance to create controlled character-performance variants from these approved references."

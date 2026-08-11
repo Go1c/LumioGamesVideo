@@ -1,0 +1,33 @@
+{
+  "schema_version": "0.1.0",
+  "job_id": "swordsman-slash-001",
+  "recipe": "character-action",
+  "prompt": "A chibi swordsman performs one fast forward slash and settles into the starting stance.",
+  "reference_image": null,
+  "anchor_policy": "generate-and-approve",
+  "video": {
+    "duration_seconds": 4,
+    "source_fps": 24,
+    "fixed_camera": true,
+    "background": "flat-contrast",
+    "trim_start_seconds": 1,
+    "trim_duration_seconds": 1.5
+  },
+  "sequence": {
+    "delivery_fps": 12,
+    "canvas": [512, 512],
+    "max_frames": 48,
+    "alpha": true,
+    "pivot": "bottom-center",
+    "loop": false
+  },
+  "spine": {
+    "enabled": true,
+    "target_version": "4.1",
+    "profile": "sequence-attachment"
+  },
+  "render_policy": {
+    "max_video_variants": 4,
+    "remote_upload_approved": false
+  }
+}

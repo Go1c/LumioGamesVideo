@@ -1,0 +1,4 @@
+interface:
+  display_name: "In-Game Loop Media"
+  short_description: "Create seamless video textures for game-world screens"
+  default_prompt: "Use $create-in-game-loop-media to create and validate a looping video texture for this in-game screen."

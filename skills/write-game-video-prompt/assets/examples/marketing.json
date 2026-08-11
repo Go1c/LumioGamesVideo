@@ -1,0 +1,60 @@
+{
+  "schema_version": "0.1.0",
+  "job_id": "launch-social-vertical-001",
+  "workflow": "marketing",
+  "goal": "Create a truthful 15-second vertical launch cut using verified gameplay as proof and generated material only as labeled cinematic framing.",
+  "inputs": {
+    "assets": [
+      {
+        "id": "gameplay-master",
+        "type": "gameplay",
+        "source": "references/gameplay.mp4",
+        "role": "Primary evidence for mechanics; preserve timing and do not invent interactions.",
+        "rights_status": "owned",
+        "remote_upload_approved": false
+      },
+      {
+        "id": "game-logo",
+        "type": "image",
+        "source": "references/logo.png",
+        "role": "Brand reference; final logo will be a deterministic overlay.",
+        "rights_status": "owned",
+        "remote_upload_approved": false
+      },
+      {
+        "id": "launch-copy",
+        "type": "text",
+        "source": "references/copy.txt",
+        "role": "Approved copy; render deterministically in postproduction.",
+        "rights_status": "owned",
+        "remote_upload_approved": false
+      }
+    ]
+  },
+  "generation": {
+    "provider": null,
+    "model": null,
+    "mode": "reference-to-video",
+    "duration_seconds": 15,
+    "aspect_ratio": "9:16",
+    "resolution": "1080x1920",
+    "audio": true,
+    "variants": 4,
+    "execution": "plan-only",
+    "provider_terms_approved": false,
+    "paid_generation": false,
+    "paid_generation_approved": false
+  },
+  "delivery": {
+    "kind": "marketing-cuts",
+    "loop": false,
+    "fps": 30,
+    "containers": ["mp4", "mov"]
+  },
+  "rights": {
+    "public_release": true,
+    "ai_disclosure_decision": "pending",
+    "notes": "Gameplay, logo, copy, music, and platform policy require release approval."
+  },
+  "qa_checks": ["identity", "continuity", "camera", "text", "audio", "truthful-claims"]
+}

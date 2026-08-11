@@ -1,0 +1,4 @@
+interface:
+  display_name: "Game Cinematic"
+  short_description: "Create short game cinematics and mission briefings"
+  default_prompt: "Use $generate-game-cinematic to turn this story beat and game references into a production-ready short cinematic."

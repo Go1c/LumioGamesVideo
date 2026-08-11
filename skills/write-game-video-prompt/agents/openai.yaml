@@ -1,0 +1,4 @@
+interface:
+  display_name: "Game Video Prompt"
+  short_description: "Build model-ready game video prompts and job specs"
+  default_prompt: "Use $write-game-video-prompt to turn this game-video idea and references into a model-ready prompt package."

@@ -1,0 +1,52 @@
+{
+  "schema_version": "0.1.0",
+  "job_id": "neon-billboard-loop-001",
+  "workflow": "in-game-loop",
+  "goal": "Create an eight-second cyberpunk drink advertisement that can repeat on a distant in-world billboard.",
+  "inputs": {
+    "assets": [
+      {
+        "id": "loop-first",
+        "type": "image",
+        "source": "references/neon-drink-anchor.png",
+        "role": "First frame; preserve product silhouette, magenta-cyan palette, and empty logo overlay zone.",
+        "rights_status": "owned",
+        "remote_upload_approved": false
+      },
+      {
+        "id": "loop-last",
+        "type": "image",
+        "source": "references/neon-drink-anchor.png",
+        "role": "Last frame; return to the same composition for loop construction.",
+        "rights_status": "owned",
+        "remote_upload_approved": false
+      }
+    ]
+  },
+  "generation": {
+    "provider": null,
+    "model": null,
+    "mode": "first-last-frame-to-video",
+    "duration_seconds": 8,
+    "aspect_ratio": "16:9",
+    "resolution": "1280x720",
+    "audio": false,
+    "variants": 4,
+    "execution": "plan-only",
+    "provider_terms_approved": false,
+    "paid_generation": false,
+    "paid_generation_approved": false
+  },
+  "delivery": {
+    "kind": "video-texture",
+    "loop": true,
+    "fps": 24,
+    "containers": ["mp4"]
+  },
+  "rights": {
+    "public_release": false,
+    "ai_disclosure_decision": "pending",
+    "notes": "Fictional brand and internally owned anchor."
+  },
+  "qa_checks": ["continuity", "text", "seam"]
+}

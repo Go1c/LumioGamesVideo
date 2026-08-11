@@ -1,0 +1,4 @@
+interface:
+  display_name: "Game Marketing Video"
+  short_description: "Create truthful trailers, UA, and social video variants"
+  default_prompt: "Use $create-game-marketing-video to produce platform-ready video variants without inventing gameplay claims."

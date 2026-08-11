@@ -1,0 +1,52 @@
+{
+  "schema_version": "0.1.0",
+  "job_id": "boss-camera-medium-001",
+  "workflow": "gameplay-previs",
+  "goal": "Test whether a medium-distance camera improves boss-attack readability without claiming technical feasibility.",
+  "inputs": {
+    "assets": [
+      {
+        "id": "greybox-capture",
+        "type": "gameplay",
+        "source": "references/greybox-medium.png",
+        "role": "Lock arena, FOV, player position, boss position, and current gameplay state.",
+        "rights_status": "owned",
+        "remote_upload_approved": false
+      },
+      {
+        "id": "boss-concept",
+        "type": "image",
+        "source": "references/boss-concept.png",
+        "role": "Visual identity reference only; do not infer mechanics.",
+        "rights_status": "owned",
+        "remote_upload_approved": false
+      }
+    ]
+  },
+  "generation": {
+    "provider": null,
+    "model": null,
+    "mode": "reference-to-video",
+    "duration_seconds": 6,
+    "aspect_ratio": "16:9",
+    "resolution": "1280x720",
+    "audio": false,
+    "variants": 3,
+    "execution": "plan-only",
+    "provider_terms_approved": false,
+    "paid_generation": false,
+    "paid_generation_approved": false
+  },
+  "delivery": {
+    "kind": "previs-comparison",
+    "loop": false,
+    "fps": 24,
+    "containers": ["mp4"]
+  },
+  "rights": {
+    "public_release": false,
+    "ai_disclosure_decision": "required",
+    "notes": "Every exported clip must say CONCEPT — NOT GAMEPLAY."
+  },
+  "qa_checks": ["continuity", "action", "camera", "truthful-claims"]
+}

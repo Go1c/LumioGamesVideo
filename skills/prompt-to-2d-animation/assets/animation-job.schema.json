@@ -1,0 +1,98 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://lumio.games/schemas/animation-job-0.1.0.json",
+  "title": "Lumio 2D Animation Job",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "job_id",
+    "recipe",
+    "prompt",
+    "reference_image",
+    "anchor_policy",
+    "video",
+    "sequence",
+    "spine",
+    "render_policy"
+  ],
+  "properties": {
+    "schema_version": {"const": "0.1.0"},
+    "job_id": {
+      "type": "string",
+      "pattern": "^[a-z0-9](?:[a-z0-9-]{0,62}[a-z0-9])?$"
+    },
+    "recipe": {
+      "enum": ["character-idle-loop", "character-emote", "character-action"]
+    },
+    "prompt": {"type": "string", "minLength": 1, "maxLength": 4000},
+    "reference_image": {"type": ["string", "null"]},
+    "anchor_policy": {
+      "enum": ["use-reference", "generate-and-approve", "not-required"]
+    },
+    "video": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "duration_seconds",
+        "source_fps",
+        "fixed_camera",
+        "background",
+        "trim_start_seconds",
+        "trim_duration_seconds"
+      ],
+      "properties": {
+        "duration_seconds": {"type": "number", "exclusiveMinimum": 0, "maximum": 15},
+        "source_fps": {"type": "number", "exclusiveMinimum": 0, "maximum": 120},
+        "fixed_camera": {"const": true},
+        "background": {"enum": ["flat-contrast", "transparent", "segmentation-required"]},
+        "trim_start_seconds": {"type": "number", "minimum": 0},
+        "trim_duration_seconds": {"type": "number", "exclusiveMinimum": 0, "maximum": 15}
+      }
+    },
+    "sequence": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["delivery_fps", "canvas", "max_frames", "alpha", "pivot", "loop"],
+      "properties": {
+        "delivery_fps": {"type": "number", "exclusiveMinimum": 0, "maximum": 60},
+        "canvas": {
+          "type": "array",
+          "prefixItems": [
+            {"type": "integer", "minimum": 64, "maximum": 2048},
+            {"type": "integer", "minimum": 64, "maximum": 2048}
+          ],
+          "items": false,
+          "minItems": 2,
+          "maxItems": 2
+        },
+        "max_frames": {"type": "integer", "minimum": 1, "maximum": 48},
+        "alpha": {"type": "boolean"},
+        "pivot": {"enum": ["bottom-center", "center"]},
+        "loop": {"type": "boolean"}
+      }
+    },
+    "spine": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["enabled", "target_version", "profile"],
+      "properties": {
+        "enabled": {"type": "boolean"},
+        "target_version": {
+          "type": ["string", "null"],
+          "pattern": "^[0-9]+\\.[0-9]+$"
+        },
+        "profile": {"enum": ["sequence-attachment", null]}
+      }
+    },
+    "render_policy": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["max_video_variants", "remote_upload_approved"],
+      "properties": {
+        "max_video_variants": {"type": "integer", "minimum": 1, "maximum": 8},
+        "remote_upload_approved": {"type": "boolean"}
+      }
+    }
+  }
+}

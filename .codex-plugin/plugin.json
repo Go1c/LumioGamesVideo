@@ -1,0 +1,38 @@
+{
+  "name": "lumio-games-video",
+  "version": "0.1.0",
+  "description": "Create production-ready game videos and 2D animation assets from prompts and references.",
+  "author": {
+    "name": "Lumio Games"
+  },
+  "skills": "./skills/",
+  "keywords": [
+    "game-video",
+    "cinematic",
+    "localization",
+    "menu-motion",
+    "video-texture",
+    "previsualization",
+    "marketing",
+    "2d-animation",
+    "video-generation",
+    "spine"
+  ],
+  "interface": {
+    "displayName": "Lumio Games Video",
+    "shortDescription": "Create game video workflows and 2D animation assets.",
+    "longDescription": "Plan and produce cinematics, character performances, animated menus, in-world loop media, gameplay previsualization, marketing cuts, and prompt-driven 2D flipbooks through provider-neutral, rights-aware workflows.",
+    "developerName": "Lumio Games",
+    "category": "Creative",
+    "capabilities": [
+      "Interactive",
+      "Write"
+    ],
+    "defaultPrompt": [
+      "Turn this story beat into a short game cinematic.",
+      "Create a seamless video texture for this in-world billboard.",
+      "Animate this game menu while keeping interactive UI deterministic.",
+      "Turn this character action into a transparent Spine flipbook."
+    ]
+  }
+}

@@ -1,0 +1,68 @@
+{
+  "schema_version": "0.1.0",
+  "job_id": "npc-quest-complete-ja-001",
+  "workflow": "character-performance",
+  "goal": "Create a Japanese quest-completion performance while preserving the approved NPC identity, blocking, and camera.",
+  "inputs": {
+    "assets": [
+      {
+        "id": "npc-anchor",
+        "type": "image",
+        "source": "references/npc-anchor.png",
+        "role": "Identity and costume anchor.",
+        "rights_status": "owned",
+        "remote_upload_approved": false
+      },
+      {
+        "id": "motion-master",
+        "type": "video",
+        "source": "references/source-performance.mp4",
+        "role": "Retain blocking, gesture beats, gaze, and camera timing.",
+        "rights_status": "consented",
+        "remote_upload_approved": false
+      },
+      {
+        "id": "japanese-line",
+        "type": "text",
+        "source": "references/ja.txt",
+        "role": "Human-approved target dialogue; preserve wording exactly.",
+        "rights_status": "owned",
+        "remote_upload_approved": false
+      },
+      {
+        "id": "voice-reference",
+        "type": "audio",
+        "source": "references/approved-voice.wav",
+        "role": "Use only within the explicitly consented character and line scope.",
+        "rights_status": "consented",
+        "remote_upload_approved": false
+      }
+    ]
+  },
+  "generation": {
+    "provider": null,
+    "model": null,
+    "mode": "reference-to-video",
+    "duration_seconds": 8,
+    "aspect_ratio": "16:9",
+    "resolution": "1280x720",
+    "audio": true,
+    "variants": 3,
+    "execution": "plan-only",
+    "provider_terms_approved": false,
+    "paid_generation": false,
+    "paid_generation_approved": false
+  },
+  "delivery": {
+    "kind": "localized-clips",
+    "loop": false,
+    "fps": 24,
+    "containers": ["mov"]
+  },
+  "rights": {
+    "public_release": false,
+    "ai_disclosure_decision": "pending",
+    "notes": "Voice and performance consent must be attached before rendering."
+  },
+  "qa_checks": ["identity", "continuity", "action", "camera", "text", "audio"]
+}

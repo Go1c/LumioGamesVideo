@@ -1,0 +1,52 @@
+{
+  "schema_version": "0.1.0",
+  "job_id": "boss-reveal-shot-001",
+  "workflow": "cinematic",
+  "goal": "Reveal the boss in one controlled shot and end on the approved gameplay transition frame.",
+  "inputs": {
+    "assets": [
+      {
+        "id": "boss-anchor",
+        "type": "image",
+        "source": "references/boss-anchor.png",
+        "role": "Preserve boss identity, costume, scale, and silhouette.",
+        "rights_status": "owned",
+        "remote_upload_approved": false
+      },
+      {
+        "id": "arena-reference",
+        "type": "image",
+        "source": "references/arena.png",
+        "role": "Preserve arena geography, palette, and light direction.",
+        "rights_status": "owned",
+        "remote_upload_approved": false
+      }
+    ]
+  },
+  "generation": {
+    "provider": null,
+    "model": null,
+    "mode": "reference-to-video",
+    "duration_seconds": 12,
+    "aspect_ratio": "16:9",
+    "resolution": "1280x720",
+    "audio": true,
+    "variants": 4,
+    "execution": "plan-only",
+    "provider_terms_approved": false,
+    "paid_generation": false,
+    "paid_generation_approved": false
+  },
+  "delivery": {
+    "kind": "cinematic-master",
+    "loop": false,
+    "fps": 24,
+    "containers": ["mp4", "mov"]
+  },
+  "rights": {
+    "public_release": false,
+    "ai_disclosure_decision": "pending",
+    "notes": "Internal prototype using owned game references."
+  },
+  "qa_checks": ["identity", "continuity", "action", "camera", "audio"]
+}
