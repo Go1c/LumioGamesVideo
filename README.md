@@ -8,11 +8,12 @@
 Flipbook 的专项能力。核心保持 provider-neutral；MiniMax H3 是可选适配器，不是强制
 依赖。
 
-## 八个 Skill
+## 九个 Skill
 
 | Skill | 功能 | 主要产物 |
 |---|---|---|
 | `write-game-video-prompt` | 公共提示词、模式选择、参考映射、权利与生成任务编排 | `game-video-job.json`、prompt package |
+| `use-zealman-autodl-workflows` | 检索、检查、暂存并执行项目内的 Zealman AutoDL/ComfyUI 参考工作流 | workflow copy、source sidecar、参数映射、执行记录 |
 | `generate-game-cinematic` | 剧情过场、任务简报、Boss Reveal、转场 | continuity bible、shot plan、cinematic master |
 | `localize-character-performance` | 角色动作迁移、对白表演和多语言版本 | rights manifest、timing matrix、localized clips |
 | `animate-game-menu` | 主菜单、选人、Player Card 和开场 UI 动态背景 | confirmation frame、motion plate、UI layer contract |
@@ -53,6 +54,7 @@ T2V / I2V / 首尾帧 / Ref2V / V2V 模式选择
 - “用三组镜头距离对比这个灰盒 Boss 战，但明确标成概念而非 Gameplay。”
 - “从真实 Gameplay 生成 16:9 Trailer 和 9:16 社媒版，不得虚构功能。”
 - “只给提示词，生成一个 Q 版剑士挥砍动作并输出 Spine Flipbook。”
+- “用项目内的 Zealman AutoDL 工作流，为这个首尾帧任务选流、检查依赖并暂存一份可修改副本。”
 
 ## 通用任务契约
 
@@ -113,6 +115,7 @@ plugin.json
 .codex-plugin/plugin.json
 skills/
 ├── write-game-video-prompt/
+├── use-zealman-autodl-workflows/
 ├── generate-game-cinematic/
 ├── localize-character-performance/
 ├── animate-game-menu/
@@ -140,7 +143,8 @@ python3 -m pip install -r requirements.txt
 ```
 
 图像、视频、音频生成和语义抠图由宿主 Agent 的可用工具提供。插件不保存 API token，
-也不内置模型权重、视频 provider、Spine Editor 或 Spine Runtime。
+也不内置模型权重、视频 provider、Spine Editor 或 Spine Runtime。Zealman 参考集只保留
+工作流 JSON 与说明文件，不包含更新包、演示视频或用户生成素材。
 
 ## 开发验证
 
@@ -155,4 +159,5 @@ python3 /path/to/plugin-creator/scripts/validate_plugin.py .
 ```
 
 产品边界、工作流契约和验收标准见 [SPEC.md](SPEC.md)。仓库尚未选择开源许可证；确定
-许可证前请勿把本包作为已授权的公开发行物重新分发。
+许可证前请勿把本包作为已授权的公开发行物重新分发。导入的 Zealman vendor 参考资料另有
+禁止二次开发后发布的声明，在权利确认前同样不得公开分发或宣称为 Lumio 原创。

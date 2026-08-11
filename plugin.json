@@ -2,7 +2,7 @@
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "lumio-games-video",
   "version": "0.1.0",
-  "description": "Plan and produce game cinematics, character performances, menu motion, world-loop media, previs, marketing videos, and 2D flipbooks.",
+  "description": "Plan and produce game videos and 2D flipbooks, with an optional AutoDL/ComfyUI workflow adapter.",
   "author": {
     "name": "Lumio Games"
   },
@@ -16,6 +16,8 @@
     "marketing",
     "2d-animation",
     "video-generation",
-    "spine"
+    "spine",
+    "comfyui",
+    "autodl"
   ]
 }

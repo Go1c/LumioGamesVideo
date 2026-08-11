@@ -1,0 +1,4 @@
+interface:
+  display_name: "Use Zealman AutoDL Workflows"
+  short_description: "Select, stage, and run the imported workflow library"
+  default_prompt: "Use $use-zealman-autodl-workflows to select and stage the safest matching workflow for this request."

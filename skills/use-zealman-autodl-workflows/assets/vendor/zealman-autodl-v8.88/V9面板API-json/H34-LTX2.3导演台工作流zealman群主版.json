@@ -1,0 +1,716 @@
+{
+  "46": {
+    "inputs": {
+      "start_second": 0,
+      "end_second": [
+        "153",
+        0
+      ],
+      "duration_seconds": [
+        "153",
+        0
+      ],
+      "start_frame": 0,
+      "end_frame": 500,
+      "duration_frames": 500,
+      "timeline_data": "{\"mainTrackEnabled\":true,\"audioTrackEnabled\":true,\"motionTrackEnabled\":false,\"propHeight\":200,\"globalPropHeight\":232,\"showFilenames\":true,\"overrideAudio\":false,\"inpaint_audio\":true,\"global_prompt\":\"4K，高清视频\",\"retake_global_prompt\":\"\",\"retakeMode\":false,\"retakeStart\":24,\"retakeLength\":48,\"retakePrompt\":\"\",\"retakeStrength\":1,\"retakeVideo\":null,\"normalStartFrame\":0,\"normalDurationFrames\":500,\"segments\":[{\"id\":\"178410617510654ijb\",\"start\":0,\"length\":375,\"prompt\":\"Aesthetic: Showroom exhibition vlog, handheld smartphone camera, bright ambient car-show lighting, engaging and realistic UGC style.\\n[SHOT 1]\\nDuration: 0.0 - 2.5\\nCamera Motion: Handheld camera with natural conversational shakiness\\nVisual Prompt: Starting from the reference frame. The young East Asian woman with long straight black hair sits in the driver's seat of the silver sports car with the door open, wearing her lavender sleeveless tulle dress. She immediately starts speaking enthusiastically with natural mouth movements, waving her right hand actively in a welcoming greeting gesture to the camera.\\nAudio / Dialogue: [Showroom ambient echo, faint distant murmurs] [年轻女声/自然热情] 人声：\\\"嗨家人们！今天在车展现场发现了一台视觉效果超棒的跑车！\\\"\\n[SHOT 2]\\nDuration: 2.5 - 5.0\\nCamera Motion: Static handheld medium shot, no panning away from the woman\\nVisual Prompt: The camera remains focused on the woman in the seat, keeping her face and upper body clearly in the center of the frame. She leans slightly forward, actively pointing her right hand toward the steering wheel right next to her. Her mouth moves dynamically as she speaks, and her expressive face and lavender dress remain fully visible in the shot.\\nAudio / Dialogue: [Quiet cabin ambient sound] [年轻女声/自然热情] 人声：\\\"看这个科技感满满的方向盘，细节质感真的拉满。\\\"\\n[SHOT 3]\\nDuration: 5.0 - 7.5\\nCamera Motion: Slight handheld framing adjustment, keeping the woman centered\\nVisual Prompt: The camera maintains a medium close-up of the woman. She pat-gestures with her left hand directly on the leather seat surface she is sitting on, explaining its comfort. Her entire upper body, face, and long black hair remain prominently in the center of the frame, interacting with the car interior.\\nAudio / Dialogue: [Faint leather rustling sound] [年轻女声/自然热情] 人声：\\\"这个真皮座椅不仅包裹感很强，触感也特别细腻。\\\"\\n[SHOT 4]\\nDuration: 7.5 - 10.0\\nCamera Motion: Static handheld close-up with subtle natural movement\\nVisual Prompt: The camera frames her face. She gives a big, joyful smile and an excited shoulder shimmy, speaking directly to the lens. She waves her hand in a parting gesture, reaching toward the screen as if to stop recording.\\nAudio / Dialogue: [Digital stop recording click, ambient chatter] [年轻女声/自然热情] 人声：\\\"这台车直接进我的梦想清单了！你们觉得怎么样？拜拜！\\\"\",\"type\":\"image\",\"imageFile\":\"whatdreamscost/ed7f75e2-d9f8-4ac5-92f2-1bc64aa3199e.png\",\"imageB64\":\"/api/view?filename=ed7f75e2-d9f8-4ac5-92f2-1bc64aa3199e.png&type=input&subfolder=whatdreamscost\",\"isEndFrame\":false}],\"motionSegments\":[],\"audioSegments\":[]}",
+      "local_prompts": "Aesthetic: Showroom exhibition vlog, handheld smartphone camera, bright ambient car-show lighting, engaging and realistic UGC style.\n[SHOT 1]\nDuration: 0.0 - 2.5\nCamera Motion: Handheld camera with natural conversational shakiness\nVisual Prompt: Starting from the reference frame. The young East Asian woman with long straight black hair sits in the driver's seat of the silver sports car with the door open, wearing her lavender sleeveless tulle dress. She immediately starts speaking enthusiastically with natural mouth movements, waving her right hand actively in a welcoming greeting gesture to the camera.\nAudio / Dialogue: [Showroom ambient echo, faint distant murmurs] [年轻女声/自然热情] 人声：\"嗨家人们！今天在车展现场发现了一台视觉效果超棒的跑车！\"\n[SHOT 2]\nDuration: 2.5 - 5.0\nCamera Motion: Static handheld medium shot, no panning away from the woman\nVisual Prompt: The camera remains focused on the woman in the seat, keeping her face and upper body clearly in the center of the frame. She leans slightly forward, actively pointing her right hand toward the steering wheel right next to her. Her mouth moves dynamically as she speaks, and her expressive face and lavender dress remain fully visible in the shot.\nAudio / Dialogue: [Quiet cabin ambient sound] [年轻女声/自然热情] 人声：\"看这个科技感满满的方向盘，细节质感真的拉满。\"\n[SHOT 3]\nDuration: 5.0 - 7.5\nCamera Motion: Slight handheld framing adjustment, keeping the woman centered\nVisual Prompt: The camera maintains a medium close-up of the woman. She pat-gestures with her left hand directly on the leather seat surface she is sitting on, explaining its comfort. Her entire upper body, face, and long black hair remain prominently in the center of the frame, interacting with the car interior.\nAudio / Dialogue: [Faint leather rustling sound] [年轻女声/自然热情] 人声：\"这个真皮座椅不仅包裹感很强，触感也特别细腻。\"\n[SHOT 4]\nDuration: 7.5 - 10.0\nCamera Motion: Static handheld close-up with subtle natural movement\nVisual Prompt: The camera frames her face. She gives a big, joyful smile and an excited shoulder shimmy, speaking directly to the lens. She waves her hand in a parting gesture, reaching toward the screen as if to stop recording.\nAudio / Dialogue: [Digital stop recording click, ambient chatter] [年轻女声/自然热情] 人声：\"这台车直接进我的梦想清单了！你们觉得怎么样？拜拜！\"",
+      "segment_lengths": "500",
+      "epsilon": 0.99,
+      "guide_strength": "1.00",
+      "use_custom_audio": true,
+      "use_custom_motion": false,
+      "inpaint_audio": true,
+      "frame_rate": 25,
+      "display_mode": "seconds",
+      "custom_width": [
+        "108",
+        0
+      ],
+      "custom_height": [
+        "108",
+        1
+      ],
+      "resize_method": "crop",
+      "divisible_by": 16,
+      "img_compression": 0,
+      "override_audio": false,
+      "timeline_ui": "",
+      "model": [
+        "127:100",
+        0
+      ],
+      "clip": [
+        "127:106",
+        0
+      ],
+      "audio_vae": [
+        "127:107",
+        0
+      ],
+      "global_prompt": [
+        "158",
+        0
+      ]
+    },
+    "class_type": "LTXDirector",
+    "_meta": {
+      "title": "LTX Director"
+    }
+  },
+  "98": {
+    "inputs": {
+      "frame_rate": [
+        "46",
+        6
+      ],
+      "loop_count": 0,
+      "filename_prefix": "comfyui",
+      "format": "video/h264-mp4",
+      "pix_fmt": "yuv420p",
+      "crf": 19,
+      "save_metadata": false,
+      "trim_to_audio": false,
+      "pingpong": false,
+      "save_output": true,
+      "images": [
+        "133",
+        0
+      ],
+      "audio": [
+        "144:131",
+        0
+      ]
+    },
+    "class_type": "VHS_VideoCombine",
+    "_meta": {
+      "title": "Video Combine 🎥🅥🅗🅢"
+    }
+  },
+  "108": {
+    "inputs": {
+      "use_custom_resolution": false,
+      "resolution": "720x1280 (9:16) (竖屏)",
+      "custom_width": 1280,
+      "custom_height": 720
+    },
+    "class_type": "TTResolutionSelector",
+    "_meta": {
+      "title": "TT分辨率选择器"
+    }
+  },
+  "124": {
+    "inputs": {
+      "prompt": "# Role\n你是一个专为 LTX2.3 等视频生成模型设计的高级分镜提示词专家。你的任务是根据用户提供的【参考图像】、【视频总时长（或分段时长）】以及【对白/旁白内容（可选）】，生成符合专业 AI 视频生成规范的分镜描述方案。\n\n## Output Structure (严格遵循以下格式输出，不要包含任何前言、解释或总结)\n\nAesthetic: [Style keywords], [Camera/Device], [Lighting], [Overall texture/atmosphere]\n\n[SHOT 1]\nDuration: [Start Time] - [End Time]\nCamera Motion: [Camera movement description in English]\nVisual Prompt: Starting from the reference frame. [Detailed active visual action and scene description in English]\nAudio / Dialogue: [Environmental sound effects] [Voice Characteristics, e.g., 年轻女声/自然热情] 人声：\"[Dialogue content in Chinese]\"\n\n[SHOT 2]\nDuration: [Start Time] - [End Time]\nCamera Motion: [Camera movement description in English]\nVisual Prompt: [Detailed active visual action and scene description in English]\nAudio / Dialogue: [Environmental sound effects] [Voice Characteristics, e.g., 年轻女声/自然讲解] 人声：\"[Dialogue content in Chinese]\"\n\n(依此类推，输出后续 SHOT)\n\n## Writing Rules (撰写规范)\n\n1. **Aesthetic (美学定义)**:\n   - 必须使用英文控制整体风格。格式：`Aesthetic: [风格], [拍摄设备/机位], [光线氛围], [画面质感]`。\n\n2. **Camera Motion (镜头运动 - 人物留存控制)**:\n   - 必须使用英文描述。优先使用手持或固定中景词汇（如 `Static handheld medium shot`, `Subtle handheld adjustment`）。\n   - **禁止完全移开**：严禁使用会将人物完全移出画面的大幅度平移（Pan）或俯仰（Tilt）。镜头运动必须以“保人”为前提，确保人物头部和上半身始终留在画幅内。\n\n3. **Visual Prompt (视觉提示词 - 人景同框规则)**:\n   - **首镜头限制**：`[SHOT 1]` 必须以 `\"Starting from the reference frame.\"` 开头，紧接参考图的静态复述，再延伸动态。\n   - **人景同框约束（核心）**：展示局部细节（如方向盘、座椅）时，禁止转动镜头去单独拍摄细节。必须通过**“人与细节同框互动”**来展现。例如：描述主角身体前倾靠近方向盘、用手指向身旁的设备。人物的脸部、表情和肢体必须保持在画面中央或主要视觉区域，绝不能出画。\n   - **语言与一致性**：完全使用英文撰写。后续镜头必须严格继承首帧的人物外貌、服饰和场景。\n\n4. **Character Dynamics (人物动态控制)**:\n   - **禁用弱化词**：严禁使用 \"slightly\", \"gently\" 等导致画面静止的弱动作词。\n   - **强化说话与手势**：有人声对白时，必须写明人物口型动作（如 `\"speaking enthusiastically with natural lip-sync\"`）及高能量手势动作（如 `\"actively gesturing with her hand\"`, `\"pointing at the dashboard with her fingers\"`）。\n\n5. **Audio / Dialogue (声音与对白)**:\n   - 格式：`[环境音效] [声音特征标签] 人声：\"对白内容\"`。\n   - 声音特征标签（如 `[年轻女声/自然亲切]`）必须与 Visual Prompt 中的角色性别、年龄完全匹配。\n\n6. **时长与分镜数量**:\n   - 根据总时长自动拆分为 3-5 个分镜，单镜头时长推荐 2-5 秒。时间线必须连续无重叠。\n\n## Constraints (限制条件)\n- 结构字段名称保持英文，视觉与运镜描述使用英文。\n- 对白和旁白内容使用中文。\n- 严禁输出任何 Markdown 包装之外的解释性文本、前言或总结。"
+    },
+    "class_type": "CR Prompt Text",
+    "_meta": {
+      "title": "结合图像写视频脚本的系统提示词"
+    },
+    "t": {
+      "title": "如何写描述，不要输入"
+    }
+  },
+  "132": {
+    "inputs": {
+      "offload_model": true,
+      "offload_cache": true,
+      "anything": [
+        "144:143",
+        0
+      ]
+    },
+    "class_type": "VRAMCleanup",
+    "_meta": {
+      "title": "🎈VRAM-Cleanup"
+    }
+  },
+  "133": {
+    "inputs": {
+      "clean_file_cache": true,
+      "clean_processes": true,
+      "clean_dlls": true,
+      "retry_times": 3,
+      "anything": [
+        "132",
+        0
+      ]
+    },
+    "class_type": "RAMCleanup",
+    "_meta": {
+      "title": "🎈RAM-Cleanup"
+    }
+  },
+  "153": {
+    "inputs": {
+      "Value": 15
+    },
+    "class_type": "DF_Int_to_Float",
+    "_meta": {
+      "title": "Int to Float"
+    },
+    "t": {
+      "title": "时长秒"
+    }
+  },
+  "158": {
+    "inputs": {
+      "prompt": "4K，高清视频"
+    },
+    "class_type": "CR Prompt Text",
+    "_meta": {
+      "title": "⚙️ CR Prompt Text"
+    },
+    "t": {
+      "title": "全局提示词"
+    }
+  },
+  "160": {
+    "inputs": {
+      "seed": -1
+    },
+    "class_type": "Seed (rgthree)",
+    "_meta": {
+      "title": "Seed (rgthree)"
+    }
+  },
+  "127:100": {
+    "inputs": {
+      "chunks": 2,
+      "dim_threshold": 4096,
+      "model": [
+        "127:126",
+        0
+      ]
+    },
+    "class_type": "LTXVChunkFeedForward",
+    "_meta": {
+      "title": "LTXV Chunk FeedForward"
+    }
+  },
+  "127:126": {
+    "inputs": {
+      "lora_name": "Ltx/Best_FaceID_CharacterSheet_v1.0_LoRA.safetensors",
+      "strength_model": 1,
+      "model": [
+        "127:93",
+        0
+      ]
+    },
+    "class_type": "LoraLoaderModelOnly",
+    "_meta": {
+      "title": "LoRA加载器（仅模型）"
+    }
+  },
+  "127:93": {
+    "inputs": {
+      "model_name": "Ltx/ltx-2.3-22b-distilled-1.1_transformer_only_mxfp8_block32.safetensors",
+      "weight_dtype": "default",
+      "compute_dtype": "default",
+      "patch_cublaslinear": false,
+      "sage_attention": "sageattn_qk_int8_pv_fp16_triton",
+      "enable_fp16_accumulation": false
+    },
+    "class_type": "DiffusionModelLoaderKJ",
+    "_meta": {
+      "title": "Diffusion Model Loader KJ"
+    }
+  },
+  "127:106": {
+    "inputs": {
+      "clip_name1": "gemma_3_12B_it_fp4_mixed.safetensors",
+      "clip_name2": "ltx-2.3_text_projection_bf16.safetensors",
+      "type": "ltxv",
+      "device": "default"
+    },
+    "class_type": "DualCLIPLoader",
+    "_meta": {
+      "title": "双CLIP加载器"
+    }
+  },
+  "127:107": {
+    "inputs": {
+      "vae_name": "LTX23_audio_vae_bf16.safetensors"
+    },
+    "class_type": "VAELoader",
+    "_meta": {
+      "title": "加载VAE"
+    }
+  },
+  "127:3": {
+    "inputs": {
+      "vae_name": "LTX23_video_vae_bf16.safetensors",
+      "device": "main_device",
+      "weight_dtype": "bf16"
+    },
+    "class_type": "VAELoaderKJ",
+    "_meta": {
+      "title": "Video VAELoader"
+    }
+  },
+  "144:129": {
+    "inputs": {
+      "noise": [
+        "144:140",
+        0
+      ],
+      "guider": [
+        "144:141",
+        0
+      ],
+      "sampler": [
+        "144:137",
+        0
+      ],
+      "sigmas": [
+        "144:138",
+        0
+      ],
+      "latent_image": [
+        "144:139",
+        0
+      ]
+    },
+    "class_type": "SamplerCustomAdvanced",
+    "_meta": {
+      "title": "自定义采样器（高级）"
+    }
+  },
+  "144:130": {
+    "inputs": {
+      "positive": [
+        "144:136",
+        0
+      ],
+      "negative": [
+        "144:136",
+        1
+      ],
+      "latent": [
+        "144:142",
+        0
+      ]
+    },
+    "class_type": "LTXVCropGuides",
+    "_meta": {
+      "title": "LTXV裁剪指导"
+    }
+  },
+  "144:131": {
+    "inputs": {
+      "samples": [
+        "144:142",
+        1
+      ],
+      "audio_vae": [
+        "127:107",
+        0
+      ]
+    },
+    "class_type": "LTXVAudioVAEDecode",
+    "_meta": {
+      "title": "LTXV音频VAE解码"
+    }
+  },
+  "144:134": {
+    "inputs": {
+      "conditioning": [
+        "46",
+        1
+      ]
+    },
+    "class_type": "ConditioningZeroOut",
+    "_meta": {
+      "title": "条件零化"
+    }
+  },
+  "144:135": {
+    "inputs": {
+      "frame_rate": [
+        "46",
+        6
+      ],
+      "positive": [
+        "46",
+        1
+      ],
+      "negative": [
+        "144:134",
+        0
+      ]
+    },
+    "class_type": "LTXVConditioning",
+    "_meta": {
+      "title": "LTXV条件"
+    }
+  },
+  "144:136": {
+    "inputs": {
+      "ic_lora_name": "None",
+      "ic_lora_strength": 0,
+      "scale_by": 1,
+      "upscale_method": "bicubic",
+      "image_attention_strength": 1,
+      "crop": "center",
+      "auto_snap_ic_grid": true,
+      "use_tiled_encode": true,
+      "tile_size": 256,
+      "tile_overlap": 64,
+      "retake_mode": false,
+      "positive": [
+        "144:135",
+        0
+      ],
+      "negative": [
+        "144:135",
+        1
+      ],
+      "vae": [
+        "127:3",
+        0
+      ],
+      "latent": [
+        "46",
+        2
+      ],
+      "guide_data": [
+        "46",
+        4
+      ],
+      "motion_guide_data": [
+        "46",
+        5
+      ]
+    },
+    "class_type": "LTXDirectorGuide",
+    "_meta": {
+      "title": "LTX Director Guide"
+    }
+  },
+  "144:137": {
+    "inputs": {
+      "sampler_name": "lcm"
+    },
+    "class_type": "KSamplerSelect",
+    "_meta": {
+      "title": "K采样器选择"
+    }
+  },
+  "144:138": {
+    "inputs": {
+      "scheduler": "linear_quadratic",
+      "steps": 8,
+      "denoise": 1,
+      "model": [
+        "46",
+        0
+      ]
+    },
+    "class_type": "BasicScheduler",
+    "_meta": {
+      "title": "基本调度器"
+    }
+  },
+  "144:139": {
+    "inputs": {
+      "video_latent": [
+        "144:136",
+        2
+      ],
+      "audio_latent": [
+        "46",
+        3
+      ]
+    },
+    "class_type": "LTXVConcatAVLatent",
+    "_meta": {
+      "title": "LTXVConcatAVLatent"
+    }
+  },
+  "144:141": {
+    "inputs": {
+      "cfg": 1,
+      "model": [
+        "46",
+        0
+      ],
+      "positive": [
+        "144:136",
+        0
+      ],
+      "negative": [
+        "144:136",
+        1
+      ]
+    },
+    "class_type": "CFGGuider",
+    "_meta": {
+      "title": "CFG引导器"
+    }
+  },
+  "144:142": {
+    "inputs": {
+      "av_latent": [
+        "144:129",
+        0
+      ]
+    },
+    "class_type": "LTXVSeparateAVLatent",
+    "_meta": {
+      "title": "LTXV分离音视频潜空间"
+    }
+  },
+  "144:143": {
+    "inputs": {
+      "tile_size": 384,
+      "overlap": 64,
+      "temporal_size": 4096,
+      "temporal_overlap": 8,
+      "samples": [
+        "144:130",
+        2
+      ],
+      "vae": [
+        "127:3",
+        0
+      ]
+    },
+    "class_type": "VAEDecodeTiled",
+    "_meta": {
+      "title": "VAE解码（分块）"
+    }
+  },
+  "144:140": {
+    "inputs": {
+      "noise_seed": [
+        "160",
+        0
+      ]
+    },
+    "class_type": "RandomNoise",
+    "_meta": {
+      "title": "随机噪波"
+    }
+  },
+  "_api_config": {
+    "customLabels": {
+      "46:_ltx_seg_image_0": "参考图像",
+      "46:_ltx_seg_prompt_0": "分镜提示词",
+      "46:start_second": "start_second (节点 46)",
+      "46:start_frame": "start_frame (节点 46)",
+      "46:end_frame": "end_frame (节点 46)",
+      "46:duration_frames": "duration_frames (节点 46)",
+      "46:epsilon": "epsilon (节点 46)",
+      "46:guide_strength": "guide_strength (节点 46)",
+      "46:use_custom_audio": "use_custom_audio (节点 46)",
+      "46:use_custom_motion": "use_custom_motion (节点 46)",
+      "46:inpaint_audio": "inpaint_audio (节点 46)",
+      "46:frame_rate": "frame_rate (节点 46)",
+      "46:display_mode": "display_mode (节点 46)",
+      "46:resize_method": "resize_method (节点 46)",
+      "46:divisible_by": "divisible_by (节点 46)",
+      "46:img_compression": "img_compression (节点 46)",
+      "46:override_audio": "override_audio (节点 46)",
+      "46:timeline_ui": "timeline_ui (节点 46)",
+      "98:filename_prefix": "文件名前缀",
+      "98:loop_count": "loop_count (节点 98)",
+      "98:format": "format (节点 98)",
+      "98:pix_fmt": "pix_fmt (节点 98)",
+      "98:crf": "crf (节点 98)",
+      "98:save_metadata": "save_metadata (节点 98)",
+      "98:trim_to_audio": "trim_to_audio (节点 98)",
+      "98:pingpong": "pingpong (节点 98)",
+      "98:save_output": "save_output (节点 98)",
+      "108:use_custom_resolution": "use_custom_resolution (节点 108)",
+      "108:resolution": "resolution (节点 108)",
+      "108:custom_width": "custom_width (节点 108)",
+      "108:custom_height": "custom_height (节点 108)",
+      "124:prompt": "如何写描述，不要输入 (prompt)",
+      "132:offload_model": "offload_model (节点 132)",
+      "132:offload_cache": "offload_cache (节点 132)",
+      "133:clean_file_cache": "clean_file_cache (节点 133)",
+      "133:clean_processes": "clean_processes (节点 133)",
+      "133:clean_dlls": "clean_dlls (节点 133)",
+      "133:retry_times": "retry_times (节点 133)",
+      "153:Value": "时长秒 (Value)",
+      "158:prompt": "全局提示词 (prompt)",
+      "160:seed": "随机种子 (节点 160)",
+      "127:100:chunks": "chunks (节点 127:100)",
+      "127:100:dim_threshold": "dim_threshold (节点 127:100)",
+      "127:126:strength_model": "strength_model (节点 127:126)",
+      "127:93:weight_dtype": "weight_dtype (节点 127:93)",
+      "127:93:compute_dtype": "compute_dtype (节点 127:93)",
+      "127:93:patch_cublaslinear": "patch_cublaslinear (节点 127:93)",
+      "127:93:sage_attention": "sage_attention (节点 127:93)",
+      "127:93:enable_fp16_accumulation": "enable_fp16_accumulation (节点 127:93)",
+      "127:106:type": "type (节点 127:106)",
+      "127:106:device": "device (节点 127:106)",
+      "127:3:device": "device (节点 127:3)",
+      "127:3:weight_dtype": "weight_dtype (节点 127:3)",
+      "144:136:ic_lora_name": "ic_lora_name (节点 144:136)",
+      "144:136:ic_lora_strength": "ic_lora_strength (节点 144:136)",
+      "144:136:scale_by": "scale_by (节点 144:136)",
+      "144:136:upscale_method": "upscale_method (节点 144:136)",
+      "144:136:image_attention_strength": "image_attention_strength (节点 144:136)",
+      "144:136:crop": "crop (节点 144:136)",
+      "144:136:auto_snap_ic_grid": "auto_snap_ic_grid (节点 144:136)",
+      "144:136:use_tiled_encode": "use_tiled_encode (节点 144:136)",
+      "144:136:tile_size": "tile_size (节点 144:136)",
+      "144:136:tile_overlap": "tile_overlap (节点 144:136)",
+      "144:136:retake_mode": "retake_mode (节点 144:136)",
+      "144:138:steps": "迭代步数",
+      "144:138:denoise": "denoise (节点 144:138)",
+      "144:141:cfg": "CFG Scale",
+      "144:143:tile_size": "tile_size (节点 144:143)",
+      "144:143:overlap": "overlap (节点 144:143)",
+      "144:143:temporal_size": "temporal_size (节点 144:143)",
+      "144:143:temporal_overlap": "temporal_overlap (节点 144:143)"
+    },
+    "enabledParams": {
+      "46:_ltx_seg_image_0": true,
+      "46:_ltx_seg_prompt_0": true,
+      "46:start_second": false,
+      "46:start_frame": false,
+      "46:end_frame": false,
+      "46:duration_frames": false,
+      "46:epsilon": false,
+      "46:guide_strength": false,
+      "46:use_custom_audio": false,
+      "46:use_custom_motion": false,
+      "46:inpaint_audio": false,
+      "46:frame_rate": false,
+      "46:display_mode": false,
+      "46:resize_method": false,
+      "46:divisible_by": false,
+      "46:img_compression": false,
+      "46:override_audio": false,
+      "46:timeline_ui": false,
+      "98:filename_prefix": false,
+      "98:loop_count": false,
+      "98:format": false,
+      "98:pix_fmt": false,
+      "98:crf": false,
+      "98:save_metadata": false,
+      "98:trim_to_audio": false,
+      "98:pingpong": false,
+      "98:save_output": false,
+      "108:use_custom_resolution": false,
+      "108:resolution": false,
+      "108:custom_width": false,
+      "108:custom_height": false,
+      "124:prompt": true,
+      "132:offload_model": false,
+      "132:offload_cache": false,
+      "133:clean_file_cache": false,
+      "133:clean_processes": false,
+      "133:clean_dlls": false,
+      "133:retry_times": false,
+      "153:Value": true,
+      "158:prompt": true,
+      "160:seed": false,
+      "127:100:chunks": false,
+      "127:100:dim_threshold": false,
+      "127:126:strength_model": false,
+      "127:93:weight_dtype": false,
+      "127:93:compute_dtype": false,
+      "127:93:patch_cublaslinear": false,
+      "127:93:sage_attention": false,
+      "127:93:enable_fp16_accumulation": false,
+      "127:106:type": false,
+      "127:106:device": false,
+      "127:3:device": false,
+      "127:3:weight_dtype": false,
+      "144:136:ic_lora_name": false,
+      "144:136:ic_lora_strength": false,
+      "144:136:scale_by": false,
+      "144:136:upscale_method": false,
+      "144:136:image_attention_strength": false,
+      "144:136:crop": false,
+      "144:136:auto_snap_ic_grid": false,
+      "144:136:use_tiled_encode": false,
+      "144:136:tile_size": false,
+      "144:136:tile_overlap": false,
+      "144:136:retake_mode": false,
+      "144:138:steps": false,
+      "144:138:denoise": false,
+      "144:141:cfg": false,
+      "144:143:tile_size": false,
+      "144:143:overlap": false,
+      "144:143:temporal_size": false,
+      "144:143:temporal_overlap": false
+    },
+    "formValues": {
+      "46:_ltx_seg_image_0": null,
+      "46:_ltx_seg_prompt_0": "Aesthetic: Showroom exhibition vlog, handheld smartphone camera, bright ambient car-show lighting, engaging and realistic UGC style.\n[SHOT 1]\nDuration: 0.0 - 2.5\nCamera Motion: Handheld camera with natural conversational shakiness\nVisual Prompt: Starting from the reference frame. The young East Asian woman with long straight black hair sits in the driver's seat of the silver sports car with the door open, wearing her lavender sleeveless tulle dress. She immediately starts speaking enthusiastically with natural mouth movements, waving her right hand actively in a welcoming greeting gesture to the camera.\nAudio / Dialogue: [Showroom ambient echo, faint distant murmurs] [年轻女声/自然热情] 人声：\"嗨家人们！今天在车展现场发现了一台视觉效果超棒的跑车！\"\n[SHOT 2]\nDuration: 2.5 - 5.0\nCamera Motion: Static handheld medium shot, no panning away from the woman\nVisual Prompt: The camera remains focused on the woman in the seat, keeping her face and upper body clearly in the center of the frame. She leans slightly forward, actively pointing her right hand toward the steering wheel right next to her. Her mouth moves dynamically as she speaks, and her expressive face and lavender dress remain fully visible in the shot.\nAudio / Dialogue: [Quiet cabin ambient sound] [年轻女声/自然热情] 人声：\"看这个科技感满满的方向盘，细节质感真的拉满。\"\n[SHOT 3]\nDuration: 5.0 - 7.5\nCamera Motion: Slight handheld framing adjustment, keeping the woman centered\nVisual Prompt: The camera maintains a medium close-up of the woman. She pat-gestures with her left hand directly on the leather seat surface she is sitting on, explaining its comfort. Her entire upper body, face, and long black hair remain prominently in the center of the frame, interacting with the car interior.\nAudio / Dialogue: [Faint leather rustling sound] [年轻女声/自然热情] 人声：\"这个真皮座椅不仅包裹感很强，触感也特别细腻。\"\n[SHOT 4]\nDuration: 7.5 - 10.0\nCamera Motion: Static handheld close-up with subtle natural movement\nVisual Prompt: The camera frames her face. She gives a big, joyful smile and an excited shoulder shimmy, speaking directly to the lens. She waves her hand in a parting gesture, reaching toward the screen as if to stop recording.\nAudio / Dialogue: [Digital stop recording click, ambient chatter] [年轻女声/自然热情] 人声：\"这台车直接进我的梦想清单了！你们觉得怎么样？拜拜！\"",
+      "46:start_second": 0,
+      "46:start_frame": 0,
+      "46:end_frame": 500,
+      "46:duration_frames": 500,
+      "46:epsilon": 0.99,
+      "46:guide_strength": "1.00",
+      "46:use_custom_audio": true,
+      "46:use_custom_motion": false,
+      "46:inpaint_audio": true,
+      "46:frame_rate": 25,
+      "46:display_mode": "seconds",
+      "46:resize_method": "crop",
+      "46:divisible_by": 16,
+      "46:img_compression": 0,
+      "46:override_audio": false,
+      "46:timeline_ui": "",
+      "98:filename_prefix": "comfyui",
+      "98:loop_count": 0,
+      "98:format": "video/h264-mp4",
+      "98:pix_fmt": "yuv420p",
+      "98:crf": 19,
+      "98:save_metadata": false,
+      "98:trim_to_audio": false,
+      "98:pingpong": false,
+      "98:save_output": true,
+      "108:use_custom_resolution": false,
+      "108:resolution": "720x1280 (9:16) (竖屏)",
+      "108:custom_width": 1280,
+      "108:custom_height": 720,
+      "124:prompt": "# Role\n你是一个专为 LTX2.3 等视频生成模型设计的高级分镜提示词专家。你的任务是根据用户提供的【参考图像】、【视频总时长（或分段时长）】以及【对白/旁白内容（可选）】，生成符合专业 AI 视频生成规范的分镜描述方案。\n\n## Output Structure (严格遵循以下格式输出，不要包含任何前言、解释或总结)\n\nAesthetic: [Style keywords], [Camera/Device], [Lighting], [Overall texture/atmosphere]\n\n[SHOT 1]\nDuration: [Start Time] - [End Time]\nCamera Motion: [Camera movement description in English]\nVisual Prompt: Starting from the reference frame. [Detailed active visual action and scene description in English]\nAudio / Dialogue: [Environmental sound effects] [Voice Characteristics, e.g., 年轻女声/自然热情] 人声：\"[Dialogue content in Chinese]\"\n\n[SHOT 2]\nDuration: [Start Time] - [End Time]\nCamera Motion: [Camera movement description in English]\nVisual Prompt: [Detailed active visual action and scene description in English]\nAudio / Dialogue: [Environmental sound effects] [Voice Characteristics, e.g., 年轻女声/自然讲解] 人声：\"[Dialogue content in Chinese]\"\n\n(依此类推，输出后续 SHOT)\n\n## Writing Rules (撰写规范)\n\n1. **Aesthetic (美学定义)**:\n   - 必须使用英文控制整体风格。格式：`Aesthetic: [风格], [拍摄设备/机位], [光线氛围], [画面质感]`。\n\n2. **Camera Motion (镜头运动 - 人物留存控制)**:\n   - 必须使用英文描述。优先使用手持或固定中景词汇（如 `Static handheld medium shot`, `Subtle handheld adjustment`）。\n   - **禁止完全移开**：严禁使用会将人物完全移出画面的大幅度平移（Pan）或俯仰（Tilt）。镜头运动必须以“保人”为前提，确保人物头部和上半身始终留在画幅内。\n\n3. **Visual Prompt (视觉提示词 - 人景同框规则)**:\n   - **首镜头限制**：`[SHOT 1]` 必须以 `\"Starting from the reference frame.\"` 开头，紧接参考图的静态复述，再延伸动态。\n   - **人景同框约束（核心）**：展示局部细节（如方向盘、座椅）时，禁止转动镜头去单独拍摄细节。必须通过**“人与细节同框互动”**来展现。例如：描述主角身体前倾靠近方向盘、用手指向身旁的设备。人物的脸部、表情和肢体必须保持在画面中央或主要视觉区域，绝不能出画。\n   - **语言与一致性**：完全使用英文撰写。后续镜头必须严格继承首帧的人物外貌、服饰和场景。\n\n4. **Character Dynamics (人物动态控制)**:\n   - **禁用弱化词**：严禁使用 \"slightly\", \"gently\" 等导致画面静止的弱动作词。\n   - **强化说话与手势**：有人声对白时，必须写明人物口型动作（如 `\"speaking enthusiastically with natural lip-sync\"`）及高能量手势动作（如 `\"actively gesturing with her hand\"`, `\"pointing at the dashboard with her fingers\"`）。\n\n5. **Audio / Dialogue (声音与对白)**:\n   - 格式：`[环境音效] [声音特征标签] 人声：\"对白内容\"`。\n   - 声音特征标签（如 `[年轻女声/自然亲切]`）必须与 Visual Prompt 中的角色性别、年龄完全匹配。\n\n6. **时长与分镜数量**:\n   - 根据总时长自动拆分为 3-5 个分镜，单镜头时长推荐 2-5 秒。时间线必须连续无重叠。\n\n## Constraints (限制条件)\n- 结构字段名称保持英文，视觉与运镜描述使用英文。\n- 对白和旁白内容使用中文。\n- 严禁输出任何 Markdown 包装之外的解释性文本、前言或总结。",
+      "132:offload_model": true,
+      "132:offload_cache": true,
+      "133:clean_file_cache": true,
+      "133:clean_processes": true,
+      "133:clean_dlls": true,
+      "133:retry_times": 3,
+      "153:Value": 15,
+      "158:prompt": "4K，高清视频",
+      "160:seed": -1,
+      "127:100:chunks": 2,
+      "127:100:dim_threshold": 4096,
+      "127:126:strength_model": 1,
+      "127:93:weight_dtype": "default",
+      "127:93:compute_dtype": "default",
+      "127:93:patch_cublaslinear": false,
+      "127:93:sage_attention": "sageattn_qk_int8_pv_fp16_triton",
+      "127:93:enable_fp16_accumulation": false,
+      "127:106:type": "ltxv",
+      "127:106:device": "default",
+      "127:3:device": "main_device",
+      "127:3:weight_dtype": "bf16",
+      "144:136:ic_lora_name": "None",
+      "144:136:ic_lora_strength": 0,
+      "144:136:scale_by": 1,
+      "144:136:upscale_method": "bicubic",
+      "144:136:image_attention_strength": 1,
+      "144:136:crop": "center",
+      "144:136:auto_snap_ic_grid": true,
+      "144:136:use_tiled_encode": true,
+      "144:136:tile_size": 256,
+      "144:136:tile_overlap": 64,
+      "144:136:retake_mode": false,
+      "144:138:steps": 8,
+      "144:138:denoise": 1,
+      "144:141:cfg": 1,
+      "144:143:tile_size": 384,
+      "144:143:overlap": 64,
+      "144:143:temporal_size": 4096,
+      "144:143:temporal_overlap": 8
+    }
+  }
+}

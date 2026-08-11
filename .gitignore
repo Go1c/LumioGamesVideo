@@ -3,3 +3,4 @@ __pycache__/
 .DS_Store
 node_modules/
 2d-animation-output/
+game-video-output/

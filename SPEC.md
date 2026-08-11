@@ -33,6 +33,10 @@ v0.1 MUST 覆盖调研中的六类工作流：
 MiniMax H3 MAY 是首个参考适配器，但插件核心 MUST provider-neutral。宿主没有媒体
 生成能力时 MUST 输出 plan-only package，不得宣称已经生成视频。
 
+`use-zealman-autodl-workflows` MAY 把项目内导入的 Zealman AutoDL/ComfyUI 工作流作为
+具体执行适配器，但它 MUST 保持 vendor 参考只读，不得把该适配器变成公共 job 契约的
+强制依赖。
+
 ## 2. 核心边界
 
 插件生成的是离线或准离线视频和帧资产。它 MUST NOT：
@@ -50,6 +54,7 @@ MiniMax H3 MAY 是首个参考适配器，但插件核心 MUST provider-neutral�
 ```text
 lumio-games-video
 ├── write-game-video-prompt              # 公共编排层
+├── use-zealman-autodl-workflows         # 可选 Zealman/AutoDL 执行适配器
 ├── generate-game-cinematic              # 调研方向 1
 ├── localize-character-performance       # 调研方向 2
 ├── animate-game-menu                    # 调研方向 3
@@ -64,6 +69,7 @@ lumio-games-video
 | Skill | 触发输入 | 强制产物 | 硬边界 |
 |---|---|---|---|
 | `write-game-video-prompt` | 任意游戏视频想法和参考素材 | 通用 job、参考角色映射、最终提示词、生成/权利/QA 计划 | 不直接假装完成媒体生成 |
+| `use-zealman-autodl-workflows` | Zealman/AutoDL、镜像工作流、前缀或已完成的游戏视频 job | 选流理由、依赖与参数映射、staged copy、source sidecar、执行状态 | vendor 只读；UI/API JSON 不混用；无授权不上传、付费或发布 |
 | `generate-game-cinematic` | story beat、角色/场景、镜头或 Gameplay 过渡 | continuity bible、shot plan、逐镜头 job、master | flattened video 不是引擎 timeline |
 | `localize-character-performance` | 角色、动作、脚本、语言或声音参考 | rights manifest、performance lock、timing matrix、版本评分 | 无肖像/声音授权不得渲染 |
 | `animate-game-menu` | UI 截图/Figma、角色卡、Logo、菜单布局 | confirmation frame、motion plate、overlay/safe-area contract | 视频不是交互 UI |
@@ -86,6 +92,7 @@ Skill 正文 MUST 使用命令式流程，并按需链接一层深度的 referen
 | `minimalist-product-ad-generator` | marketing/loop references | 作为产品/皮肤/世界内广告方法，不设重叠顶层触发 |
 | `music-video-subtitle-generator` | marketing 工作流 | 作为节奏、字幕和角色曲模板，不设重叠顶层触发 |
 | paper/collage/handdrawn Skills | 后续 style presets | v0.1 不作为核心基础设施；可在 cinematic/marketing 内选用 |
+| Zealman AutoDL v8.88/V9 本地快照 | `use-zealman-autodl-workflows` | 作为只读 vendor 选流与执行适配器；不宣称所有权或发布权 |
 
 这种映射遵循调研提出的三层策略：直接集成公共提示词逻辑、重写高价值游戏生产 SOP、
 把低优先级视觉风格保留为模板，而不是把九个官方 Skill 原样复制并继续依赖 Hub Canvas。
@@ -297,7 +304,7 @@ v0.1.0 发布前必须：
 
 1. 根 `plugin.json` 通过 Agent Plugins 1.0.0 官方 Schema。
 2. `.codex-plugin/plugin.json` 通过 Codex 插件校验。
-3. 八个 Skill 分别通过 Agent Skill 校验且没有 TODO。
+3. 九个 Skill 分别通过 Agent Skill 校验且没有 TODO。
 4. 通用 job example 同时通过 JSON Schema 和 bundled validator。
 5. 通用 validator 覆盖错误 mode/input、远程上传、付费、rights、delivery 和 workflow QA。
 6. loop analyzer 通过合成视频测试，并明确其数值不是视觉认证。
@@ -306,11 +313,14 @@ v0.1.0 发布前必须：
 9. 至少对 cinematic、menu、loop、previs、marketing、character performance 和 2D 各做
    一次 plan-only 前向测试。
 10. 包内没有 token、用户素材、模型权重、Spine Runtime 或第三方专有二进制。
-11. 仓库所有者确定公开发布许可证，并添加一致的 `LICENSE` 与 manifest 字段。
+11. Zealman vendor 参考集保持只读、有来源说明、无重复下载副本和非工作流二进制。
+12. 仓库所有者确定公开发布许可证与 vendor 资料发布边界，并添加一致的 `LICENSE` 与
+    manifest 字段。
 
 ## 11. 规范来源
 
 - 本项目调研：`/Users/cui/Downloads/视频生成研究.md`
+- Zealman AutoDL 工作流快照：`/Users/cui/Downloads/zealman-AutoDL镜像工作流`
 - [Agent Plugins 1.0.0](https://agent-plugins.org/specification.md)
 - [Agent Skills Specification](https://agentskills.io/specification.md)
 - [MiniMax H3 官方仓库](https://github.com/MiniMax-AI/MiniMax-H3)

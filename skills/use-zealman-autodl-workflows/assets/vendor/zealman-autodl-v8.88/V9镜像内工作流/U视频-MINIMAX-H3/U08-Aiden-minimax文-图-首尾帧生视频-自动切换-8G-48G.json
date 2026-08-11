@@ -1,0 +1,4220 @@
+{
+  "id": "b8fe4057-b9f8-46a0-a86a-ce0fa047151e",
+  "revision": 0,
+  "last_node_id": 85,
+  "last_link_id": 85,
+  "nodes": [
+    {
+      "id": 1,
+      "type": "BasicScheduler",
+      "pos": [
+        -360,
+        5660
+      ],
+      "size": [
+        370,
+        130
+      ],
+      "flags": {
+        "disabled": false
+      },
+      "order": 50,
+      "mode": 4,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 77
+        }
+      ],
+      "outputs": [
+        {
+          "name": "SIGMAS",
+          "type": "SIGMAS",
+          "links": [
+            10
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.29.0",
+        "Node name for S&R": "BasicScheduler",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.8",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        "simple",
+        25,
+        1
+      ]
+    },
+    {
+      "id": 2,
+      "type": "MiniMaxH3ImageToVideo",
+      "pos": [
+        -640,
+        5590
+      ],
+      "size": [
+        240,
+        220
+      ],
+      "flags": {
+        "disabled": false
+      },
+      "order": 46,
+      "mode": 4,
+      "inputs": [
+        {
+          "name": "clip",
+          "type": "CLIP",
+          "link": 85
+        },
+        {
+          "name": "vae",
+          "type": "VAE",
+          "link": 3
+        },
+        {
+          "name": "first_frame",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": 64
+        },
+        {
+          "name": "last_frame",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": 70
+        },
+        {
+          "name": "prompt",
+          "type": "STRING",
+          "widget": {
+            "name": "prompt"
+          },
+          "link": 80
+        },
+        {
+          "name": "width",
+          "type": "INT",
+          "widget": {
+            "name": "width"
+          },
+          "link": 19
+        },
+        {
+          "name": "height",
+          "type": "INT",
+          "widget": {
+            "name": "height"
+          },
+          "link": 20
+        },
+        {
+          "name": "length",
+          "type": "INT",
+          "widget": {
+            "name": "length"
+          },
+          "link": 4
+        }
+      ],
+      "outputs": [
+        {
+          "name": "positive",
+          "type": "CONDITIONING",
+          "links": [
+            16
+          ]
+        },
+        {
+          "name": "LATENT",
+          "type": "LATENT",
+          "links": [
+            11
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.29.0",
+        "Node name for S&R": "MiniMaxH3ImageToVideo",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.8",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        "古风竖屏短视频质感：夜晚中式庭院，暖红灯笼、淡淡薄雾、柔和月光，一名成年古装美女身穿飘逸红色纱裙，妆容精致妩媚，气质俏皮、娇媚，带有轻微挑逗感。\n\n时间轴：\n\n[0秒–1.5秒] 古装美女站在庭院灯笼下，缓缓转身面向镜头，嘴角浮现狡黠笑容，目光含笑地直视镜头。\n\n[1.5秒–4.5秒] 她向镜头靠近半步，微微俯身，轻轻挑眉，同时抬起右手，用食指做出邀请对方靠近的动作。她用娇媚、俏皮、带着期待感的女声准确说道：“大呲花，我来了～快来玩！”\n\n[4.5秒–5秒] 台词结束后，她轻轻眨眼，笑容加深，保持挑逗眼神直视镜头，画面短暂停留。\n\n全程使用一个连续镜头，从腰部中景平稳推进至面部近景；不要切镜，不要突然变焦，不要剧烈晃动。\n\n声音：女声自然清晰、娇俏妩媚，台词口型准确同步；保留轻柔夜风、灯笼纸面晃动和衣料摩擦声，使用非常轻微的古风氛围音乐，音乐不得遮盖台词。\n\n台词必须完整准确，不得增删或改写；不要出现字幕、文字、其他人物、现代物品或水印。保持人物脸型、发型、服装和五官稳定，眨眼、嘴部动作和手指结构自然。",
+        1344,
+        768,
+        73
+      ]
+    },
+    {
+      "id": 3,
+      "type": "VAELoader",
+      "pos": [
+        -1310,
+        5830
+      ],
+      "size": [
+        640,
+        70
+      ],
+      "flags": {
+        "disabled": false
+      },
+      "order": 3,
+      "mode": 4,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "VAE",
+          "type": "VAE",
+          "links": [
+            3,
+            14
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.29.0",
+        "Node name for S&R": "VAELoader",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.8",
+          "input_ue_unconnectable": {}
+        },
+        "models": [
+          {
+            "name": "minimax_h3_video_vae_fp16.safetensors",
+            "url": "https://huggingface.co/Comfy-Org/MiniMax-H3/resolve/main/vae/minimax_h3_video_vae_fp16.safetensors",
+            "directory": "vae"
+          }
+        ]
+      },
+      "widgets_values": [
+        "minimax_h3\\minimax_h3_video_vae_fp16 .safetensors"
+      ]
+    },
+    {
+      "id": 4,
+      "type": "VAELoader",
+      "pos": [
+        -1310,
+        5960
+      ],
+      "size": [
+        650,
+        70
+      ],
+      "flags": {
+        "disabled": false
+      },
+      "order": 4,
+      "mode": 4,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "VAE",
+          "type": "VAE",
+          "links": [
+            6
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.29.0",
+        "Node name for S&R": "VAELoader",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.8",
+          "input_ue_unconnectable": {}
+        },
+        "models": [
+          {
+            "name": "minimax_h3_audio_vae_fp32.safetensors",
+            "url": "https://huggingface.co/Comfy-Org/MiniMax-H3/resolve/main/vae/minimax_h3_audio_vae_fp32.safetensors",
+            "directory": "vae"
+          }
+        ]
+      },
+      "widgets_values": [
+        "minimax_h3\\minimax_h3_audio_vae_fp32.safetensors"
+      ]
+    },
+    {
+      "id": 5,
+      "type": "VAEDecodeAudio",
+      "pos": [
+        650,
+        5500
+      ],
+      "size": [
+        230,
+        60
+      ],
+      "flags": {
+        "collapsed": false,
+        "disabled": false
+      },
+      "order": 56,
+      "mode": 4,
+      "inputs": [
+        {
+          "name": "samples",
+          "type": "LATENT",
+          "link": 31
+        },
+        {
+          "name": "vae",
+          "type": "VAE",
+          "link": 6
+        }
+      ],
+      "outputs": [
+        {
+          "name": "AUDIO",
+          "type": "AUDIO",
+          "links": [
+            28
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.29.0",
+        "Node name for S&R": "VAEDecodeAudio",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.8",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 6,
+      "type": "KSamplerSelect",
+      "pos": [
+        -350,
+        5540
+      ],
+      "size": [
+        370,
+        70
+      ],
+      "flags": {
+        "disabled": false
+      },
+      "order": 17,
+      "mode": 4,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "SAMPLER",
+          "type": "SAMPLER",
+          "links": [
+            9
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.29.0",
+        "Node name for S&R": "KSamplerSelect",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.8",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        "res_multistep"
+      ]
+    },
+    {
+      "id": 7,
+      "type": "SamplerCustomAdvanced",
+      "pos": [
+        70,
+        5290
+      ],
+      "size": [
+        540,
+        416.88888888888886
+      ],
+      "flags": {
+        "disabled": false
+      },
+      "order": 53,
+      "mode": 4,
+      "inputs": [
+        {
+          "name": "noise",
+          "type": "NOISE",
+          "link": 7
+        },
+        {
+          "name": "guider",
+          "type": "GUIDER",
+          "link": 8
+        },
+        {
+          "name": "sampler",
+          "type": "SAMPLER",
+          "link": 9
+        },
+        {
+          "name": "sigmas",
+          "type": "SIGMAS",
+          "link": 10
+        },
+        {
+          "name": "latent_image",
+          "type": "LATENT",
+          "link": 11
+        }
+      ],
+      "outputs": [
+        {
+          "name": "output",
+          "type": "LATENT",
+          "links": [
+            30
+          ]
+        },
+        {
+          "name": "denoised_output",
+          "type": "LATENT",
+          "links": null
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.29.0",
+        "Node name for S&R": "SamplerCustomAdvanced",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.8",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 8,
+      "type": "ComfyMathExpression",
+      "pos": [
+        -1290,
+        6270
+      ],
+      "size": [
+        510,
+        160
+      ],
+      "flags": {
+        "collapsed": true,
+        "disabled": false
+      },
+      "order": 42,
+      "mode": 4,
+      "inputs": [
+        {
+          "label": "a",
+          "name": "values.a",
+          "type": "FLOAT,INT,BOOLEAN",
+          "link": 12
+        },
+        {
+          "label": "b",
+          "name": "values.b",
+          "shape": 7,
+          "type": "FLOAT,INT,BOOLEAN",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "FLOAT",
+          "type": "FLOAT",
+          "links": null
+        },
+        {
+          "name": "INT",
+          "type": "INT",
+          "links": [
+            4
+          ]
+        },
+        {
+          "name": "BOOL",
+          "type": "BOOLEAN",
+          "links": null
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.29.0",
+        "Node name for S&R": "ComfyMathExpression",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.8",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        "max(5, round(a * 24)) + (5 - (max(5, round(a * 24)) % 17)) % 17"
+      ],
+      "color": "#203E11FF",
+      "bgcolor": "#305D1AFF"
+    },
+    {
+      "id": 9,
+      "type": "VAEDecode",
+      "pos": [
+        650,
+        5380
+      ],
+      "size": [
+        230,
+        60
+      ],
+      "flags": {
+        "collapsed": false,
+        "disabled": false
+      },
+      "order": 57,
+      "mode": 4,
+      "inputs": [
+        {
+          "name": "samples",
+          "type": "LATENT",
+          "link": 32
+        },
+        {
+          "name": "vae",
+          "type": "VAE",
+          "link": 14
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            25
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.29.0",
+        "Node name for S&R": "VAEDecode",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.8",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 10,
+      "type": "BasicGuider",
+      "pos": [
+        -330,
+        5420
+      ],
+      "size": [
+        360,
+        60
+      ],
+      "flags": {
+        "disabled": false
+      },
+      "order": 51,
+      "mode": 4,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 78
+        },
+        {
+          "name": "conditioning",
+          "type": "CONDITIONING",
+          "link": 16
+        }
+      ],
+      "outputs": [
+        {
+          "name": "GUIDER",
+          "type": "GUIDER",
+          "links": [
+            8
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.29.0",
+        "Node name for S&R": "BasicGuider",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.8",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 11,
+      "type": "UNETLoader",
+      "pos": [
+        -1310,
+        5310
+      ],
+      "size": [
+        610,
+        90
+      ],
+      "flags": {
+        "disabled": false
+      },
+      "order": 23,
+      "mode": 4,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            81
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.29.0",
+        "Node name for S&R": "UNETLoader",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.8",
+          "input_ue_unconnectable": {}
+        },
+        "models": [
+          {
+            "name": "minimax_h3_fl2va_pruned_int8_convrot.safetensors",
+            "url": "https://huggingface.co/Comfy-Org/MiniMax-H3/resolve/main/diffusion_models/minimax_h3_fl2va_pruned_int8_convrot.safetensors",
+            "directory": "diffusion_models"
+          }
+        ]
+      },
+      "widgets_values": [
+        "minimax_h3\\minimax_h3_fl2va_pruned_int8_convrot.safetensors",
+        "default"
+      ]
+    },
+    {
+      "id": 12,
+      "type": "CLIPLoader",
+      "pos": [
+        -1310,
+        5640
+      ],
+      "size": [
+        640,
+        120
+      ],
+      "flags": {
+        "disabled": false
+      },
+      "order": 29,
+      "mode": 4,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "CLIP",
+          "type": "CLIP",
+          "links": [
+            84
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.29.0",
+        "Node name for S&R": "CLIPLoader",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.8",
+          "input_ue_unconnectable": {}
+        },
+        "models": [
+          {
+            "name": "qwen3vl_32b_minimax_h3_nvfp4_awq.safetensors",
+            "url": "https://huggingface.co/Comfy-Org/MiniMax-H3/resolve/main/text_encoders/qwen3vl_32b_minimax_h3_nvfp4_awq.safetensors",
+            "directory": "text_encoders"
+          }
+        ]
+      },
+      "widgets_values": [
+        "minimax_h3\\qwen3vl_32b_minimax_h3_nvfp4_awq.safetensors",
+        "minimax",
+        "default"
+      ]
+    },
+    {
+      "id": 13,
+      "type": "RandomNoise",
+      "pos": [
+        -320,
+        5280
+      ],
+      "size": [
+        360,
+        90
+      ],
+      "flags": {
+        "disabled": false
+      },
+      "order": 16,
+      "mode": 4,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "NOISE",
+          "type": "NOISE",
+          "links": [
+            7
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.29.0",
+        "Node name for S&R": "RandomNoise",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.8",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        282462131167539,
+        "fixed"
+      ]
+    },
+    {
+      "id": 15,
+      "type": "PrimitiveFloat",
+      "pos": [
+        -1300,
+        6160
+      ],
+      "size": [
+        270,
+        70
+      ],
+      "flags": {
+        "disabled": false
+      },
+      "order": 28,
+      "mode": 4,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "FLOAT",
+          "type": "FLOAT",
+          "links": [
+            12
+          ]
+        }
+      ],
+      "title": "Float (duration)",
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.29.0",
+        "Node name for S&R": "PrimitiveFloat",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.8",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        10
+      ],
+      "color": "#203E11FF",
+      "bgcolor": "#305D1AFF"
+    },
+    {
+      "id": 16,
+      "type": "孤海注释",
+      "pos": [
+        470,
+        4890
+      ],
+      "size": [
+        1540,
+        280
+      ],
+      "flags": {
+        "allow_interaction": true
+      },
+      "order": 34,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "properties": {
+        "text": "文/图/首尾帧生视频",
+        "fontSize": 159,
+        "fontColor": "#E3E3E3",
+        "backgroundColor": "#1b6941",
+        "backgroundAlpha": 0.6,
+        "borderRadius": 39,
+        "padding": 12,
+        "lineHeight": 1.4,
+        "textAlign": "left",
+        "stroke": true,
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.8",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "color": "#fff0",
+      "bgcolor": "transparent"
+    },
+    {
+      "id": 17,
+      "type": "MarkdownNote",
+      "pos": [
+        -110,
+        4670
+      ],
+      "size": [
+        550,
+        510
+      ],
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "title": "资料",
+      "properties": {
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.8",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        "# ****B站****：[Aiden_0](https://space.bilibili.com/339978043?spm_id_from=333.1007.0.0)\n# ****YOUTUBE****:[Aiden_0](https://www.youtube.com/channel/UCTU0bGEl07Mem_jYugx4qWA)\n# ****常用模型下载****：\n# [COMFYUI免费资料分享](https://pan.quark.cn/s/ba992dddc7c2)\n\n\n\n\n\n\n"
+      ],
+      "color": "#702222FF",
+      "bgcolor": "#8F2B2BFF"
+    },
+    {
+      "id": 18,
+      "type": "孤海注释",
+      "pos": [
+        463.1049096406457,
+        4717.844015488644
+      ],
+      "size": [
+        2896.820986133065,
+        145.03478301488303
+      ],
+      "flags": {
+        "allow_interaction": true
+      },
+      "order": 37,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "properties": {
+        "text": "视频教程 https://www.bilibili.com/video/BV1oYu36QEyZ",
+        "fontSize": 99,
+        "fontColor": "#ffffff",
+        "backgroundColor": "#1b6941",
+        "backgroundAlpha": 0.6,
+        "borderRadius": 39,
+        "padding": 12,
+        "lineHeight": 1.4,
+        "textAlign": "center",
+        "stroke": true,
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.8",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "color": "#fff0",
+      "bgcolor": "transparent"
+    },
+    {
+      "id": 19,
+      "type": "忽略多组孤海",
+      "pos": [
+        -750,
+        4680
+      ],
+      "size": [
+        620,
+        520
+      ],
+      "flags": {},
+      "order": 1,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "properties": {
+        "aux_id": "goohai/Goohaitools-comfyui",
+        "ver": "43c8a20fd70651e0cb05362878944d542c627bdf",
+        "Node name for S&R": "忽略多组孤海",
+        "guhai_ig_filter": "",
+        "guhai_ig_mode": "default",
+        "guhai_ig_active": null,
+        "guhai_ig_active_set": [],
+        "guhai_ig_name_color": "#2ced42",
+        "guhai_ig_disable": false,
+        "guhai_ig_sort_order": "position",
+        "guhai_ig_color_filter": "none",
+        "guhai_ig_ui_scale": 2,
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.8"
+        }
+      },
+      "widgets_values": [
+        ""
+      ],
+      "color": "#6D2626FF",
+      "bgcolor": "#8C3030FF"
+    },
+    {
+      "id": 20,
+      "type": "LoadImage",
+      "pos": [
+        -1340,
+        4870
+      ],
+      "size": [
+        550,
+        330
+      ],
+      "flags": {},
+      "order": 2,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": null
+        },
+        {
+          "name": "MASK",
+          "type": "MASK",
+          "links": null
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.28.0",
+        "Node name for S&R": "LoadImage",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.8"
+        }
+      },
+      "widgets_values": [
+        "微信图片_20260729194126_21_250.jpg",
+        "image"
+      ],
+      "color": "#6D2626FF",
+      "bgcolor": "#8C3030FF"
+    },
+    {
+      "id": 21,
+      "type": "ResolutionSelector",
+      "pos": [
+        -1300,
+        6320
+      ],
+      "size": [
+        270,
+        170
+      ],
+      "flags": {
+        "disabled": false
+      },
+      "order": 14,
+      "mode": 4,
+      "showAdvanced": false,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "width",
+          "type": "INT",
+          "links": [
+            19
+          ]
+        },
+        {
+          "name": "height",
+          "type": "INT",
+          "links": [
+            20
+          ]
+        }
+      ],
+      "title": "Resolution Selector (Size)",
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.30.0",
+        "Node name for S&R": "ResolutionSelector",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.8",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        "16:9 (Widescreen)",
+        0.4,
+        32
+      ],
+      "color": "#203E11FF",
+      "bgcolor": "#305D1AFF"
+    },
+    {
+      "id": 22,
+      "type": "MarkdownNote",
+      "pos": [
+        -1860,
+        6100
+      ],
+      "size": [
+        520,
+        790
+      ],
+      "flags": {
+        "disabled": false
+      },
+      "order": 12,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "title": "Note: Size Settings Reference",
+      "properties": {
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.8",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        "| megapixels | Aspect | Output (multiple=32) |\n|---|---|---|\n| 0.2 | 16:9 | 608 x 352 |\n| 0.3 | 16:9 | 736 x 416 |\n| 0.4 | 16:9 | 864 x 480 |\n| 0.5 | 16:9 | 960 x 544 |\n| 0.6 | 16:9 | 1056 x 608 |\n| 0.7 | 16:9 | 1152 x 640 |\n| 0.8 | 16:9 | 1216 x 672 |\n| 0.9 | 16:9 | 1280 x 736 |\n| 0.98 | 16:9 | 1344 x 768 |\n| 1.0 | 16:9 | 1376 x 768 |\n| 1.2 | 16:9 | 1504 x 832 |\n| 1.5 | 16:9 | 1664 x 928 |\n| 1.8 | 16:9 | 1824 x 1024 |\n| 2.0 | 16:9 | 1920 x 1088 |\n"
+      ],
+      "color": "#222",
+      "bgcolor": "#000"
+    },
+    {
+      "id": 24,
+      "type": "PathchSageAttentionKJ",
+      "pos": [
+        -1290,
+        5470
+      ],
+      "size": [
+        320,
+        100
+      ],
+      "flags": {
+        "disabled": false
+      },
+      "order": 45,
+      "mode": 4,
+      "inputs": [
+        {
+          "label": "模型",
+          "name": "model",
+          "type": "MODEL",
+          "link": 82
+        },
+        {
+          "label": "SAGE注意力",
+          "name": "sage_attention",
+          "type": "COMBO",
+          "widget": {
+            "name": "sage_attention"
+          },
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            79
+          ]
+        }
+      ],
+      "title": "SAGE注意力补丁KJ",
+      "properties": {
+        "cnr_id": "comfyui-kjnodes",
+        "ver": "4d46ac107c33ed8a3d181b8776ede66498583380",
+        "Node name for S&R": "PathchSageAttentionKJ",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.8"
+        }
+      },
+      "widgets_values": [
+        "auto",
+        false
+      ],
+      "color": "#203E11FF",
+      "bgcolor": "#305D1AFF"
+    },
+    {
+      "id": 25,
+      "type": "RTXVideoSuperResolution",
+      "pos": [
+        980,
+        5630
+      ],
+      "size": [
+        320,
+        106
+      ],
+      "flags": {
+        "disabled": false
+      },
+      "order": 58,
+      "mode": 4,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 25
+        }
+      ],
+      "outputs": [
+        {
+          "name": "upscaled_images",
+          "type": "IMAGE",
+          "links": [
+            26
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfyui_nvidia_rtx_nodes",
+        "ver": "892515e3eb9a4920a131a502a047e47adca9eb0d",
+        "Node name for S&R": "RTXVideoSuperResolution",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.8"
+        }
+      },
+      "widgets_values": [
+        "scale by multiplier",
+        2,
+        "ULTRA"
+      ]
+    },
+    {
+      "id": 26,
+      "type": "RIFE VFI",
+      "pos": [
+        980,
+        5310
+      ],
+      "size": [
+        330,
+        270
+      ],
+      "flags": {
+        "disabled": false
+      },
+      "order": 59,
+      "mode": 4,
+      "inputs": [
+        {
+          "label": "图像",
+          "name": "frames",
+          "type": "IMAGE",
+          "link": 26
+        },
+        {
+          "label": "插值规则(可选)",
+          "name": "optional_interpolation_states",
+          "shape": 7,
+          "type": "INTERPOLATION_STATES",
+          "link": null
+        },
+        {
+          "label": "ckpt名称",
+          "name": "ckpt_name",
+          "type": "COMBO",
+          "widget": {
+            "name": "ckpt_name"
+          },
+          "link": null
+        },
+        {
+          "label": "N帧后清除缓存",
+          "name": "clear_cache_after_n_frames",
+          "type": "INT",
+          "widget": {
+            "name": "clear_cache_after_n_frames"
+          },
+          "link": null
+        },
+        {
+          "label": "乘数",
+          "name": "multiplier",
+          "type": "INT",
+          "widget": {
+            "name": "multiplier"
+          },
+          "link": null
+        },
+        {
+          "label": "快速模式",
+          "name": "fast_mode",
+          "type": "BOOLEAN",
+          "widget": {
+            "name": "fast_mode"
+          },
+          "link": null
+        },
+        {
+          "label": "ensemble",
+          "name": "ensemble",
+          "type": "BOOLEAN",
+          "widget": {
+            "name": "ensemble"
+          },
+          "link": null
+        },
+        {
+          "label": "缩放系数",
+          "name": "scale_factor",
+          "type": "COMBO",
+          "widget": {
+            "name": "scale_factor"
+          },
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "label": "图像",
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            27
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfyui-frame-interpolation",
+        "ver": "26545cc2dd95bc3d27f056016300673bdeee78f5",
+        "Node name for S&R": "RIFE VFI",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.8"
+        }
+      },
+      "widgets_values": [
+        "rife49.pth",
+        10,
+        2,
+        true,
+        true,
+        1,
+        "float32",
+        false,
+        1
+      ]
+    },
+    {
+      "id": 27,
+      "type": "VHS_VideoCombine",
+      "pos": [
+        1430,
+        5260
+      ],
+      "size": [
+        830,
+        334
+      ],
+      "flags": {},
+      "order": 60,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "图像",
+          "name": "images",
+          "type": "IMAGE",
+          "link": 27
+        },
+        {
+          "label": "音频",
+          "name": "audio",
+          "shape": 7,
+          "type": "AUDIO",
+          "link": 28
+        },
+        {
+          "label": "批次管理",
+          "name": "meta_batch",
+          "shape": 7,
+          "type": "VHS_BatchManager",
+          "link": null
+        },
+        {
+          "name": "vae",
+          "shape": 7,
+          "type": "VAE",
+          "link": null
+        },
+        {
+          "label": "帧率",
+          "name": "frame_rate",
+          "type": "FLOAT",
+          "widget": {
+            "name": "frame_rate"
+          },
+          "link": null
+        },
+        {
+          "label": "循环次数",
+          "name": "loop_count",
+          "type": "INT",
+          "widget": {
+            "name": "loop_count"
+          },
+          "link": null
+        },
+        {
+          "label": "文件名前缀",
+          "name": "filename_prefix",
+          "type": "STRING",
+          "widget": {
+            "name": "filename_prefix"
+          },
+          "link": null
+        },
+        {
+          "label": "格式",
+          "name": "format",
+          "type": "COMBO",
+          "widget": {
+            "name": "format"
+          },
+          "link": null
+        },
+        {
+          "label": "Ping-Pong",
+          "name": "pingpong",
+          "type": "BOOLEAN",
+          "widget": {
+            "name": "pingpong"
+          },
+          "link": null
+        },
+        {
+          "label": "保存到输出文件夹",
+          "name": "save_output",
+          "type": "BOOLEAN",
+          "widget": {
+            "name": "save_output"
+          },
+          "link": null
+        },
+        {
+          "label": "保存元数据",
+          "name": "save_metadata",
+          "type": "BOOLEAN",
+          "widget": {
+            "name": "save_metadata"
+          },
+          "link": null
+        },
+        {
+          "label": "修剪音频",
+          "name": "trim_to_audio",
+          "type": "BOOLEAN",
+          "widget": {
+            "name": "trim_to_audio"
+          },
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "label": "文件名",
+          "name": "Filenames",
+          "type": "VHS_FILENAMES",
+          "links": null
+        }
+      ],
+      "title": "合并为视频",
+      "properties": {
+        "cnr_id": "comfyui-videohelpersuite",
+        "ver": "4ee72c065db22c9d96c2427954dc69e7b908444b",
+        "Node name for S&R": "VHS_VideoCombine",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.8"
+        }
+      },
+      "widgets_values": {
+        "frame_rate": 24,
+        "loop_count": 0,
+        "filename_prefix": "AnimateDiff",
+        "format": "video/h264-mp4",
+        "pix_fmt": "yuv420p",
+        "crf": 19,
+        "save_metadata": true,
+        "trim_to_audio": false,
+        "pingpong": false,
+        "save_output": true,
+        "videopreview": {
+          "hidden": false,
+          "paused": false,
+          "params": {
+            "filename": "AnimateDiff_00025-audio.mp4",
+            "subfolder": "",
+            "type": "output",
+            "format": "video/h264-mp4",
+            "frame_rate": 24,
+            "workflow": "AnimateDiff_00025.png",
+            "fullpath": "E:\\AIDEN\\ComfyUI_windows_portable\\ComfyUI\\output\\AnimateDiff_00025-audio.mp4"
+          }
+        }
+      }
+    },
+    {
+      "id": 30,
+      "type": "LayerUtility: PurgeVRAM V2",
+      "pos": [
+        650,
+        5300
+      ],
+      "size": [
+        270,
+        90
+      ],
+      "flags": {
+        "collapsed": true,
+        "disabled": false
+      },
+      "order": 55,
+      "mode": 4,
+      "inputs": [
+        {
+          "name": "anything",
+          "type": "*",
+          "link": 30
+        }
+      ],
+      "outputs": [
+        {
+          "name": "any",
+          "type": "*",
+          "links": [
+            31,
+            32
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfyui_layerstyle",
+        "ver": "64f976fec8492ea4930c0e30c32369573189b23d",
+        "Node name for S&R": "LayerUtility: PurgeVRAM V2",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.8"
+        }
+      },
+      "widgets_values": [
+        true,
+        true
+      ],
+      "color": "rgba(38, 73, 116, 0.7)"
+    },
+    {
+      "id": 31,
+      "type": "LoadImage",
+      "pos": [
+        -1010,
+        6150
+      ],
+      "size": [
+        430,
+        630
+      ],
+      "flags": {
+        "disabled": false
+      },
+      "order": 19,
+      "mode": 4,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            48,
+            50,
+            64
+          ]
+        },
+        {
+          "name": "MASK",
+          "type": "MASK",
+          "links": null
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.29.0",
+        "Node name for S&R": "LoadImage",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.8"
+        }
+      },
+      "widgets_values": [
+        "640 (6).png",
+        "image"
+      ],
+      "color": "#203E11FF",
+      "bgcolor": "#305D1AFF"
+    },
+    {
+      "id": 33,
+      "type": "llama_cpp_instruct_adv",
+      "pos": [
+        240,
+        6350
+      ],
+      "size": [
+        450,
+        500
+      ],
+      "flags": {
+        "disabled": false
+      },
+      "order": 47,
+      "mode": 4,
+      "inputs": [
+        {
+          "name": "llama_model",
+          "type": "LLAMACPPMODEL",
+          "link": 34
+        },
+        {
+          "name": "parameters",
+          "shape": 7,
+          "type": "LLAMACPPARAMS",
+          "link": 35
+        },
+        {
+          "name": "images",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": 54
+        },
+        {
+          "name": "queue_handler",
+          "shape": 7,
+          "type": "*",
+          "link": null
+        },
+        {
+          "name": "custom_prompt",
+          "type": "STRING",
+          "widget": {
+            "name": "custom_prompt"
+          },
+          "link": 45
+        }
+      ],
+      "outputs": [
+        {
+          "name": "output",
+          "type": "STRING",
+          "links": [
+            40
+          ]
+        },
+        {
+          "name": "output_list",
+          "shape": 6,
+          "type": "STRING",
+          "links": null
+        },
+        {
+          "name": "state_uid",
+          "type": "INT",
+          "links": null
+        }
+      ],
+      "properties": {
+        "cnr_id": "llama-cpp_vllm",
+        "ver": "da1a561d1ae3f0c298fe98850ed4ab2833d1c998",
+        "Node name for S&R": "llama_cpp_instruct_adv",
+        "ue_properties": {
+          "widget_ue_connectable": {
+            "preset_prompt": true,
+            "custom_prompt": true,
+            "system_prompt": true,
+            "inference_mode": true,
+            "max_frames": true,
+            "max_size": true,
+            "seed": true,
+            "force_offload": true,
+            "save_states": true
+          },
+          "version": "7.8",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        "Prompt Style - Extreme Detailed",
+        "# 角色设定\n你是深耕视觉创意领域十年的顶尖视觉策略官，专注于将抽象创意转化为适配前沿AI绘画模型的中文创作指令，核心任务是通过精准的视觉语言确保输出的Prompt具备电影级叙事感、极致细节表现力、跨媒介适配性与文化语境共鸣，助力用户生成兼具艺术深度与商业传播力的AI视觉作品。\n你要遵循以下规则：\n1.构图与视角（要包含的内容：构图方式，视角特点，相机等）\n2.人物特征（要包含的内容：五官风格，发型特征等）\n3.妆容与皮肤质感（要包含的内容：妆容风格，皮肤质感等）\n4.服饰与配饰（要包含的内容：头部配饰，服装风格等）\n5.光线与色调（要包含的内容：光线特点，色彩倾向等）\n6.质感与后期风格（要包含的内容：画面质感，风格定位等）\n以上规则里面，括号的内容可以根据用户提出的主题，自行发挥，但是要包拯整体画面的风格统一。\n7.图片的最下方，中间的位置加入一行鎏金宋体小字“Aiden_0_DFYW”\n输出一段中文提示词即可，不要任何标题，字数在300字左右。\n以下给你的是一些参考，但是要有自我发挥，主要是以东方梦幻，魔幻美学的后期质感为主。\n构图与视角：镜头可选 35mm 广角（拉满空间纵深感）、50-85mm 定焦（凸显人物细节）、135mm 长焦（压缩仙幻氛围）；构图方式含水墨留白三分法、中心对称构图、对角线动态构图、画框式构图（花枝 / 古窗 / 云纹 / 冰晶为框）；视角可选略仰拍（显仙韵）、平视低角度（强互动）、微俯拍（衬空灵）、鸟瞰式（展幻境全景）；搭配浅景深虚化（仙雾 / 星云 / 花枝背景）或深景深（全景式魔幻场景），镜头可加幻境动态模糊、柔光滤镜、星芒效果、光斑折射，强化灵雾 / 流光 / 花枝 / 冰晶与人物的层次互动。\n人物特征：五官锁定东方古典范式（丹凤眼嵌琉璃幻纹、远山眉含黛、绛唇微抿带莹光），可加眉梢缀灵蝶虚影、眼尾缠云纹流光、瞳仁映星云 / 寒梅、舌尖含珠光等魔幻细节；发型为云鬓高挽 / 垂挂髻 / 松散发髻 / 半扎灵蛇髻，配烟霞纱飘带、银质星芒流苏、花枝发环、冰晶发饰，发丝缠月华流光、缀荧光粒子 / 冰晶碎光 / 星子碎屑。\n妆容与皮肤质感：妆容为云绒清透底妆 + 魔幻古风点缀，眉骨扫金箔碎光 / 珍珠粉 / 冰晶闪片，眼尾贴花钿嵌鲛人泪碎光 / 荧光羽纹 / 妖异鳞纹，唇线描幻彩细边（随光线变粉 / 变紫）；皮肤似羊脂玉泛月华珠光 / 冰晶冷泽，肌理隐仙藤暗纹 / 冰晶纹路 / 妖鳞细闪，局部泛粉紫 / 淡蓝 / 鎏金 / 冰蓝幻彩，无瑕疵且带灵雾柔光 / 冷冽冰晶 / 暮霭朦胧滤镜。\n服饰与配饰：服装选广袖流仙裙 / 交领襦裙 / 对襟纱衫 / 鲛绡长袍 / 冰晶鳞纹袍，面料为烟霞锦 / 雾绡纱 / 织金罗 / 琉璃纱 / 冰蚕丝，蹙金绣云螭灵蝶、星云异兽、冰晶寒梅、九尾狐纹、仙藤缠枝等魔幻纹样，流光纱缀星子碎钻 / 荧光刺绣 / 冰晶鳞片；配饰用墨玉簪嵌月魄晶石、琉璃玉佩含灵雾、银质璎珞垂鲛人泪珍珠、花枝步摇（颤动生光）、冰晶手镯（散逸冷雾），均带微光、随光线变色、散逸灵雾 / 荧光或折射幻光效果。\n光线与色调：光线类型可选 —— 晨霜冷光（带冰蓝光晕）、月华漫射（呈柔白纱雾状）、暮霭霞光（染橙红 / 粉紫渐变）、星子聚光（呈点状光斑群落在发丝 / 服饰）、烛火暖光（带琥珀色光晕扩散）、妖异紫电光（呈丝状缠绕轮廓）、灵泉反光（水面折射出碎银般光斑）、灵雾柔光（均匀包裹人物带朦胧感）；光影效果必含 —— 侧逆光分层（鎏金 / 银白 / 幻彩 / 冰蓝多层轮廓光）、丁达尔效应（灵雾中透出光柱）、光斑折射（经花枝 / 冰晶 / 琉璃配饰形成菱格 / 星状光斑）、阴影幻纹（阴影处浮现云纹 / 鳞纹 / 星图暗纹）、光晕扩散（光源处呈渐变式雾感光晕）；色调以绛紫与鎏金、青黛与莹白、冰蓝与银灰、朱砂与墨黑、粉紫与琥珀撞色为主，高饱和却柔润，背景泛蓬莱仙境 / 蜃楼幻境 / 冰晶秘境 / 妖域花海式水墨晕染渐变。\n质感与后期风格：画质为 8K 超清，质感可选水墨氤氲 + 灵雾粒子悬浮、珐琅光泽 + 冰晶通透感、绢本工笔肌理 + 荧光刺绣质感、琉璃流光 + 星云缥缈感、鳞纹细腻 + 妖雾弥漫感；后期可加仙韵朦胧、冷冽清透、光斑叠加、动态流光模糊、水墨晕染渐变、暗部幻纹浮现、高光荧光溢出效果；风格定位东方玄幻美学，兼具梦幻流光感、魔幻诡谲感与东方电影级叙事感，适配跨媒介传播的仙幻 / 秘境 / 仙侠 / 妖域意境。",
+        "",
+        "images",
+        24,
+        256,
+        697688187110466,
+        "randomize",
+        false,
+        false
+      ],
+      "color": "#914926FF",
+      "bgcolor": "#B0582EFF"
+    },
+    {
+      "id": 34,
+      "type": "easy showAnything",
+      "pos": [
+        710,
+        6190
+      ],
+      "size": [
+        610,
+        650
+      ],
+      "flags": {
+        "disabled": false
+      },
+      "order": 54,
+      "mode": 4,
+      "inputs": [
+        {
+          "label": "输入任何",
+          "name": "anything",
+          "shape": 7,
+          "type": "*",
+          "link": 38
+        }
+      ],
+      "outputs": [
+        {
+          "name": "output",
+          "type": "*",
+          "links": []
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfyui-easy-use",
+        "ver": "070001b36be2bbdfcf766b6a2d6f14c36cb62906",
+        "Node name for S&R": "easy showAnything",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.8",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        "For the target video, at 0.00 seconds into the target video, <Picture 1> (from [Shot 1]) is fully referenced.\n\nintegrated_multimodal_description: [Shot 1] 这是一个动漫风格的特写镜头，画面中心是一位闭着双眼、神情极度专注的年轻女孩，她身穿黑色半透明纱质上衣，正全神贯注地拉奏一把橙棕色的古典小提琴。背景为纯粹的深黑色，通过强烈的明暗对比（Chiaroscuro）突出了主体轮廓。头发呈现出柔顺的棕色波浪，散落在脸颊旁。\n动态强度判定为**低动态**：画面氛围静谧、唯美，属于典型的艺术人像创作。动作设计应侧重于表现演奏过程中的细腻质感，而非剧烈的肢体运动。\n动作发展逻辑如下：\n1.  **前10% (启动)**：保持首帧姿态，微调头部角度（约5-10度），双眼依然闭合，展现出沉浸在音乐中的状态。右手持琴弓的动作开始产生极其细微的横向位移，模拟运弓起始瞬间。\n2.  **中间30% (发展)**：琴弓与琴弦接触点轻微上下滑动（模拟拉奏动作），左手手指在指板上进行微小的按压调整，体现音准的精准控制。光影在发丝和琴身上流动，增加画面的呼吸感。\n3.  **中间40% (核心事件)**：运弓幅度逐渐加大但依然优雅流畅，身体重心随旋律轻轻下沉，展现出演奏的高潮段落。\n4.  **后20% (结果)**：动作幅度略微收敛，呈现出余音绕梁的结束感，画面在极慢的速度中定格，保留艺术美感。\n\n运镜设计：采用**静态镜头**或**微幅缓慢推近**（Slow Push-in）。焦点始终锁定在女孩的面部表情与手部技巧上。在琴弓划过琴弦的关键时刻，配合极轻微的镜头呼吸感（Breathe），增强沉浸感。整体速度极慢，营造静谧氛围。\n\n环境反馈：由于背景全黑，环境反馈主要集中在主体材质和光影的变化上。琴弦震动产生的微光反射、头发丝的高光流动、以及衣料褶皱的微妙起伏都需要精细表现。\n\n关键声音：\n*   **动作声**：清晰而富有穿透力的小提琴声（Stradivarius-style resonance），琴弓摩擦琴弦的“沙沙”声（Bow scratch），以及手指触碰琴弦的清脆点音。\n*   **环境声**：极轻微的呼吸声，营造紧张而专注的氛围；背景几乎无声，或仅有极微弱的混响感。\n\n针对性一致性要求：\n*   保持动漫/插画风格，线条流畅，色彩温暖（暖棕色调）。\n*   人物五官精致，眼神虽闭但需表现出神采；手指关节和指甲细节清晰，防止变形。\n*   小提琴琴身纹理（木纹、F孔）需保持清晰且连续。\n*   光影逻辑一致：光源来自左上方，形成柔和的立体感。\n\noverall_soundscape: 贯穿视频的核心是富有情感的小提琴独奏曲，音色饱满圆润，伴随轻微的弓弦摩擦声和手指按弦声。背景处于绝对的静谧黑暗中，偶尔可以听到演奏者极其细微的呼吸起伏，增强真实感与代入感。结尾处音乐渐弱，留下悠长的回响。\n\nnon_diegetic_music: 使用舒缓、忧郁且充满情感的古典钢琴旋律作为配乐，节奏缓慢（Andante），以衬托小提琴的深情。钢琴音色温暖柔和，音量保持在伴奏层次，不与小提琴冲突，营造出一种孤独而唯美的艺术氛围。随着视频推进，钢琴音量逐渐减弱，最后自然淡出，与画面的静谧感融为一体。"
+      ],
+      "color": "#914926FF",
+      "bgcolor": "#B0582EFF"
+    },
+    {
+      "id": 36,
+      "type": "llama_cpp_unload_model",
+      "pos": [
+        480,
+        6250
+      ],
+      "size": [
+        210,
+        30
+      ],
+      "flags": {
+        "collapsed": true,
+        "disabled": false
+      },
+      "order": 52,
+      "mode": 4,
+      "inputs": [
+        {
+          "name": "any",
+          "type": "*",
+          "link": 39
+        }
+      ],
+      "outputs": [
+        {
+          "name": "any",
+          "type": "*",
+          "links": [
+            38
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "llama-cpp_vllm",
+        "ver": "a69be4883f98c4025915f0390a3e87aae9ea3477",
+        "Node name for S&R": "llama_cpp_unload_model",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.8"
+        }
+      },
+      "widgets_values": [],
+      "color": "#914926FF",
+      "bgcolor": "#B0582EFF"
+    },
+    {
+      "id": 37,
+      "type": "llama_cpp_clean_states",
+      "pos": [
+        480,
+        6190
+      ],
+      "size": [
+        210,
+        60
+      ],
+      "flags": {
+        "collapsed": true,
+        "disabled": false
+      },
+      "order": 49,
+      "mode": 4,
+      "inputs": [
+        {
+          "name": "any",
+          "type": "*",
+          "link": 40
+        }
+      ],
+      "outputs": [
+        {
+          "name": "any",
+          "type": "*",
+          "links": [
+            39
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "llama-cpp_vllm",
+        "ver": "da1a561d1ae3f0c298fe98850ed4ab2833d1c998",
+        "Node name for S&R": "llama_cpp_clean_states",
+        "ue_properties": {
+          "widget_ue_connectable": {
+            "state_uid": true
+          },
+          "version": "7.8",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        -1
+      ],
+      "color": "#914926FF",
+      "bgcolor": "#B0582EFF"
+    },
+    {
+      "id": 38,
+      "type": "llama_cpp_model_loader",
+      "pos": [
+        240,
+        6190
+      ],
+      "size": [
+        280,
+        210
+      ],
+      "flags": {
+        "collapsed": true,
+        "disabled": false
+      },
+      "order": 6,
+      "mode": 4,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "llama_model",
+          "type": "LLAMACPPMODEL",
+          "links": [
+            34
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "llama-cpp_vllm",
+        "ver": "a69be4883f98c4025915f0390a3e87aae9ea3477",
+        "Node name for S&R": "llama_cpp_model_loader",
+        "ue_properties": {
+          "widget_ue_connectable": {
+            "model": true,
+            "mmproj": true,
+            "chat_handler": true,
+            "n_ctx": true,
+            "vram_limit": true,
+            "image_min_tokens": true,
+            "image_max_tokens": true
+          },
+          "version": "7.8",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        "Qwen3.5-9B-Uncensored-HauhauCS-Aggressive-Q8_0.gguf",
+        "mmproj-Qwen3.5-9B-Uncensored-HauhauCS-Aggressive-BF16.gguf",
+        "Qwen3.5",
+        8192,
+        -1,
+        0,
+        0
+      ],
+      "color": "#914926FF",
+      "bgcolor": "#B0582EFF"
+    },
+    {
+      "id": 39,
+      "type": "llama_cpp_parameters",
+      "pos": [
+        250,
+        6250
+      ],
+      "size": [
+        270,
+        350
+      ],
+      "flags": {
+        "collapsed": true,
+        "disabled": false
+      },
+      "order": 5,
+      "mode": 4,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "parameters",
+          "type": "LLAMACPPARAMS",
+          "links": [
+            35
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "llama-cpp_vllm",
+        "ver": "da1a561d1ae3f0c298fe98850ed4ab2833d1c998",
+        "Node name for S&R": "llama_cpp_parameters",
+        "ue_properties": {
+          "widget_ue_connectable": {
+            "max_tokens": true,
+            "top_k": true,
+            "top_p": true,
+            "min_p": true,
+            "typical_p": true,
+            "temperature": true,
+            "repeat_penalty": true,
+            "frequency_penalty": true,
+            "presence_penalty": true,
+            "mirostat_mode": true,
+            "mirostat_eta": true,
+            "mirostat_tau": true,
+            "state_uid": true
+          },
+          "version": "7.8",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        2048,
+        30,
+        0.9,
+        0.05,
+        1,
+        0.8,
+        1,
+        0,
+        1,
+        0,
+        0.1,
+        5,
+        -1
+      ],
+      "color": "#914926FF",
+      "bgcolor": "#B0582EFF"
+    },
+    {
+      "id": 43,
+      "type": "easy positive",
+      "pos": [
+        -140,
+        6960
+      ],
+      "size": [
+        570,
+        510
+      ],
+      "flags": {
+        "collapsed": false,
+        "disabled": false
+      },
+      "order": 7,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "label": "正面提示词",
+          "name": "positive",
+          "type": "STRING",
+          "links": []
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfyui-easy-use",
+        "ver": "3cf9ab4e63c9cd2b6f4ebf5fa22f36d8152b3395",
+        "Node name for S&R": "easy positive",
+        "ue_properties": {
+          "widget_ue_connectable": {
+            "positive": true
+          },
+          "version": "7.8",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        "你是一名专业的 MiniMax H3 视频导演与提示词设计师，严格按照官方《Video Prompt Writing Guide》的I2VA规则工作。\n\n用户会上传一张图片作为视频0.00秒的首帧，并可能补充时长、动作、情绪、对白、风格或运镜要求。你的任务是观察图片，自动识别主体、环境、构图和当前状态，从首帧合理推断后续运动，直接输出完整的中文图生视频提示词。\n\n不要要求用户填写人物、场景、服装、光线、动作步骤或声音。除非图片无法查看或用户要求存在根本冲突，否则不要提问。\n\n一、任务规则\n\n1. 参考图片必须完整对应视频0.00秒，属于`[Shot 1]`。\n2. 用户指定时长时严格遵守；未指定时默认10秒。\n3. 动态路径必须遵循：首帧锚定→动作启动→连续发展→明确结果或反应。\n4. 先建立图片中的主体、构图和环境，再描述接下来发生的动作。\n5. 不要让人物、物体或镜头在视频开始时突然跳到另一种状态。\n6. 用户明确指定的动作、情绪、对白和风格优先于自动推断。\n7. 默认使用一个连续镜头。只有用户明确要求或确实需要展现新信息时才切镜。\n8. 输出内容使用中文；官方字段、Picture标签、Shot标签及对白标签保留英文格式。\n9. 不输出分析、说明、参数建议或额外标题，只输出官方结构的最终提示词。\n\n二、图片分析\n\n正式输出前，在内部完成以下判断，不展示分析过程：\n\n1. 识别画面类型：人物近景、人物全身、多人互动、动物、产品、风景、建筑、动作场面、二维动画或三维CG。\n2. 识别主体外观：容貌、年龄感、发型、服装、姿势、视线、手势、身体朝向及重要道具。\n3. 识别初始构图：主体位置、景别、拍摄角度、机位高度、前后景关系和景深。\n4. 识别场景信息：地点、时间、天气、光线、色彩、背景物体和空间结构。\n5. 判断首帧正在发生或即将发生的事情，从现有姿势推断最自然的后续动作。\n6. 判断可以产生动态的元素：呼吸、头发、衣物、雨雪、烟雾、水面、树叶、灯光、车辆或机械结构。\n7. 识别生成风险：双手、眼镜、杯子、武器、复杂服装、机械关节、建筑、文字、反射和倒影。\n8. 图片中的水印、平台标记和无意义文字不作为场景内容延续，不复制、不强化、不主动动画化。\n\n三、动作推断\n\n如果用户没有指定动作，根据图片选择一个最自然、最稳定且最有表现力的核心事件：\n\n- 人物近景：使用呼吸、眨眼、视线转移、嘴角变化、轻微抬头或转头等微表情。\n- 人物全身：根据身体重心推断行走、转身、坐下、起身或与道具互动。\n- 多人画面：围绕视线回应、距离变化或一个简单互动展开。\n- 动物画面：使用呼吸、耳朵、尾巴、视线、脚步和环境互动。\n- 产品画面：使用稳定环绕、光线扫过、材质反射或局部结构展示。\n- 风景与建筑：使用云雾、水面、光影、风雪、树木和缓慢的大尺度运镜。\n- 战斗或运动画面：根据首帧姿态延续一个完整动作，明确发力点、轨迹、反馈和落点。\n- 动画或CG画面：保持原有美术风格，不擅自转成真人写实画面。\n\n5秒视频只安排一个动作。10秒视频只完成一个核心事件，可以包含2至4个连续步骤，不同时发展多个无关事件。\n\n四、镜头规则\n\n`[Shot 1]`是首镜头，不写时间戳。\n\n运镜必须自然写进当前镜头的描述，包含必要的运动类型、幅度和速度，例如：\n\n- 镜头以小幅度缓慢推近；\n- 镜头稳定跟随人物向前移动；\n- 镜头以较大幅度缓慢拉远；\n- 镜头保持静止；\n- 镜头围绕主体进行小幅度慢速环绕。\n\n如果只是轻微改变距离或角度，使用镜头运动，不增加切镜。\n\n只有发生真实切镜时才加入后续镜头，并使用严格递增的准确切点：\n\n`[Shot 2] At 00:03.500，镜头切换至……`\n\n切镜必须带来新的主体信息、空间信息、动作结果、观察角度或时间变化。不要无意义切镜、旋转画面、突然变焦或进行无规律抖动。\n\n五、对白与可见文字\n\n只有用户明确提供对白、旁白或歌词时才加入语言内容，不要擅自编写台词。\n\n说话人物使用稳定编号，例如`(S1)`、`(S2)`。对白采用：\n\n`成年女子使用轻柔、缓慢的声音（S1）说道：<d>[Chinese]用户提供的完整对白。</d>`\n\n`<d>`内部只保留语言标签和对白原文。人物动作、语气、音色和语速写在标签外。\n\n画外音必须说明人物“以画外音说道”，并明确画面中人物的嘴唇保持闭合。\n\n画面中确实需要保留的招牌、标签或霓虹文字使用英文双引号标注，逐字保留原文，不翻译、不猜测模糊文字。\n\n六、一致性要求\n\n一致性和限制必须自然写进`integrated_multimodal_description`，不要创建额外字段。\n\n根据图片具体内容强调：\n\n- 保持人物身份、五官、发型、服装和身体比例稳定。\n- 保持姿势变化、视线方向和身体重心连续。\n- 保持手指、眼睛、嘴唇及人物与道具的接触关系正确。\n- 保持眼镜、杯子、武器、产品、车辆或机械结构不变形。\n- 保持建筑、家具、背景、反射和空间位置稳定。\n- 头发、布料、液体、烟雾和光影符合物理规律。\n- 不增加动作过程不需要的新人物、肢体、道具或建筑。\n- 避免换脸、肢体反折、手指错误、物体穿模、服装变色、背景跳动、倒影错位和光线闪烁。\n- 不新增字幕、水印、标志或无关文字。\n\n七、声音规则\n\n`overall_soundscape`使用1至4个中文句子，在一个连续段落中概括全片的环境声、物理动作声和非语言人声。\n\n对白、歌唱、画内音乐以及在特定动作点发生的关键声音，应写在`integrated_multimodal_description`的相应位置，不在`overall_soundscape`中重复。\n\n只有用户明确要求全片完全静音时，`overall_soundscape`才写`N/A`。\n\n`non_diegetic_music`使用1至3个中文句子，描述画面中人物听不见、只有观众能听见的背景音乐。说明乐器、速度、节奏、音量变化和结束方式，不只使用抽象情绪词。\n\n如果不需要非画面内配乐，写`N/A`。\n\n八、最终输出格式\n\n最终只能输出以下内容，不添加其他标题、分析或说明：\n\nFor the target video, at 0.00 seconds into the target video, <Picture 1> (from [Shot 1]) is fully referenced.\n\nintegrated_multimodal_description: [Shot 1] 根据图片写出具体视觉风格、首帧构图、主体外观、姿势、环境和光线，然后按照播放顺序描述动作如何启动、连续发展并形成结果或反应。将运镜、物理反馈、同步声音和针对性一致性要求自然写入对应位置。如果发生切镜，继续按照官方Shot格式描述。\n\noverall_soundscape: 根据图片中的具体场景，使用1至4个句子概括贯穿视频的环境声、动作声和非语言人声。\n\nnon_diegetic_music: 根据画面风格和动作节奏，使用1至3个句子描述乐器、速度、节奏、音量变化和结尾方式；不需要配乐时写N/A。\n\n生成时必须将上述说明替换为根据用户图片推断出的实际内容，不得照抄说明文字，不得留下占位符。"
+      ],
+      "color": "#914926FF",
+      "bgcolor": "#B0582EFF"
+    },
+    {
+      "id": 44,
+      "type": "easy positive",
+      "pos": [
+        450,
+        6960
+      ],
+      "size": [
+        610,
+        510
+      ],
+      "flags": {
+        "collapsed": false,
+        "disabled": false
+      },
+      "order": 8,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "label": "正面提示词",
+          "name": "positive",
+          "type": "STRING",
+          "links": []
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfyui-easy-use",
+        "ver": "3cf9ab4e63c9cd2b6f4ebf5fa22f36d8152b3395",
+        "Node name for S&R": "easy positive",
+        "ue_properties": {
+          "widget_ue_connectable": {
+            "positive": true
+          },
+          "version": "7.8",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        "你是一名专业的 MiniMax H3 视频导演与提示词设计师，严格按照官方《Video Prompt Writing Guide》的FL2VA规则工作。\n\n用户会上传两张图片：\n\n- Picture 1是目标视频的首帧。\n- Picture 2是目标视频的尾帧。\n\n用户可能补充视频时长、动作、情绪、对白、风格或运镜要求。你的任务是比较两张图片，分析首尾帧之间的差异，反推出连续、自然、符合物理规律的中间路径，直接输出完整的中文首尾帧视频提示词。\n\n不要让用户填写人物、场景、动作步骤、运镜、光线或声音。除非图片无法查看或两张图片不存在可识别的连接关系，否则不要提问。\n\n一、任务规则\n\n1. Picture 1严格对应目标视频0.00秒。\n2. Picture 2严格对应目标视频结束时刻。\n3. 用户指定时长时严格遵守；未指定时默认10.00秒。\n4. 视频必须从Picture 1准确开始，并在最后一刻完整落到Picture 2。\n5. 不要分别重复描述两张静态图片，重点描述首尾状态之间如何连续变化。\n6. 动态路径遵循：首帧状态→可观察的中间变化→差异逐渐缩小→准确落到尾帧。\n7. 默认使用一个连续镜头。除非用户明确要求，否则不切镜。\n8. 用户明确指定的动作、情绪、对白、风格和运镜优先于自动推断。\n9. 输出内容使用中文；官方字段、Picture标签、Shot标签和对白标签保留英文格式。\n10. 不输出分析、说明、参数建议或额外标题，只输出官方结构的最终提示词。\n\n二、首尾帧分析\n\n正式输出前，在内部完成以下比较，不展示分析过程：\n\n1. 判断两张图片中的人物、动物、产品、车辆、建筑或其他主体是否相同。\n2. 比较容貌、年龄感、发型、服装、颜色、材质、身体比例和道具。\n3. 比较头部角度、视线、表情、手势、身体重心、四肢位置及人物与道具的接触关系。\n4. 比较主体在画面中的位置、大小、方向、远近关系和移动方向。\n5. 比较景别、机位高度、拍摄角度、焦距、透视、构图中心和景深。\n6. 比较时间、天气、云雾、水面、灯光、阴影、背景人物、车辆和场景结构。\n7. 判断是否存在拿起、放下、开合、点燃、熄灭、破碎、穿戴、移动、旋转或其他物体状态变化。\n8. 判断两张图片的视觉风格是否一致。除非首尾帧明确要求风格变化，否则全程保持统一。\n9. 识别双手、眼镜、杯子、武器、复杂服装、机械关节、建筑、文字和倒影等生成风险。\n\n三、中间路径推断\n\n所有主要差异都必须具有可观察的变化过程：\n\n- 表情不同：通过呼吸、眨眼、视线、眉眼、嘴角和头部角度逐渐完成。\n- 姿势不同：先调整身体重心，再移动对应肢体，最后稳定在尾帧姿势。\n- 手势不同：明确手臂、手腕、手掌和手指的运动顺序。\n- 道具状态不同：明确人物如何接触、拿起、移动、使用或放下道具。\n- 人物位置不同：通过行走、转身、靠近、后退、跳跃或镜头跟随完成。\n- 景别不同：通过推近、拉远或主体移动完成。\n- 观察角度不同：通过人物转身、镜头横移、小幅环绕或升降完成。\n- 背景不同：通过镜头运动、前景遮挡、门窗开合、烟雾、天气或光线变化自然揭示。\n- 光线不同：描述亮度、色温、方向、阴影和反射如何逐渐变化。\n- 战斗状态不同：明确发力点、运动方向、攻击轨迹、冲击反馈和收招姿势。\n- 产品角度不同：通过稳定环绕、转台运动、光线扫过或产品旋转连接。\n- 风景构图不同：通过云雾、水面、风雪、光影和大尺度运镜连接。\n\n不要使用瞬间变形、人物闪现、姿势跳变、无原因换装、道具凭空出现、背景突然替换或违反物理规律的运动。\n\n四、时间与尾帧收束\n\n根据视频时长自动安排节奏：\n\n- 前20%保持Picture 1的主要构图并启动动作。\n- 中间50%完成主要动作、主体移动、物体变化或镜头变化。\n- 后20%逐渐接近Picture 2的姿势、位置、景别、角度和光线。\n- 最后10%完整落到Picture 2并稳定保持。\n\n5秒视频只安排一个简单变化。\n\n10秒视频只完成一个核心事件，可以包含2至4个连续步骤，不同时发展多个无关事件。\n\n到达Picture 2后不得继续产生新动作。最终人物姿态、物体状态、主体位置、镜头角度、景别、光线和构图必须与Picture 2一致。\n\n五、镜头与运镜规则\n\nFL2VA默认使用单镜头，让模型连续插补首尾状态。\n\n`[Shot 1]`不写时间戳。\n\n运镜自然写进当前镜头，包含必要的类型、幅度、速度和跟随对象：\n\n- 景别由远变近：小幅度缓慢推近。\n- 景别由近变远：缓慢拉远。\n- 主体横向改变位置：横移或稳定跟拍。\n- 机位高度改变：缓慢升高或降低。\n- 人物观察角度改变：小幅环绕或人物自然转身。\n- 构图差异很小：静止镜头或极慢推近。\n- 尾帧展现更大空间：缓慢拉远并适度升高。\n\n不要同时叠加相互冲突的运镜，不旋转画面、不突然变焦、不进行无规律抖动。\n\n只有用户明确要求多镜头时才加入切镜。后续镜头使用严格递增、位于视频时长以内的准确切点：\n\n`[Shot 2] At 00:03.500，镜头切换至……`\n\n如果首尾帧差异较大，优先使用人物经过镜头、前景遮挡、烟雾覆盖、强光掠过或镜头转向完成连续过渡。\n\n六、对白与可见文字\n\n只有用户明确提供对白、旁白或歌词时才加入语言内容，不擅自编写台词。\n\n说话人物使用稳定编号，例如`(S1)`、`(S2)`。对白采用：\n\n`成年女子使用轻柔、缓慢的声音（S1）说道：<d>[Chinese]用户提供的完整对白。</d>`\n\n对白跨越切镜时，明确说明声音连续越过切点。画外音需要说明画面中人物的嘴唇保持闭合。\n\n画面中确实需要保留的文字使用英文双引号标注，逐字保留原文，不翻译、不猜测模糊文字。\n\n七、一致性要求\n\n所有一致性限制自然写入`integrated_multimodal_description`，不要创建额外字段。\n\n根据两张图片的具体内容强调：\n\n- 保持主体身份、五官、发型、身体比例和核心设计稳定。\n- 保持服装款式、颜色、材质和穿着状态连续。\n- 保持手指、瞳孔、嘴唇以及人物与道具的接触关系正确。\n- 保持产品、车辆、眼镜、杯子、武器或机械结构不变形。\n- 保持建筑、家具、背景、反射、倒影和空间关系稳定。\n- 保持动作方向、人物视线、光线方向和运动速度连续。\n- 不增加连接过程不需要的新人物、肢体、道具、车辆或建筑。\n- 避免换脸、肢体反折、手指错误、物体穿模、服装变色、背景跳动、建筑融化、倒影错位和光线闪烁。\n- 不复制或动画化图片中的水印、平台标记和无意义文字。\n- 不新增字幕、标志、水印或无关文字。\n\n八、声音规则\n\n`overall_soundscape`使用1至4个中文句子，在一个连续段落中概括环境声、物理动作声和非语言人声。\n\n对白、歌唱、画内音乐以及特定时间点发生的关键声音，应写在`integrated_multimodal_description`的相应位置，不在`overall_soundscape`中重复。\n\n只有用户明确要求全片完全静音时，`overall_soundscape`才写`N/A`。\n\n`non_diegetic_music`使用1至3个中文句子，描述人物听不见、只有观众能听见的背景音乐，明确乐器、速度、节奏、音量变化和结尾方式。\n\n如果不需要非画面内配乐，写`N/A`。\n\n九、最终输出格式\n\n最终只能输出以下内容，不添加其他标题、分析、解释或参数建议：\n\nHow the reference pictures align with the target video — Picture 1 (from Shot 1) aligns with the 0.00-second mark of the target video; Picture 2 (from Shot N) aligns with the S.SS-second mark of the target video.\n\nintegrated_multimodal_description: [Shot 1] 根据两张图片写出具体视觉风格和Picture 1中的初始状态，然后按照播放顺序描述动作、物体、环境和镜头如何连续变化，差异如何逐渐缩小，并在结束时准确落到Picture 2。将同步声音、物理反馈和针对性一致性要求自然写入对应位置。如果发生切镜，继续按照官方Shot格式描述。\n\noverall_soundscape: 根据具体场景，使用1至4个句子概括贯穿视频的环境声、动作声和非语言人声。\n\nnon_diegetic_music: 根据画面风格和动作节奏，使用1至3个句子描述乐器、速度、节奏、音量变化和结尾方式；不需要配乐时写N/A。\n\n必须将`Shot N`替换为Picture 2实际所属的最终镜头编号，将`S.SS`替换为视频实际结束时间并保留两位小数。\n\n如果全片为单镜头，首尾帧都属于`Shot 1`。\n\n生成时必须将上述说明替换为根据用户两张图片推断出的实际内容，不得照抄说明文字，不得留下占位符。"
+      ],
+      "color": "#914926FF",
+      "bgcolor": "#B0582EFF"
+    },
+    {
+      "id": 46,
+      "type": "easy positive",
+      "pos": [
+        -1350,
+        6960
+      ],
+      "size": [
+        560,
+        470
+      ],
+      "flags": {
+        "collapsed": false,
+        "disabled": false
+      },
+      "order": 10,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "label": "正面提示词",
+          "name": "positive",
+          "type": "STRING",
+          "links": [
+            46
+          ]
+        }
+      ],
+      "title": "高动态",
+      "properties": {
+        "cnr_id": "comfyui-easy-use",
+        "ver": "3cf9ab4e63c9cd2b6f4ebf5fa22f36d8152b3395",
+        "Node name for S&R": "easy positive",
+        "ue_properties": {
+          "widget_ue_connectable": {
+            "positive": true
+          },
+          "version": "7.8",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        "你是一名专业的 MiniMax H3 视频导演与提示词设计师，严格按照官方I2VA规则，根据用户上传的首帧图片反推视频提示词。\n\n用户会上传一张图片作为视频0.00秒的首帧，并可能补充时长、动作、情绪、对白或风格要求。你需要观察图片，自主判断主体、场景、动作潜力和动态强度，直接输出完整的中文图生视频提示词。\n\n不要让用户填写画面信息。除非图片无法查看或要求根本冲突，否则不要提问。\n\n一、基本规则\n\n1. 参考图片严格对应视频0.00秒，属于`[Shot 1]`。\n2. 用户指定时长时严格遵守；未指定时默认10秒。\n3. 动态路径遵循：首帧锚定→动作启动→速度发展→核心事件→结果或反应。\n4. 不要默认使用慢动作或缓慢推镜。动态强度必须根据图片内容判断。\n5. 稳定性要求只用于防止变形，不能限制合理的动作速度、幅度和镜头表现。\n6. 默认围绕一个核心事件展开，但高动态画面可以包含2至4个连续动作节点。\n7. 用户明确指定的动作、动态强度、情绪、对白和风格优先。\n8. 输出使用中文；官方字段名、Picture标签、Shot标签和对白标签保留英文。\n9. 只输出官方格式的最终提示词，不输出分析、说明或参数建议。\n\n二、动态强度判断\n\n根据图片内部线索自动判断低动态、中动态或高动态。\n\n低动态线索：\n\n- 人物平静坐着或站立；\n- 对称稳定构图；\n- 没有明显发力姿势；\n- 没有高速环境元素；\n- 画面核心是情绪、产品细节或静谧氛围。\n\n低动态画面可以使用呼吸、眨眼、视线、细微转头、材质反光和轻微环境变化。\n\n中动态线索：\n\n- 人物正在行走、转身、舞动或操作物体；\n- 衣物、头发、树叶、水面或烟雾具有明显运动空间；\n- 车辆、动物或背景人群正在活动；\n- 构图具有一定方向性和空间纵深。\n\n中动态画面应同时包含主体动作、镜头跟随和环境反馈。\n\n高动态线索：\n\n- 奔跑、跳跃、坠落、追逐、战斗、体育、舞蹈或快速驾驶姿态；\n- 身体前倾、四肢大幅展开、明显蓄力或失衡状态；\n- 斜线构图、夸张透视、低机位或强烈前后景差；\n- 武器、能量、火焰、爆炸、闪电、推进器、飞行物或高速车辆；\n- 飞溅的水、碎片、烟尘、雨雪、速度线或明显运动模糊；\n- 主体视线、武器方向和环境元素共同指向同一运动方向。\n\n出现两个及以上高动态线索时，优先生成高动态提示词，不得退化为缓慢推镜或轻微晃动。\n\n三、高动态动作设计\n\n高动态画面按照以下节奏发展：\n\n- 前10%：从首帧姿态立即启动动作，不进行长时间静止蓄势。\n- 中间30%：主体迅速加速，身体、道具或机械结构沿明确方向运动。\n- 中间40%：完成最主要的攻击、冲刺、跳跃、追逐、碰撞或环境事件。\n- 后20%：表现冲击反馈、减速、落地、收招、闪避或明确结果。\n\n高动态必须同时具备三层变化：\n\n1. 主体运动  \n明确身体重心、四肢、视线、道具和运动轨迹。\n\n2. 镜头运动  \n根据动作选择快速跟拍、横移、摇摄、小幅环绕、升降或拉远。镜头速度可以随主体先加速、在冲击点短促震动、随后恢复稳定。\n\n3. 环境反馈  \n根据场景加入水花、尘土、碎片、雨幕、衣物、头发、火花、烟雾、光线、反射或背景物体的同步变化。\n\n不要只写“动作迅速”或“画面震撼”，必须描述动作如何启动、向哪里移动、经过什么过程以及产生什么结果。\n\n四、不同图片类型的推断\n\n人物肖像：\n\n根据表情与姿态决定动态。安静肖像使用微表情；头发飞扬、身体前倾、回头或强烈情绪画面可以推断快速转身、靠近、后退或明显情绪爆发。\n\n人物全身：\n\n根据身体重心继续行走、奔跑、转身、起跳、坐下、起身、舞动或与道具互动。\n\n多人画面：\n\n明确动作主次和先后顺序。主角完成核心动作，其他人物作出对应反应，避免所有人物同时无序运动。\n\n动物画面：\n\n平静画面使用呼吸、耳朵、尾巴和视线；奔跑、扑跃或捕猎姿态使用跟拍、加速和地面反馈。\n\n产品画面：\n\n根据产品类型推断旋转、启动、开合、结构运动、灯光点亮或高速使用状态。\n\n风景与建筑：\n\n静谧场景使用云雾、光影和水面；风暴、瀑布、海浪、火山、飞行城市等画面使用快速穿越、升降、拉远和大范围环境运动。\n\n战斗或运动画面：\n\n根据首帧中的发力方向、武器方向和身体重心，推断一次完整的攻击、闪避、冲刺、碰撞或落地事件。\n\n动画或CG画面：\n\n保持原有画风、角色设计和渲染方式，不转成真人画面。\n\n五、镜头规则\n\n`[Shot 1]`不写时间戳。\n\n运镜必须自然写进当前镜头，并说明类型、幅度和速度。\n\n低动态可以使用静止镜头或小幅度慢速推近。\n\n中动态可以使用正常速度跟拍、横移或小幅环绕。\n\n高动态优先使用快速跟拍、快速摇摄、横向追随、低机位前移或围绕主体的小幅高速环绕。冲击发生时允许一次短促、可控制的镜头震动，随后迅速恢复稳定。\n\n不要同时叠加互相冲突的运镜，不进行无规律抖动或持续旋转。\n\n只有真实切镜时才加入：\n\n`[Shot 2] At 00:03.500，镜头切换至……`\n\n轻微景别或角度变化通过运镜完成，不增加切镜。\n\n六、对白、声音与一致性\n\n只有用户明确提供对白时才加入人物说话，不擅自编写台词。\n\n对白格式：\n\n`人物身份与声音特征（S1）说道：<d>[Chinese]用户提供的完整对白。</d>`\n\n关键动作声音写在`integrated_multimodal_description`的动作发生位置，例如枪声、撞击、爆炸、破空声、落地声或水花声。\n\n将针对图片内容的一致性要求自然写进`integrated_multimodal_description`：\n\n- 保持主体身份、五官、发型、服装、身体比例和核心设计稳定；\n- 保持手指、关节、武器、车辆、产品和机械结构正确；\n- 保持动作方向、发力方向和物体接触关系连续；\n- 高速运动可以产生合理的动作模糊，但主体核心轮廓必须清晰；\n- 避免换脸、肢体反折、额外肢体、道具变形、背景融化和无规律闪烁；\n- 不新增字幕、水印、标志或无关文字。\n\n`overall_soundscape`使用1至4个句子概括环境声、动作声和非语言人声。\n\n`non_diegetic_music`使用1至3个句子描述乐器、节奏、速度、音量发展和结尾方式。高动态画面应让配乐节奏与动作强度匹配，不需要配乐时写`N/A`。\n\n七、最终输出格式\n\n最终只输出：\n\nFor the target video, at 0.00 seconds into the target video, <Picture 1> (from [Shot 1]) is fully referenced.\n\nintegrated_multimodal_description: [Shot 1] 根据图片和动态强度判断，写出具体视觉风格、首帧构图、主体状态、动作启动、连续发展、运镜、环境反馈、关键声音、动作结果和针对性一致性要求。如果发生切镜，继续按照官方Shot格式描述。\n\noverall_soundscape: 根据具体场景，使用1至4个句子概括贯穿视频的环境声、动作声和非语言人声。\n\nnon_diegetic_music: 根据画面风格和实际动态强度，使用1至3个句子描述乐器、节奏、速度、音量变化和结尾方式；不需要配乐时写N/A。\n\n生成时必须把说明替换成根据用户图片推断出的具体内容，不得照抄说明，不得留下占位符。"
+      ],
+      "color": "#914926FF",
+      "bgcolor": "#B0582EFF"
+    },
+    {
+      "id": 47,
+      "type": "easy positive",
+      "pos": [
+        -760,
+        6960
+      ],
+      "size": [
+        560,
+        470
+      ],
+      "flags": {
+        "collapsed": false,
+        "disabled": false
+      },
+      "order": 11,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "label": "正面提示词",
+          "name": "positive",
+          "type": "STRING",
+          "links": [
+            47
+          ]
+        }
+      ],
+      "title": "高动态",
+      "properties": {
+        "cnr_id": "comfyui-easy-use",
+        "ver": "3cf9ab4e63c9cd2b6f4ebf5fa22f36d8152b3395",
+        "Node name for S&R": "easy positive",
+        "ue_properties": {
+          "widget_ue_connectable": {
+            "positive": true
+          },
+          "version": "7.8",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        "你是一名专业的 MiniMax H3 视频导演与提示词设计师，严格按照官方FL2VA规则，根据用户上传的首尾两张图片反推视频提示词。\n\nPicture 1是视频首帧，Picture 2是视频尾帧。你需要比较两张图片，根据姿态、位置、构图、环境和物体状态的变化，推断中间动作及其真实动态强度。\n\n不要默认使用缓慢动作或慢速运镜。首尾差异越大、运动线索越强，动作速度、幅度、镜头追随和环境反馈就应该越明显。\n\n一、基本规则\n\n1. Picture 1严格对应视频0.00秒。\n2. Picture 2严格对应视频结束时刻。\n3. 用户指定时长时严格使用；未指定时默认10.00秒。\n4. 动态路径遵循：首帧状态→动作启动→连续中间变化→差异逐渐缩小→准确落到尾帧。\n5. 默认使用一个连续镜头连接首尾帧。\n6. 稳定性要求负责防止变形，不能将高速动作自动降级为慢动作。\n7. 用户指定的动作、速度、情绪、对白和运镜优先。\n8. 输出内容使用中文，官方字段与标签保留英文。\n9. 不输出分析、参数建议或额外说明。\n\n二、首尾动态强度判断\n\n低动态变化：\n\n- 首尾帧构图和姿态接近；\n- 只有表情、视线、手指或光线发生小幅变化；\n- 主体没有明显位移；\n- 场景强调安静情绪或产品细节。\n\n低动态使用细腻微表情、轻微主体运动和克制运镜。\n\n中动态变化：\n\n- 人物发生转身、起身、行走、坐下或明显手势变化；\n- 主体位置、朝向或景别发生中等变化；\n- 道具出现拿起、放下、打开或使用过程；\n- 环境中存在风、雨、水面、车辆或人群运动。\n\n中动态使用明确身体动作、正常速度跟拍和可见环境反馈。\n\n高动态变化：\n\n- 首尾帧身体姿势、重心、位置或朝向差异明显；\n- 出现奔跑、跳跃、坠落、战斗、追逐、体育、舞蹈或高速驾驶；\n- 首尾帧之间存在攻击前后、起跳落地、碰撞前后或爆炸前后的关系；\n- 画面包含武器、能量、闪电、推进器、飞行物、高速车辆、火焰或碎片；\n- 首尾景别、角度和空间位置发生大幅改变；\n- 两张图片具有明显斜线构图、速度方向或强透视变化。\n\n出现两个及以上高动态线索时，必须生成高动态连接路径，不能仅使用缓慢推镜、轻微转头或简单眨眼。\n\n三、高动态首尾连接\n\n高动态路径按照以下节奏组织：\n\n- 前10%：从Picture 1中的姿态立即启动动作。\n- 中间30%：主体加速，身体、道具或机械结构沿明确方向运动。\n- 中间40%：发生核心攻击、跳跃、追逐、碰撞、闪避、爆发或环境事件。\n- 后10%至15%：动作减速、落地、收招或完成结果，逐渐贴近Picture 2。\n- 最后5%至10%：准确落到Picture 2并短暂稳定，不再产生新动作。\n\n连接过程必须同时描述：\n\n1. 主体如何从首帧姿态发力；\n2. 身体、四肢、道具或机械结构经过什么运动轨迹；\n3. 镜头如何跟随、追赶或重新构图；\n4. 环境如何对速度和冲击作出反馈；\n5. 主体如何减速并落到尾帧姿势。\n\n不要通过人物融化、瞬间换姿势、突然传送或背景替换连接首尾帧。\n\n四、差异连接规则\n\n表情差异：\n\n根据变化幅度选择细微、明显或爆发式情绪过程，不要一律使用缓慢眨眼。\n\n姿势差异：\n\n根据身体重心安排发力、转移、旋转、腾空、落地或稳定过程。\n\n位置差异：\n\n根据距离和方向选择行走、奔跑、冲刺、跳跃、滑行、飞行或镜头跟随。\n\n景别差异：\n\n小差异使用推拉镜头；大差异可以让主体高速接近、镜头快速拉开或使用大幅度跟拍。\n\n角度差异：\n\n通过人物旋转、镜头横移、快速摇摄、小幅高速环绕或升降完成。\n\n道具差异：\n\n完整表现触碰、抓握、抬起、挥动、释放、撞击和放下过程。\n\n战斗差异：\n\n根据首尾帧判断攻击起点和落点，明确武器轨迹、身体发力、对方反应、碰撞反馈及收招姿势。\n\n环境差异：\n\n使用雨幕、烟尘、碎片、水花、火焰、云雾、车辆和光线变化加强速度与空间感。\n\n五、动态运镜\n\nFL2VA默认保持一个连续镜头，但单镜头不等于静止镜头。\n\n低动态使用静止或小幅度慢速推近。\n\n中动态使用正常速度跟拍、横移、升降或环绕。\n\n高动态可以使用：\n\n- 镜头快速跟随奔跑、车辆或飞行主体；\n- 镜头横向快速移动以保持主体居中；\n- 镜头快速摇摄追踪高速物体；\n- 镜头以小幅度高速环绕展示攻击或旋转；\n- 镜头先加速跟随，在冲击点短促震动，随后迅速稳定；\n- 镜头快速拉远或升高，展示爆炸、坠落或大范围环境变化。\n\n运镜必须说明类型、方向、幅度、速度和跟随对象。\n\n不要持续无规律抖动，不要无限旋转，不要使用与主体方向冲突的镜头运动。\n\n只有用户明确要求多镜头时才加入：\n\n`[Shot 2] At 00:03.500，镜头切换至……`\n\n六、声音与一致性\n\n只有用户提供对白时才加入人物说话，格式为：\n\n`人物身份和声音特征（S1）说道：<d>[Chinese]用户提供的完整对白。</d>`\n\n关键声音必须与动作同步写入`integrated_multimodal_description`，例如加速声、破空声、撞击声、爆炸声、脚步声、落地声和机械运转声。\n\n一致性要求自然写进正文：\n\n- 保持首尾主体的身份、外观、服装、颜色和核心结构稳定；\n- 保持动作方向、身体重心、道具轨迹和镜头方向连续；\n- 高速动作允许出现方向明确的运动模糊，但人物面部和主体轮廓不能融化；\n- 保持双手、关节、武器、车辆和机械连接正确；\n- 避免额外肢体、瞬间换脸、道具消失、建筑扭曲、背景跳动和倒影错误；\n- 不新增字幕、水印、标志或无关文字。\n\n`overall_soundscape`使用1至4个句子概括环境声、物理动作声和非语言人声。\n\n`non_diegetic_music`使用1至3个句子描述乐器、节奏、速度、动态发展和结尾方式。高动态场景应使用与动作速度匹配的节奏，不需要配乐时写`N/A`。\n\n七、最终输出格式\n\n最终只输出：\n\nHow the reference pictures align with the target video — Picture 1 (from Shot 1) aligns with the 0.00-second mark of the target video; Picture 2 (from Shot N) aligns with the S.SS-second mark of the target video.\n\nintegrated_multimodal_description: [Shot 1] 根据两张图片的真实差异和动态强度，写出Picture 1中的初始状态、动作如何立即启动、主体如何运动、镜头如何追随、环境如何反馈、速度如何发展，并在结束时准确落到Picture 2。将关键声音和针对性一致性要求自然写进动作发生的位置。如果发生切镜，继续按照官方Shot格式描述。\n\noverall_soundscape: 根据具体场景和动态强度，使用1至4个句子概括环境声、动作声和非语言人声。\n\nnon_diegetic_music: 根据画面风格与动态强度，使用1至3个句子描述乐器、节奏、速度、音量变化和结束方式；不需要配乐时写N/A。\n\n必须将`Shot N`替换为Picture 2所属的最终镜头编号，将`S.SS`替换为视频实际结束时间并保留两位小数。\n\n生成时必须把说明替换成根据用户图片推断出的具体内容，不得照抄说明，不得留下占位符。"
+      ],
+      "color": "#914926FF",
+      "bgcolor": "#B0582EFF"
+    },
+    {
+      "id": 48,
+      "type": "ImpactConditionalBranch",
+      "pos": [
+        -80,
+        6660
+      ],
+      "size": [
+        270,
+        80
+      ],
+      "flags": {
+        "disabled": false
+      },
+      "order": 38,
+      "mode": 4,
+      "inputs": [
+        {
+          "label": "真",
+          "name": "tt_value",
+          "type": "STRING",
+          "link": 46
+        },
+        {
+          "label": "假",
+          "name": "ff_value",
+          "type": "STRING",
+          "link": 47
+        },
+        {
+          "label": "条件",
+          "name": "cond",
+          "type": "BOOLEAN",
+          "widget": {
+            "name": "cond"
+          },
+          "link": 52
+        }
+      ],
+      "outputs": [
+        {
+          "label": "STRING",
+          "name": "*",
+          "type": "STRING",
+          "links": [
+            45
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfyui-impact-pack",
+        "ver": "429d0159ad429e64d2b3916e6e7be9c22d025c3c",
+        "Node name for S&R": "ImpactConditionalBranch",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.8"
+        }
+      },
+      "widgets_values": [
+        false
+      ]
+    },
+    {
+      "id": 50,
+      "type": "easy imageConcat",
+      "pos": [
+        -80,
+        6320
+      ],
+      "size": [
+        270,
+        110
+      ],
+      "flags": {
+        "disabled": false
+      },
+      "order": 40,
+      "mode": 4,
+      "inputs": [
+        {
+          "label": "图像_1",
+          "name": "image1",
+          "type": "IMAGE",
+          "link": 48
+        },
+        {
+          "label": "图像_2",
+          "name": "image2",
+          "type": "IMAGE",
+          "link": 73
+        },
+        {
+          "label": "方向",
+          "name": "direction",
+          "type": "COMBO",
+          "widget": {
+            "name": "direction"
+          },
+          "link": null
+        },
+        {
+          "label": "匹配图像尺寸",
+          "name": "match_image_size",
+          "type": "BOOLEAN",
+          "widget": {
+            "name": "match_image_size"
+          },
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "label": "图像",
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            51
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfyui-easy-use",
+        "ver": "595e0738a9e3f8d0d9c4d875461b2d2c9e7559c7",
+        "Node name for S&R": "easy imageConcat",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.8"
+        }
+      },
+      "widgets_values": [
+        "right",
+        true
+      ]
+    },
+    {
+      "id": 51,
+      "type": "ImpactConditionalBranch",
+      "pos": [
+        -80,
+        6520
+      ],
+      "size": [
+        270,
+        80
+      ],
+      "flags": {
+        "disabled": false
+      },
+      "order": 44,
+      "mode": 4,
+      "inputs": [
+        {
+          "label": "真",
+          "name": "tt_value",
+          "type": "IMAGE",
+          "link": 50
+        },
+        {
+          "label": "假",
+          "name": "ff_value",
+          "type": "IMAGE",
+          "link": 51
+        },
+        {
+          "label": "条件",
+          "name": "cond",
+          "type": "BOOLEAN",
+          "widget": {
+            "name": "cond"
+          },
+          "link": 53
+        }
+      ],
+      "outputs": [
+        {
+          "label": "IMAGE",
+          "name": "*",
+          "type": "IMAGE",
+          "links": [
+            54
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfyui-impact-pack",
+        "ver": "429d0159ad429e64d2b3916e6e7be9c22d025c3c",
+        "Node name for S&R": "ImpactConditionalBranch",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.8"
+        }
+      },
+      "widgets_values": [
+        false
+      ]
+    },
+    {
+      "id": 52,
+      "type": "easy boolean",
+      "pos": [
+        -1300,
+        6550
+      ],
+      "size": [
+        260,
+        100
+      ],
+      "flags": {
+        "disabled": false
+      },
+      "order": 9,
+      "mode": 4,
+      "inputs": [
+        {
+          "label": "值",
+          "name": "value",
+          "type": "BOOLEAN",
+          "widget": {
+            "name": "value"
+          },
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "label": "布尔",
+          "name": "boolean",
+          "type": "BOOLEAN",
+          "links": [
+            52,
+            53,
+            76
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfyui-easy-use",
+        "ver": "595e0738a9e3f8d0d9c4d875461b2d2c9e7559c7",
+        "Node name for S&R": "easy boolean",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.8"
+        }
+      },
+      "widgets_values": [
+        true
+      ],
+      "color": "#203E11FF",
+      "bgcolor": "#305D1AFF"
+    },
+    {
+      "id": 58,
+      "type": "孤海注释",
+      "pos": [
+        -1310,
+        6670
+      ],
+      "size": [
+        270,
+        170
+      ],
+      "flags": {
+        "allow_interaction": true,
+        "disabled": false
+      },
+      "order": 13,
+      "mode": 4,
+      "inputs": [],
+      "outputs": [],
+      "properties": {
+        "text": "TRUE为参考图模式\nFALSE为首尾帧模式",
+        "fontSize": 27,
+        "fontColor": "#E3E3E3",
+        "backgroundColor": "#305d1a",
+        "backgroundAlpha": 1,
+        "borderRadius": 39,
+        "padding": 12,
+        "lineHeight": 1.4,
+        "textAlign": "left",
+        "stroke": true,
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.8",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "color": "#fff0",
+      "bgcolor": "transparent"
+    },
+    {
+      "id": 59,
+      "type": "ImpactConditionalBranchSelMode",
+      "pos": [
+        -80,
+        6140
+      ],
+      "size": [
+        270,
+        90
+      ],
+      "flags": {
+        "disabled": false
+      },
+      "order": 39,
+      "mode": 4,
+      "inputs": [
+        {
+          "name": "tt_value",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": null
+        },
+        {
+          "name": "ff_value",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": 74
+        },
+        {
+          "name": "cond",
+          "type": "BOOLEAN",
+          "widget": {
+            "name": "cond"
+          },
+          "link": 76
+        }
+      ],
+      "outputs": [
+        {
+          "label": "IMAGE",
+          "name": "*",
+          "type": "IMAGE",
+          "links": [
+            70
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfyui-impact-pack",
+        "ver": "429d0159ad429e64d2b3916e6e7be9c22d025c3c",
+        "Node name for S&R": "ImpactConditionalBranchSelMode",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.8"
+        }
+      },
+      "widgets_values": [
+        false
+      ]
+    },
+    {
+      "id": 62,
+      "type": "LoadImage",
+      "pos": [
+        -550,
+        6160
+      ],
+      "size": [
+        430,
+        630
+      ],
+      "flags": {
+        "disabled": false
+      },
+      "order": 15,
+      "mode": 4,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            73,
+            74
+          ]
+        },
+        {
+          "name": "MASK",
+          "type": "MASK",
+          "links": null
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.29.0",
+        "Node name for S&R": "LoadImage",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.8"
+        }
+      },
+      "widgets_values": [
+        "3b345ba7ac429e05e7d3b9d6185376ab.jpg",
+        "image"
+      ],
+      "color": "#203E11FF",
+      "bgcolor": "#305D1AFF"
+    },
+    {
+      "id": 65,
+      "type": "EasyCache",
+      "pos": [
+        -930,
+        5460
+      ],
+      "size": [
+        230,
+        130
+      ],
+      "flags": {
+        "disabled": false
+      },
+      "order": 48,
+      "mode": 4,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 79
+        }
+      ],
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            77,
+            78
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.30.0",
+        "Node name for S&R": "EasyCache",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.8"
+        }
+      },
+      "widgets_values": [
+        0.2,
+        0.15,
+        0.95,
+        false
+      ],
+      "color": "#203E11FF",
+      "bgcolor": "#305D1AFF"
+    },
+    {
+      "id": 66,
+      "type": "easy positive",
+      "pos": [
+        -380,
+        5840
+      ],
+      "size": [
+        400,
+        200
+      ],
+      "flags": {
+        "disabled": false
+      },
+      "order": 20,
+      "mode": 4,
+      "inputs": [],
+      "outputs": [
+        {
+          "label": "正面提示词",
+          "name": "positive",
+          "type": "STRING",
+          "links": [
+            80
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfyui-easy-use",
+        "ver": "595e0738a9e3f8d0d9c4d875461b2d2c9e7559c7",
+        "Node name for S&R": "easy positive",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.8"
+        }
+      },
+      "widgets_values": [
+        "For the target video, at 0.00 seconds into the target video, <Picture 1> (from [Shot 1]) is fully referenced.\n\nintegrated_multimodal_description: [Shot 1] 这是一个动漫风格的特写镜头，画面中心是一位闭着双眼、神情极度专注的年轻女孩，她身穿黑色半透明纱质上衣，正全神贯注地拉奏一把橙棕色的古典小提琴。背景为纯粹的深黑色，通过强烈的明暗对比（Chiaroscuro）突出了主体轮廓。头发呈现出柔顺的棕色波浪，散落在脸颊旁。\n动态强度判定为**低动态**：画面氛围静谧、唯美，属于典型的艺术人像创作。动作设计应侧重于表现演奏过程中的细腻质感，而非剧烈的肢体运动。\n动作发展逻辑如下：\n1.  **前10% (启动)**：保持首帧姿态，微调头部角度（约5-10度），双眼依然闭合，展现出沉浸在音乐中的状态。右手持琴弓的动作开始产生极其细微的横向位移，模拟运弓起始瞬间。\n2.  **中间30% (发展)**：琴弓与琴弦接触点轻微上下滑动（模拟拉奏动作），左手手指在指板上进行微小的按压调整，体现音准的精准控制。光影在发丝和琴身上流动，增加画面的呼吸感。\n3.  **中间40% (核心事件)**：运弓幅度逐渐加大但依然优雅流畅，身体重心随旋律轻轻下沉，展现出演奏的高潮段落。\n4.  **后20% (结果)**：动作幅度略微收敛，呈现出余音绕梁的结束感，画面在极慢的速度中定格，保留艺术美感。\n\n运镜设计：采用**静态镜头**或**微幅缓慢推近**（Slow Push-in）。焦点始终锁定在女孩的面部表情与手部技巧上。在琴弓划过琴弦的关键时刻，配合极轻微的镜头呼吸感（Breathe），增强沉浸感。整体速度极慢，营造静谧氛围。\n\n环境反馈：由于背景全黑，环境反馈主要集中在主体材质和光影的变化上。琴弦震动产生的微光反射、头发丝的高光流动、以及衣料褶皱的微妙起伏都需要精细表现。\n\n关键声音：\n*   **动作声**：清晰而富有穿透力的小提琴声（Stradivarius-style resonance），琴弓摩擦琴弦的“沙沙”声（Bow scratch），以及手指触碰琴弦的清脆点音。\n*   **环境声**：极轻微的呼吸声，营造紧张而专注的氛围；背景几乎无声，或仅有极微弱的混响感。\n\n针对性一致性要求：\n*   保持动漫/插画风格，线条流畅，色彩温暖（暖棕色调）。\n*   人物五官精致，眼神虽闭但需表现出神采；手指关节和指甲细节清晰，防止变形。\n*   小提琴琴身纹理（木纹、F孔）需保持清晰且连续。\n*   光影逻辑一致：光源来自左上方，形成柔和的立体感。\n\noverall_soundscape: 贯穿视频的核心是富有情感的小提琴独奏曲，音色饱满圆润，伴随轻微的弓弦摩擦声和手指按弦声。背景处于绝对的静谧黑暗中，偶尔可以听到演奏者极其细微的呼吸起伏，增强真实感与代入感。结尾处音乐渐弱，留下悠长的回响。\n\nnon_diegetic_music: 使用舒缓、忧郁且充满情感的古典钢琴旋律作为配乐，节奏缓慢（Andante），以衬托小提琴的深情。钢琴音色温暖柔和，音量保持在伴奏层次，不与小提琴冲突，营造出一种孤独而唯美的艺术氛围。随着视频推进，钢琴音量逐渐减弱，最后自然淡出，与画面的静谧感融为一体。"
+      ],
+      "color": "#232",
+      "bgcolor": "#353"
+    },
+    {
+      "id": 67,
+      "type": "VHS_VideoCombine",
+      "pos": [
+        5160,
+        5050
+      ],
+      "size": [
+        870,
+        334
+      ],
+      "flags": {},
+      "order": 18,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "图像",
+          "name": "images",
+          "type": "IMAGE",
+          "link": null
+        },
+        {
+          "label": "音频",
+          "name": "audio",
+          "shape": 7,
+          "type": "AUDIO",
+          "link": null
+        },
+        {
+          "label": "批次管理",
+          "name": "meta_batch",
+          "shape": 7,
+          "type": "VHS_BatchManager",
+          "link": null
+        },
+        {
+          "name": "vae",
+          "shape": 7,
+          "type": "VAE",
+          "link": null
+        },
+        {
+          "label": "帧率",
+          "name": "frame_rate",
+          "type": "FLOAT",
+          "widget": {
+            "name": "frame_rate"
+          },
+          "link": null
+        },
+        {
+          "label": "循环次数",
+          "name": "loop_count",
+          "type": "INT",
+          "widget": {
+            "name": "loop_count"
+          },
+          "link": null
+        },
+        {
+          "label": "文件名前缀",
+          "name": "filename_prefix",
+          "type": "STRING",
+          "widget": {
+            "name": "filename_prefix"
+          },
+          "link": null
+        },
+        {
+          "label": "格式",
+          "name": "format",
+          "type": "COMBO",
+          "widget": {
+            "name": "format"
+          },
+          "link": null
+        },
+        {
+          "label": "Ping-Pong",
+          "name": "pingpong",
+          "type": "BOOLEAN",
+          "widget": {
+            "name": "pingpong"
+          },
+          "link": null
+        },
+        {
+          "label": "保存到输出文件夹",
+          "name": "save_output",
+          "type": "BOOLEAN",
+          "widget": {
+            "name": "save_output"
+          },
+          "link": null
+        },
+        {
+          "label": "保存元数据",
+          "name": "save_metadata",
+          "type": "BOOLEAN",
+          "widget": {
+            "name": "save_metadata"
+          },
+          "link": null
+        },
+        {
+          "label": "修剪音频",
+          "name": "trim_to_audio",
+          "type": "BOOLEAN",
+          "widget": {
+            "name": "trim_to_audio"
+          },
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "label": "文件名",
+          "name": "Filenames",
+          "type": "VHS_FILENAMES",
+          "links": null
+        }
+      ],
+      "title": "合并为视频",
+      "properties": {
+        "cnr_id": "comfyui-videohelpersuite",
+        "ver": "4ee72c065db22c9d96c2427954dc69e7b908444b",
+        "Node name for S&R": "VHS_VideoCombine",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.8"
+        }
+      },
+      "widgets_values": {
+        "frame_rate": 24,
+        "loop_count": 0,
+        "filename_prefix": "AnimateDiff",
+        "format": "video/h264-mp4",
+        "pix_fmt": "yuv420p",
+        "crf": 19,
+        "save_metadata": true,
+        "trim_to_audio": false,
+        "pingpong": false,
+        "save_output": true,
+        "videopreview": {
+          "hidden": false,
+          "paused": false,
+          "params": {
+            "filename": "AnimateDiff_00020-audio.mp4",
+            "subfolder": "",
+            "type": "output",
+            "format": "video/h264-mp4",
+            "frame_rate": 24,
+            "workflow": "AnimateDiff_00020.png",
+            "fullpath": "E:\\AIDEN\\ComfyUI_windows_portable\\ComfyUI\\output\\AnimateDiff_00020-audio.mp4"
+          }
+        }
+      }
+    },
+    {
+      "id": 69,
+      "type": "UniBlockSwap",
+      "pos": [
+        -640,
+        5310
+      ],
+      "size": [
+        270,
+        60
+      ],
+      "flags": {
+        "disabled": false
+      },
+      "order": 41,
+      "mode": 4,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 81
+        }
+      ],
+      "outputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "links": [
+            82
+          ]
+        }
+      ],
+      "properties": {
+        "aux_id": "smthemex/ComfyUI_UniBlockSwap",
+        "Node name for S&R": "UniBlockSwap",
+        "ver": "a019e82c45185beb5f3a2273a6b47b9f88e001b9",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.8"
+        }
+      },
+      "widgets_values": [
+        -1
+      ],
+      "color": "#203E11FF",
+      "bgcolor": "#305D1AFF"
+    },
+    {
+      "id": 72,
+      "type": "VHS_VideoCombine",
+      "pos": [
+        4240,
+        5050
+      ],
+      "size": [
+        870,
+        334
+      ],
+      "flags": {},
+      "order": 21,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "图像",
+          "name": "images",
+          "type": "IMAGE",
+          "link": null
+        },
+        {
+          "label": "音频",
+          "name": "audio",
+          "shape": 7,
+          "type": "AUDIO",
+          "link": null
+        },
+        {
+          "label": "批次管理",
+          "name": "meta_batch",
+          "shape": 7,
+          "type": "VHS_BatchManager",
+          "link": null
+        },
+        {
+          "name": "vae",
+          "shape": 7,
+          "type": "VAE",
+          "link": null
+        },
+        {
+          "label": "帧率",
+          "name": "frame_rate",
+          "type": "FLOAT",
+          "widget": {
+            "name": "frame_rate"
+          },
+          "link": null
+        },
+        {
+          "label": "循环次数",
+          "name": "loop_count",
+          "type": "INT",
+          "widget": {
+            "name": "loop_count"
+          },
+          "link": null
+        },
+        {
+          "label": "文件名前缀",
+          "name": "filename_prefix",
+          "type": "STRING",
+          "widget": {
+            "name": "filename_prefix"
+          },
+          "link": null
+        },
+        {
+          "label": "格式",
+          "name": "format",
+          "type": "COMBO",
+          "widget": {
+            "name": "format"
+          },
+          "link": null
+        },
+        {
+          "label": "Ping-Pong",
+          "name": "pingpong",
+          "type": "BOOLEAN",
+          "widget": {
+            "name": "pingpong"
+          },
+          "link": null
+        },
+        {
+          "label": "保存到输出文件夹",
+          "name": "save_output",
+          "type": "BOOLEAN",
+          "widget": {
+            "name": "save_output"
+          },
+          "link": null
+        },
+        {
+          "label": "保存元数据",
+          "name": "save_metadata",
+          "type": "BOOLEAN",
+          "widget": {
+            "name": "save_metadata"
+          },
+          "link": null
+        },
+        {
+          "label": "修剪音频",
+          "name": "trim_to_audio",
+          "type": "BOOLEAN",
+          "widget": {
+            "name": "trim_to_audio"
+          },
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "label": "文件名",
+          "name": "Filenames",
+          "type": "VHS_FILENAMES",
+          "links": null
+        }
+      ],
+      "title": "合并为视频",
+      "properties": {
+        "cnr_id": "comfyui-videohelpersuite",
+        "ver": "4ee72c065db22c9d96c2427954dc69e7b908444b",
+        "Node name for S&R": "VHS_VideoCombine",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.8"
+        }
+      },
+      "widgets_values": {
+        "frame_rate": 24,
+        "loop_count": 0,
+        "filename_prefix": "AnimateDiff",
+        "format": "video/h264-mp4",
+        "pix_fmt": "yuv420p",
+        "crf": 19,
+        "save_metadata": true,
+        "trim_to_audio": false,
+        "pingpong": false,
+        "save_output": true,
+        "videopreview": {
+          "hidden": false,
+          "paused": false,
+          "params": {
+            "filename": "AnimateDiff_00021-audio.mp4",
+            "subfolder": "",
+            "type": "output",
+            "format": "video/h264-mp4",
+            "frame_rate": 24,
+            "workflow": "AnimateDiff_00021.png",
+            "fullpath": "E:\\AIDEN\\ComfyUI_windows_portable\\ComfyUI\\output\\AnimateDiff_00021-audio.mp4"
+          }
+        }
+      }
+    },
+    {
+      "id": 73,
+      "type": "VHS_VideoCombine",
+      "pos": [
+        5170,
+        6010
+      ],
+      "size": [
+        870,
+        334
+      ],
+      "flags": {},
+      "order": 22,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "图像",
+          "name": "images",
+          "type": "IMAGE",
+          "link": null
+        },
+        {
+          "label": "音频",
+          "name": "audio",
+          "shape": 7,
+          "type": "AUDIO",
+          "link": null
+        },
+        {
+          "label": "批次管理",
+          "name": "meta_batch",
+          "shape": 7,
+          "type": "VHS_BatchManager",
+          "link": null
+        },
+        {
+          "name": "vae",
+          "shape": 7,
+          "type": "VAE",
+          "link": null
+        },
+        {
+          "label": "帧率",
+          "name": "frame_rate",
+          "type": "FLOAT",
+          "widget": {
+            "name": "frame_rate"
+          },
+          "link": null
+        },
+        {
+          "label": "循环次数",
+          "name": "loop_count",
+          "type": "INT",
+          "widget": {
+            "name": "loop_count"
+          },
+          "link": null
+        },
+        {
+          "label": "文件名前缀",
+          "name": "filename_prefix",
+          "type": "STRING",
+          "widget": {
+            "name": "filename_prefix"
+          },
+          "link": null
+        },
+        {
+          "label": "格式",
+          "name": "format",
+          "type": "COMBO",
+          "widget": {
+            "name": "format"
+          },
+          "link": null
+        },
+        {
+          "label": "Ping-Pong",
+          "name": "pingpong",
+          "type": "BOOLEAN",
+          "widget": {
+            "name": "pingpong"
+          },
+          "link": null
+        },
+        {
+          "label": "保存到输出文件夹",
+          "name": "save_output",
+          "type": "BOOLEAN",
+          "widget": {
+            "name": "save_output"
+          },
+          "link": null
+        },
+        {
+          "label": "保存元数据",
+          "name": "save_metadata",
+          "type": "BOOLEAN",
+          "widget": {
+            "name": "save_metadata"
+          },
+          "link": null
+        },
+        {
+          "label": "修剪音频",
+          "name": "trim_to_audio",
+          "type": "BOOLEAN",
+          "widget": {
+            "name": "trim_to_audio"
+          },
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "label": "文件名",
+          "name": "Filenames",
+          "type": "VHS_FILENAMES",
+          "links": null
+        }
+      ],
+      "title": "合并为视频",
+      "properties": {
+        "cnr_id": "comfyui-videohelpersuite",
+        "ver": "4ee72c065db22c9d96c2427954dc69e7b908444b",
+        "Node name for S&R": "VHS_VideoCombine",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.8"
+        }
+      },
+      "widgets_values": {
+        "frame_rate": 24,
+        "loop_count": 0,
+        "filename_prefix": "AnimateDiff",
+        "format": "video/h264-mp4",
+        "pix_fmt": "yuv420p",
+        "crf": 19,
+        "save_metadata": true,
+        "trim_to_audio": false,
+        "pingpong": false,
+        "save_output": true,
+        "videopreview": {
+          "hidden": false,
+          "paused": false,
+          "params": {
+            "filename": "AnimateDiff_00022-audio.mp4",
+            "subfolder": "",
+            "type": "output",
+            "format": "video/h264-mp4",
+            "frame_rate": 24,
+            "workflow": "AnimateDiff_00022.png",
+            "fullpath": "E:\\AIDEN\\ComfyUI_windows_portable\\ComfyUI\\output\\AnimateDiff_00022-audio.mp4"
+          }
+        }
+      }
+    },
+    {
+      "id": 74,
+      "type": "UniBlockSwapTE",
+      "pos": [
+        -640,
+        5440
+      ],
+      "size": [
+        270,
+        60
+      ],
+      "flags": {
+        "disabled": false
+      },
+      "order": 43,
+      "mode": 4,
+      "inputs": [
+        {
+          "name": "clip",
+          "type": "CLIP",
+          "link": 84
+        }
+      ],
+      "outputs": [
+        {
+          "name": "clip",
+          "type": "CLIP",
+          "links": [
+            85
+          ]
+        }
+      ],
+      "properties": {
+        "aux_id": "smthemex/ComfyUI_UniBlockSwap",
+        "Node name for S&R": "UniBlockSwapTE",
+        "ver": "a019e82c45185beb5f3a2273a6b47b9f88e001b9",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.8"
+        }
+      },
+      "widgets_values": [
+        -1
+      ],
+      "color": "#203E11FF",
+      "bgcolor": "#305D1AFF"
+    },
+    {
+      "id": 75,
+      "type": "VHS_VideoCombine",
+      "pos": [
+        4230,
+        6000
+      ],
+      "size": [
+        870,
+        334
+      ],
+      "flags": {},
+      "order": 25,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "图像",
+          "name": "images",
+          "type": "IMAGE",
+          "link": null
+        },
+        {
+          "label": "音频",
+          "name": "audio",
+          "shape": 7,
+          "type": "AUDIO",
+          "link": null
+        },
+        {
+          "label": "批次管理",
+          "name": "meta_batch",
+          "shape": 7,
+          "type": "VHS_BatchManager",
+          "link": null
+        },
+        {
+          "name": "vae",
+          "shape": 7,
+          "type": "VAE",
+          "link": null
+        },
+        {
+          "label": "帧率",
+          "name": "frame_rate",
+          "type": "FLOAT",
+          "widget": {
+            "name": "frame_rate"
+          },
+          "link": null
+        },
+        {
+          "label": "循环次数",
+          "name": "loop_count",
+          "type": "INT",
+          "widget": {
+            "name": "loop_count"
+          },
+          "link": null
+        },
+        {
+          "label": "文件名前缀",
+          "name": "filename_prefix",
+          "type": "STRING",
+          "widget": {
+            "name": "filename_prefix"
+          },
+          "link": null
+        },
+        {
+          "label": "格式",
+          "name": "format",
+          "type": "COMBO",
+          "widget": {
+            "name": "format"
+          },
+          "link": null
+        },
+        {
+          "label": "Ping-Pong",
+          "name": "pingpong",
+          "type": "BOOLEAN",
+          "widget": {
+            "name": "pingpong"
+          },
+          "link": null
+        },
+        {
+          "label": "保存到输出文件夹",
+          "name": "save_output",
+          "type": "BOOLEAN",
+          "widget": {
+            "name": "save_output"
+          },
+          "link": null
+        },
+        {
+          "label": "保存元数据",
+          "name": "save_metadata",
+          "type": "BOOLEAN",
+          "widget": {
+            "name": "save_metadata"
+          },
+          "link": null
+        },
+        {
+          "label": "修剪音频",
+          "name": "trim_to_audio",
+          "type": "BOOLEAN",
+          "widget": {
+            "name": "trim_to_audio"
+          },
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "label": "文件名",
+          "name": "Filenames",
+          "type": "VHS_FILENAMES",
+          "links": null
+        }
+      ],
+      "title": "合并为视频",
+      "properties": {
+        "cnr_id": "comfyui-videohelpersuite",
+        "ver": "4ee72c065db22c9d96c2427954dc69e7b908444b",
+        "Node name for S&R": "VHS_VideoCombine",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.8"
+        }
+      },
+      "widgets_values": {
+        "frame_rate": 24,
+        "loop_count": 0,
+        "filename_prefix": "AnimateDiff",
+        "format": "video/h264-mp4",
+        "pix_fmt": "yuv420p",
+        "crf": 19,
+        "save_metadata": true,
+        "trim_to_audio": false,
+        "pingpong": false,
+        "save_output": true,
+        "videopreview": {
+          "hidden": false,
+          "paused": false,
+          "params": {
+            "filename": "AnimateDiff_00023-audio.mp4",
+            "subfolder": "",
+            "type": "output",
+            "format": "video/h264-mp4",
+            "frame_rate": 24,
+            "workflow": "AnimateDiff_00023.png",
+            "fullpath": "E:\\AIDEN\\ComfyUI_windows_portable\\ComfyUI\\output\\AnimateDiff_00023-audio.mp4"
+          }
+        }
+      }
+    },
+    {
+      "id": 76,
+      "type": "孤海注释",
+      "pos": [
+        4200,
+        4680
+      ],
+      "size": [
+        1540,
+        280
+      ],
+      "flags": {
+        "allow_interaction": true
+      },
+      "order": 26,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "properties": {
+        "text": "EasyCache+sa",
+        "fontSize": 159,
+        "fontColor": "#E3E3E3",
+        "backgroundColor": "#1b6941",
+        "backgroundAlpha": 0.6,
+        "borderRadius": 39,
+        "padding": 12,
+        "lineHeight": 1.4,
+        "textAlign": "left",
+        "stroke": true,
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.8",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "color": "#fff0",
+      "bgcolor": "transparent"
+    },
+    {
+      "id": 77,
+      "type": "孤海注释",
+      "pos": [
+        5180,
+        6870
+      ],
+      "size": [
+        890,
+        280
+      ],
+      "flags": {
+        "allow_interaction": true
+      },
+      "order": 33,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "properties": {
+        "text": "EasyCache+sa+UniBlockSwap\nPRUNED-int8c-20G",
+        "fontSize": 58,
+        "fontColor": "#E3E3E3",
+        "backgroundColor": "#1b6941",
+        "backgroundAlpha": 0.6,
+        "borderRadius": 39,
+        "padding": 12,
+        "lineHeight": 1.4,
+        "textAlign": "left",
+        "stroke": true,
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.8",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "color": "#fff0",
+      "bgcolor": "transparent"
+    },
+    {
+      "id": 78,
+      "type": "孤海注释",
+      "pos": [
+        4230,
+        6870
+      ],
+      "size": [
+        890,
+        280
+      ],
+      "flags": {
+        "allow_interaction": true
+      },
+      "order": 32,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "properties": {
+        "text": "EasyCache+sa+UniBlockSwap\nint8c-34G",
+        "fontSize": 58,
+        "fontColor": "#E3E3E3",
+        "backgroundColor": "#1b6941",
+        "backgroundAlpha": 0.6,
+        "borderRadius": 39,
+        "padding": 12,
+        "lineHeight": 1.4,
+        "textAlign": "left",
+        "stroke": true,
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.8",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "color": "#fff0",
+      "bgcolor": "transparent"
+    },
+    {
+      "id": 79,
+      "type": "LoadImage",
+      "pos": [
+        4470,
+        7210
+      ],
+      "size": [
+        380,
+        330
+      ],
+      "flags": {},
+      "order": 27,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": null
+        },
+        {
+          "name": "MASK",
+          "type": "MASK",
+          "links": null
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.30.0",
+        "Node name for S&R": "LoadImage",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.8"
+        }
+      },
+      "widgets_values": [
+        "78fd3189ad538d4dc3fac8dcd2486a40.png",
+        "image"
+      ]
+    },
+    {
+      "id": 80,
+      "type": "LoadImage",
+      "pos": [
+        5460,
+        7200
+      ],
+      "size": [
+        320,
+        330
+      ],
+      "flags": {},
+      "order": 24,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": null
+        },
+        {
+          "name": "MASK",
+          "type": "MASK",
+          "links": null
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.30.0",
+        "Node name for S&R": "LoadImage",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.8"
+        }
+      },
+      "widgets_values": [
+        "60ec1d78a3210a56d75bee39df2280ce.png",
+        "image"
+      ]
+    },
+    {
+      "id": 81,
+      "type": "LoadImage",
+      "pos": [
+        3400,
+        7280
+      ],
+      "size": [
+        380,
+        330
+      ],
+      "flags": {},
+      "order": 31,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": null
+        },
+        {
+          "name": "MASK",
+          "type": "MASK",
+          "links": null
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.30.0",
+        "Node name for S&R": "LoadImage",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.8"
+        }
+      },
+      "widgets_values": [
+        "bcfff57cc39791f8bdff681e5570e485.png",
+        "image"
+      ]
+    },
+    {
+      "id": 82,
+      "type": "VHS_VideoCombine",
+      "pos": [
+        3140,
+        6000
+      ],
+      "size": [
+        830,
+        334
+      ],
+      "flags": {},
+      "order": 30,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "图像",
+          "name": "images",
+          "type": "IMAGE",
+          "link": null
+        },
+        {
+          "label": "音频",
+          "name": "audio",
+          "shape": 7,
+          "type": "AUDIO",
+          "link": null
+        },
+        {
+          "label": "批次管理",
+          "name": "meta_batch",
+          "shape": 7,
+          "type": "VHS_BatchManager",
+          "link": null
+        },
+        {
+          "name": "vae",
+          "shape": 7,
+          "type": "VAE",
+          "link": null
+        },
+        {
+          "label": "帧率",
+          "name": "frame_rate",
+          "type": "FLOAT",
+          "widget": {
+            "name": "frame_rate"
+          },
+          "link": null
+        },
+        {
+          "label": "循环次数",
+          "name": "loop_count",
+          "type": "INT",
+          "widget": {
+            "name": "loop_count"
+          },
+          "link": null
+        },
+        {
+          "label": "文件名前缀",
+          "name": "filename_prefix",
+          "type": "STRING",
+          "widget": {
+            "name": "filename_prefix"
+          },
+          "link": null
+        },
+        {
+          "label": "格式",
+          "name": "format",
+          "type": "COMBO",
+          "widget": {
+            "name": "format"
+          },
+          "link": null
+        },
+        {
+          "label": "Ping-Pong",
+          "name": "pingpong",
+          "type": "BOOLEAN",
+          "widget": {
+            "name": "pingpong"
+          },
+          "link": null
+        },
+        {
+          "label": "保存到输出文件夹",
+          "name": "save_output",
+          "type": "BOOLEAN",
+          "widget": {
+            "name": "save_output"
+          },
+          "link": null
+        },
+        {
+          "label": "保存元数据",
+          "name": "save_metadata",
+          "type": "BOOLEAN",
+          "widget": {
+            "name": "save_metadata"
+          },
+          "link": null
+        },
+        {
+          "label": "修剪音频",
+          "name": "trim_to_audio",
+          "type": "BOOLEAN",
+          "widget": {
+            "name": "trim_to_audio"
+          },
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "label": "文件名",
+          "name": "Filenames",
+          "type": "VHS_FILENAMES",
+          "links": null
+        }
+      ],
+      "title": "合并为视频",
+      "properties": {
+        "cnr_id": "comfyui-videohelpersuite",
+        "ver": "4ee72c065db22c9d96c2427954dc69e7b908444b",
+        "Node name for S&R": "VHS_VideoCombine",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.8"
+        }
+      },
+      "widgets_values": {
+        "frame_rate": 24,
+        "loop_count": 0,
+        "filename_prefix": "AnimateDiff",
+        "format": "video/h264-mp4",
+        "pix_fmt": "yuv420p",
+        "crf": 19,
+        "save_metadata": true,
+        "trim_to_audio": false,
+        "pingpong": false,
+        "save_output": true,
+        "videopreview": {
+          "hidden": false,
+          "paused": false,
+          "params": {
+            "filename": "AnimateDiff_00025-audio.mp4",
+            "subfolder": "",
+            "type": "output",
+            "format": "video/h264-mp4",
+            "frame_rate": 24,
+            "workflow": "AnimateDiff_00025.png",
+            "fullpath": "E:\\AIDEN\\ComfyUI_windows_portable\\ComfyUI\\output\\AnimateDiff_00025-audio.mp4"
+          }
+        }
+      }
+    },
+    {
+      "id": 84,
+      "type": "孤海注释",
+      "pos": [
+        3150,
+        6860
+      ],
+      "size": [
+        890,
+        280
+      ],
+      "flags": {
+        "allow_interaction": true
+      },
+      "order": 36,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "properties": {
+        "text": "\nPRUNED-int8c-20G",
+        "fontSize": 58,
+        "fontColor": "#E3E3E3",
+        "backgroundColor": "#1b6941",
+        "backgroundAlpha": 0.6,
+        "borderRadius": 39,
+        "padding": 12,
+        "lineHeight": 1.4,
+        "textAlign": "left",
+        "stroke": true,
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.8",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "color": "#fff0",
+      "bgcolor": "transparent"
+    },
+    {
+      "id": 85,
+      "type": "孤海注释",
+      "pos": [
+        -2960,
+        5240
+      ],
+      "size": [
+        1540,
+        280
+      ],
+      "flags": {
+        "allow_interaction": true
+      },
+      "order": 35,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "properties": {
+        "text": "将扩散模型或文本编码器的 Transformer Blocks 拆成可交换单元，推理时只把当前需要计算的 Block 放进显存，计算完立即卸载，再加载下一个 Block。\n本质属于 Block-wise Offload / Layer Streaming / 块级换入换出。\n它用速度、PCIe 传输和内存访问开销，换取显存占用下降。模型权重精度本身一般不会改变，因此理论上不会因为这个节点直接降低画质。",
+        "fontSize": 32,
+        "fontColor": "#E3E3E3",
+        "backgroundColor": "#1b6941",
+        "backgroundAlpha": 0.6,
+        "borderRadius": 39,
+        "padding": 12,
+        "lineHeight": 1.4,
+        "textAlign": "left",
+        "stroke": true,
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.8",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "color": "#fff0",
+      "bgcolor": "transparent"
+    }
+  ],
+  "links": [
+    [
+      3,
+      3,
+      0,
+      2,
+      1,
+      "VAE"
+    ],
+    [
+      4,
+      8,
+      1,
+      2,
+      7,
+      "INT"
+    ],
+    [
+      6,
+      4,
+      0,
+      5,
+      1,
+      "VAE"
+    ],
+    [
+      7,
+      13,
+      0,
+      7,
+      0,
+      "NOISE"
+    ],
+    [
+      8,
+      10,
+      0,
+      7,
+      1,
+      "GUIDER"
+    ],
+    [
+      9,
+      6,
+      0,
+      7,
+      2,
+      "SAMPLER"
+    ],
+    [
+      10,
+      1,
+      0,
+      7,
+      3,
+      "SIGMAS"
+    ],
+    [
+      11,
+      2,
+      1,
+      7,
+      4,
+      "LATENT"
+    ],
+    [
+      12,
+      15,
+      0,
+      8,
+      0,
+      "FLOAT"
+    ],
+    [
+      14,
+      3,
+      0,
+      9,
+      1,
+      "VAE"
+    ],
+    [
+      16,
+      2,
+      0,
+      10,
+      1,
+      "CONDITIONING"
+    ],
+    [
+      19,
+      21,
+      0,
+      2,
+      5,
+      "INT"
+    ],
+    [
+      20,
+      21,
+      1,
+      2,
+      6,
+      "INT"
+    ],
+    [
+      25,
+      9,
+      0,
+      25,
+      0,
+      "IMAGE"
+    ],
+    [
+      26,
+      25,
+      0,
+      26,
+      0,
+      "IMAGE"
+    ],
+    [
+      27,
+      26,
+      0,
+      27,
+      0,
+      "IMAGE"
+    ],
+    [
+      28,
+      5,
+      0,
+      27,
+      1,
+      "AUDIO"
+    ],
+    [
+      30,
+      7,
+      0,
+      30,
+      0,
+      "LATENT"
+    ],
+    [
+      31,
+      30,
+      0,
+      5,
+      0,
+      "LATENT"
+    ],
+    [
+      32,
+      30,
+      0,
+      9,
+      0,
+      "LATENT"
+    ],
+    [
+      34,
+      38,
+      0,
+      33,
+      0,
+      "LLAMACPPMODEL"
+    ],
+    [
+      35,
+      39,
+      0,
+      33,
+      1,
+      "LLAMACPPARAMS"
+    ],
+    [
+      38,
+      36,
+      0,
+      34,
+      0,
+      "*"
+    ],
+    [
+      39,
+      37,
+      0,
+      36,
+      0,
+      "*"
+    ],
+    [
+      40,
+      33,
+      0,
+      37,
+      0,
+      "STRING"
+    ],
+    [
+      45,
+      48,
+      0,
+      33,
+      4,
+      "STRING"
+    ],
+    [
+      46,
+      46,
+      0,
+      48,
+      0,
+      "STRING"
+    ],
+    [
+      47,
+      47,
+      0,
+      48,
+      1,
+      "STRING"
+    ],
+    [
+      48,
+      31,
+      0,
+      50,
+      0,
+      "IMAGE"
+    ],
+    [
+      50,
+      31,
+      0,
+      51,
+      0,
+      "IMAGE"
+    ],
+    [
+      51,
+      50,
+      0,
+      51,
+      1,
+      "IMAGE"
+    ],
+    [
+      52,
+      52,
+      0,
+      48,
+      2,
+      "BOOLEAN"
+    ],
+    [
+      53,
+      52,
+      0,
+      51,
+      2,
+      "BOOLEAN"
+    ],
+    [
+      54,
+      51,
+      0,
+      33,
+      2,
+      "IMAGE"
+    ],
+    [
+      64,
+      31,
+      0,
+      2,
+      2,
+      "IMAGE"
+    ],
+    [
+      70,
+      59,
+      0,
+      2,
+      3,
+      "IMAGE"
+    ],
+    [
+      73,
+      62,
+      0,
+      50,
+      1,
+      "IMAGE"
+    ],
+    [
+      74,
+      62,
+      0,
+      59,
+      1,
+      "IMAGE"
+    ],
+    [
+      76,
+      52,
+      0,
+      59,
+      2,
+      "BOOLEAN"
+    ],
+    [
+      77,
+      65,
+      0,
+      1,
+      0,
+      "MODEL"
+    ],
+    [
+      78,
+      65,
+      0,
+      10,
+      0,
+      "MODEL"
+    ],
+    [
+      79,
+      24,
+      0,
+      65,
+      0,
+      "MODEL"
+    ],
+    [
+      80,
+      66,
+      0,
+      2,
+      4,
+      "STRING"
+    ],
+    [
+      81,
+      11,
+      0,
+      69,
+      0,
+      "MODEL"
+    ],
+    [
+      82,
+      69,
+      0,
+      24,
+      0,
+      "MODEL"
+    ],
+    [
+      84,
+      12,
+      0,
+      74,
+      0,
+      "CLIP"
+    ],
+    [
+      85,
+      74,
+      0,
+      2,
+      0,
+      "CLIP"
+    ]
+  ],
+  "groups": [
+    {
+      "id": 5,
+      "title": "llama反推",
+      "bounding": [
+        -1320,
+        6070,
+        2710,
+        830
+      ],
+      "color": "#3f789e",
+      "flags": {}
+    },
+    {
+      "id": 6,
+      "title": "插帧放大",
+      "bounding": [
+        920,
+        5220,
+        460,
+        830
+      ],
+      "color": "#3f789e",
+      "flags": {}
+    },
+    {
+      "id": 7,
+      "title": "Group",
+      "bounding": [
+        -1320,
+        5210,
+        2215,
+        840
+      ],
+      "color": "#3f789e",
+      "flags": {}
+    }
+  ],
+  "config": {},
+  "extra": {
+    "ue_links": [],
+    "ds": {
+      "scale": 0.25397395833333425,
+      "offset": [
+        2164.466759277566,
+        -3238.1738824045083
+      ]
+    },
+    "links_added_by_ue": [],
+    "frontendVersion": "1.48.7",
+    "VHS_latentpreview": false,
+    "VHS_latentpreviewrate": 0,
+    "VHS_MetadataImage": true,
+    "VHS_KeepIntermediate": true
+  },
+  "version": 0.4
+}

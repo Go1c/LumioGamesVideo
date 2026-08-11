@@ -1,0 +1,35 @@
+zealman comfyui V8.88应用版API版
+https://autodl.art/app/market/22?v=628
+200+工作流，全行业可用的图像生成，视频生成，短剧、数字人、跳舞迁移、TTS配音。内置comfyui无限画布。支持API实时调用，并发集群，智能任务队列可做你产品后端。
+工作流与说明网盘同步更新https://pan.quark.cn/s/cde3c555a0a4
+
+zealman comfyui镜像开机教学视频
+https://www.bilibili.com/video/BV1RwXvBpEJg
+
+ComfyUI2026 镜像版(非应用入口请选择该镜像)
+https://autodl.art/i/comfyanonymous/ComfyUI/comfyui2026
+
+算力市场和应用广场有啥区别？
+https://www.bilibili.com/video/BV1aaAVzSEoc
+    
+字字动画如何使用zealman-comfyui镜像，图文教程
+https://my.feishu.cn/wiki/Y2rpwEBXjioR7sk4l1icCZDonLb
+字字动画comfyui专用插件
+https://my.feishu.cn/wiki/SJDhwbLrviXiQ2kbd0gcfVcAnah
+
+zealman-Image-DaBiao炼丹打标工具下载
+链接：https://pan.quark.cn/s/1284fb542ccd?pwd=cuJc
+提取码：cuJc
+
+
+v8.88版本更新：
+comfyui v0.27.1（支持自动升降切换版本，内置依赖自动安装，并发接口同步支持）
+工作流矩阵按当前镜像目录重排同步（活跃 235 套，含 OLD 共 267 套）：
+
+1.新增30+ int8_convrot加速模型，几乎涵盖了常见个各种图像视频基础类模型
+2.插件集体更新到最新版
+3.增强前后端，并发生成，现在支持批量添加多个图像或视频生成任务自动跑。支持主机内批量添加参考图片、视频、音频文件等做为生成素材，URL方式批量传参数。支持开多个镜像机器，并发智能分配任务。生成结果全部自动拉取到主机，支持一键打包自定义时间段内所有结果文件下载到本地。如果工作流中增加oss节点也支持跑完自动上传到您的oss地址。
+4.新增多个LTX2.3,KREA2工作流。
+5.新增 P24/P25 Scail-2 高阶 Plus v4 及 P27 Scail2 循环动作迁移长视频。
+6.最容易的低成本AI创业赚钱项目 = 开一zealman镜像，自己写个网页前端调镜像的API+充值功能。一个镜像可队列任务，用户多开多个镜像可智能分配任务,怎么省钱都帮你做了。
+
