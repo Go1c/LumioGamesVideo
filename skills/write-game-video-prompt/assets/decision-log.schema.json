@@ -1,0 +1,62 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://lumio.games/schemas/game-video/decision-log.schema.json",
+  "title": "Lumio game-video candidate decision log",
+  "description": "Gate 4 record of every generated candidate: seed, inputs hash, outputs, and the accept/reject decision. One log per job output directory.",
+  "type": "object",
+  "required": ["schema_version", "job_id", "candidates"],
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": { "const": 1 },
+    "job_id": {
+      "type": "string",
+      "pattern": "^[a-z0-9](?:[a-z0-9-]{0,62}[a-z0-9])?$"
+    },
+    "candidates": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/candidate" }
+    }
+  },
+  "$defs": {
+    "candidate": {
+      "type": "object",
+      "required": ["candidate_id", "created_at", "status", "adapter", "seed", "outputs"],
+      "additionalProperties": false,
+      "properties": {
+        "candidate_id": {
+          "type": "string",
+          "pattern": "^[a-z0-9](?:[a-z0-9-]{0,62}[a-z0-9])?$"
+        },
+        "created_at": { "type": "string" },
+        "status": { "enum": ["generated", "failed", "rejected", "selected"] },
+        "adapter": {
+          "type": "string",
+          "description": "Execution adapter or provider, e.g. zealman-autodl or minimax-h3."
+        },
+        "workflow_id": { "type": ["string", "null"] },
+        "model": { "type": ["string", "null"] },
+        "seed": { "type": ["integer", "null"] },
+        "prompt_revision": { "type": ["string", "null"] },
+        "prompt_id": { "type": ["string", "null"] },
+        "input_values_sha256": { "type": ["string", "null"] },
+        "outputs": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["path", "sha256", "type"],
+            "additionalProperties": false,
+            "properties": {
+              "path": { "type": "string" },
+              "sha256": { "type": "string", "pattern": "^[0-9a-f]{64}$" },
+              "type": { "enum": ["image", "video", "audio", "text", "file"] },
+              "source_url_path": { "type": ["string", "null"] }
+            }
+          }
+        },
+        "rejection_reason": { "type": ["string", "null"] },
+        "notes": { "type": ["string", "null"] },
+        "cost": { "type": ["number", "null"] }
+      }
+    }
+  }
+}

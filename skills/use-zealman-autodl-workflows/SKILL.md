@@ -75,6 +75,31 @@ python3 "$skill_root/scripts/stage_workflow.py" \
 Keep each revision in a new file or output directory. Preserve the sidecar's source path and SHA-256
 when adapting node values, API mappings, or model references.
 
+## 3.5 Map the approved job onto the staged workflow
+
+For a staged panel-API copy, bind the job's prompt, references, and settings to concrete
+`nodeId:field` parameters instead of editing JSON by hand. List the exposed parameters first, then
+build a run request:
+
+```bash
+python3 "$skill_root/scripts/apply_job.py" \
+  game-video-output/job-001/workflows/lumio-job-001-wan-flf.json --list
+
+python3 "$skill_root/scripts/apply_job.py" \
+  game-video-output/job-001/workflows/lumio-job-001-wan-flf.json \
+  --job game-video-output/job-001/game-video-job.json \
+  --map "119:text=prompt:prompts/final.txt" \
+  --map "145:image=asset:loop-first" \
+  --map "165:image=asset:loop-last" \
+  --map "153:Number=job:generation.duration_seconds" \
+  --map "182:seed=seed:random"
+```
+
+Mapping sources: `text:<literal>`, `prompt:<file>`, `asset:<job asset id>` (marks a local file for
+upload), `job:<dotted.path>`, `seed:<int|random>`, `int:`, `float:`, `bool:`. The tool refuses
+parameters outside `enabledParams` unless `--allow-disabled` is passed, and records each asset's
+`remote_upload_approved` state so the runner can enforce it.
+
 ## 4. Choose the correct execution path
 
 Use a UI-graph JSON to open and debug inside ComfyUI. On a Zealman instance, place only an authorized
@@ -100,9 +125,23 @@ will leave the machine, model/GPU assumptions, resolution, duration, task count,
 and rights/retention risks. Obtain confirmation when those facts were not already explicitly
 approved.
 
-For panel API runs, follow the documented sequence: upload file inputs, connect WebSocket, submit
-`/api/workflow/generate`, observe progress/history, then retrieve output. Use concurrent endpoints
-only for an explicitly approved batch and cap the first smoke test to one small task.
+For panel API runs, execute the run request with the bundled runner, which follows the documented
+sequence (upload file inputs, submit `/api/workflow/generate`, poll `/api/workflow/result`, download
+`/output/...` artifacts immediately), appends every variant to the job's decision log, and advances
+the staged sidecar from `staged` to `rendered` or `failed`:
+
+```bash
+python3 "$skill_root/scripts/run_workflow.py" \
+  game-video-output/job-001/workflows/lumio-job-001-wan-flf.run-request.json \
+  --output-dir game-video-output/job-001/candidates \
+  --base-url "$ZEALMAN_BASE_URL" \
+  --register --dry-run   # inspect the plan first, then drop --dry-run
+```
+
+The runner refuses plan-only jobs and remote runs whose uploaded assets lack
+`remote_upload_approved`. The base URL is session-scoped and is never written to the sidecar, the
+decision log, or any output. Cap the first smoke test to `--variants 1`. Use concurrent endpoints
+only for an explicitly approved batch.
 
 ## 5. Verify and hand off
 
@@ -113,6 +152,7 @@ audio, continuity, loop, truthfulness, or 2D-package QA after generation.
 Deliver:
 
 - selected source path and SHA-256 plus the staged workflow and sidecar;
+- the run request, decision log, and downloaded candidate artifacts with hashes;
 - input-to-parameter mapping and unresolved model/custom-node dependencies;
 - exact execution mode, target, task count, and approval state;
 - prompt/job revision, output paths, provider/instance facts, and cost when available;

@@ -68,6 +68,41 @@ python3 skills/write-game-video-prompt/scripts/validate_job.py \
 任务会记录 workflow、参考素材角色、权利状态、生成模式、provider/model、执行位置、
 付费与远程上传确认、交付格式和强制 QA。
 
+每个候选的 seed、输入 hash、产物与取舍决定记录在 `decision-log.json`
+（Schema 见 `skills/write-game-video-prompt/assets/decision-log.schema.json`）：
+
+```bash
+python3 skills/write-game-video-prompt/scripts/log_candidate.py \
+  init --job game-video-job.json --log candidates/decision-log.json
+```
+
+## Zealman 执行链路
+
+对已批准的 job，可在 Zealman AutoDL 面板上完成选流到出片的闭环：
+
+```bash
+skill=skills/use-zealman-autodl-workflows
+
+# 1. 选流并暂存可修改副本（自动生成 provenance sidecar）
+python3 "$skill/scripts/stage_workflow.py" "V9面板API-json/G02-首尾帧-Wan2.2首尾帧视频.json" \
+  out/workflows --name lumio-flf.json
+
+# 2. 把 job 的提示词、参考图、时长、seed 映射到工作流参数
+python3 "$skill/scripts/apply_job.py" out/workflows/lumio-flf.json --list
+python3 "$skill/scripts/apply_job.py" out/workflows/lumio-flf.json \
+  --job game-video-job.json \
+  --map "119:text=prompt:prompts/final.txt" \
+  --map "145:image=asset:loop-first" \
+  --map "182:seed=seed:random"
+
+# 3. 上传、提交、轮询、下载，并写入 decision log 与 sidecar 状态
+python3 "$skill/scripts/run_workflow.py" out/workflows/lumio-flf.run-request.json \
+  --output-dir out/candidates --base-url "$ZEALMAN_BASE_URL" --register
+```
+
+runner 会拒绝 plan-only job 与未批准上传的远程执行；面板地址只在会话内使用，
+不会写入任何文件。
+
 ## 循环媒体
 
 对已有候选或 master 检查媒体信息和首尾显示帧差异：

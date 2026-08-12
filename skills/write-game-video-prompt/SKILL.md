@@ -78,6 +78,20 @@ Generate no more than `generation.variants`. Reject candidates that violate any 
 mandatory QA check. Track provider, model, seed, prompt revision, source hashes, chosen candidate,
 editing steps, and final hashes in `provenance.json`.
 
+Record every candidate and decision in a `decision-log.json` that follows
+[assets/decision-log.schema.json](assets/decision-log.schema.json). Adapter runners such as
+`$use-zealman-autodl-workflows` append generated candidates automatically; manage manual entries and
+verdicts with the bundled tool:
+
+```bash
+python scripts/log_candidate.py init --job game-video-job.json --log candidates/decision-log.json
+python scripts/log_candidate.py add --log candidates/decision-log.json \
+  --candidate-id c-001 --adapter host-tool --seed 42 --output candidates/c-001/clip.mp4
+python scripts/log_candidate.py reject --log candidates/decision-log.json \
+  --candidate-id c-001 --reason "violates immutable brand facts"
+python scripts/log_candidate.py select --log candidates/decision-log.json --candidate-id c-002
+```
+
 If compatible media tools are unavailable, deliver a plan-only package containing:
 
 - `game-video-job.json`;
